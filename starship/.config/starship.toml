@@ -1,0 +1,48 @@
+add_newline = false
+
+[character]
+success_symbol = "[➜](bold green)"
+error_symbol = "[✖](bold red)"
+
+[package]
+disabled = true
+
+[battery]
+charging_symbol = "" # none
+format = "[$symbol]($style)"
+
+[[battery.display]]
+threshold = 10
+style = "bold black bgred"
+
+[[battery.display]]
+threshold = 20
+style = "bold red"
+
+[[battery.display]]
+threshold = 40
+style = "bold yellow"
+
+[cmd_duration]
+disabled = true
+
+[directory]
+truncation_length = 10
+truncate_to_repo = false
+truncation_symbol = "…"
+
+[memory_usage]
+disabled = false
+threshold = 60
+format = "[$ram_pct+$swap_pct]($style)"
+
+[shell]
+disabled = false
+fish_indicator = "⋊⋗"
+bash_indicator = "⚒"
+zsh_indicator = "🄩"
+unknown_indicator = "⁇"
+
+[time]
+disabled = false
+format = "[$time]($style) "

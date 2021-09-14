@@ -1,0 +1,1 @@
+alias lstree="ls -T"

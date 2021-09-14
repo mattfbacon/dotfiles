@@ -1,0 +1,100 @@
+
+include "%L"
+
+<Multi_key> <p> <i> : "π" U03C0 # Lowercase Pi
+<Multi_key> <P> <I> : "Π" U03A0 # Uppercase Pi
+<Multi_key> <asterisk> <period> : "•" U2022 # BULLET
+<Multi_key> <asterisk> <o> : "◦" U25E6 # WHITE BULLET
+<Multi_key> <greater> <equal> : "≥" U2265 # Greater than or equal to
+<Multi_key> <less> <equal> : "≤" U2264 # Less than or equal to
+<Multi_key> <asciitilde> <asciitilde> : "≈" U2248 # Approximately equal
+<Multi_key> <backslash> <slash> : "✓" U2713 # Check mark
+<Multi_key> <braceleft> <parenleft> : "【" U3010 # Left Cool Parentheses
+<Multi_key> <braceright> <parenright> : "】" U3011 # Right Cool Parentheses
+<Multi_key> <less> <less> : "«" U00AB # Left Guillemet
+<Multi_key> <greater> <greater> : "»" U00BB # Right Guillemet
+<Multi_key> <b> <b> : "♭" U266D # Flat Symbol
+<Multi_key> <n> <a> <t> : "♮" U266E # Natural Symbol
+<Multi_key> <numbersign> <numbersign> : "♯" U266F # Sharp Symbol
+<Multi_key> <asciitilde> <equal> : "≅" U2245 # Congruent
+<Multi_key> <2> <2> : "²" U00B2 # Squared
+<Multi_key> <3> <3> : "³" U00B3 # Cubed
+<Multi_key> <bar> <v> : "↓" U2193 # Down arrow (from | + v)
+<Multi_key> <asciicircum> <bar> : "↑" U2191 # Up arrow (from ^ + |)
+<Multi_key> <colon> <parenright> : "😃" U1F603 # Smiley
+<Multi_key> <semicolon> <parenright> : "😉" U1F609 # Winky
+
+<Multi_key> <1> <slash> <4>: "¼"   onequarter # VULGAR FRACTION ONE QUARTER
+<Multi_key> <1> <slash> <2>: "½"   onehalf # VULGAR FRACTION ONE HALF
+<Multi_key> <3> <slash> <4>: "¾"   threequarters # VULGAR FRACTION THREE QUARTERS
+<Multi_key> <1> <slash> <3>: "⅓"   U2153 # VULGAR FRACTION ONE THIRD
+<Multi_key> <2> <slash> <3>: "⅔"   U2154 # VULGAR FRACTION TWO THIRDS
+<Multi_key> <1> <slash> <5>: "⅕"   U2155 # VULGAR FRACTION ONE FIFTH
+<Multi_key> <2> <slash> <5>: "⅖"   U2156 # VULGAR FRACTION TWO FIFTHS
+<Multi_key> <3> <slash> <5>: "⅗"   U2157 # VULGAR FRACTION THREE FIFTHS
+<Multi_key> <4> <slash> <5>: "⅘"   U2158 # VULGAR FRACTION FOUR FIFTHS
+<Multi_key> <1> <slash> <6>: "⅙"   U2159 # VULGAR FRACTION ONE SIXTH
+<Multi_key> <5> <slash> <6>: "⅚"   U215A # VULGAR FRACTION FIVE SIXTHS
+<Multi_key> <1> <slash> <8>: "⅛"   U215B # VULGAR FRACTION ONE EIGHTH
+<Multi_key> <3> <slash> <8>: "⅜"   U215C # VULGAR FRACTION THREE EIGHTHS
+<Multi_key> <5> <slash> <8>: "⅝"   U215D # VULGAR FRACTION FIVE EIGHTHS
+<Multi_key> <7> <slash> <8>: "⅞"   U215E # VULGAR FRACTION SEVEN EIGHTHS
+
+<Multi_key> <n> <b> <s> <p>: " "   nobreakspace # NO-BREAK SPACE
+<Multi_key> <z> <w> <j>: "‍" U200D # zero width joiner
+<Multi_key> <space> <n>: " " U2002   # EN SPACE
+<Multi_key> <space> <m>: " " U2003   # EM SPACE
+
+<Multi_key> <minus> <KP_Subtract>  : "−" U2212 #  MINUS SIGN
+<Multi_key> <apostrophe> <apostrophe>   : "’"   U2019 # RIGHT SINGLE QUOTATION MARK
+<Multi_key> <quotedbl> <period> : "“" U201C # Smart quote, opener
+<Multi_key> <period> <quotedbl> : "”" U201D # Smart quote, closer
+<Multi_key> <apostrophe> <period> : "‘" U2018 # Smart apostrophe, opener
+<Multi_key> <period> <apostrophe> : "’" U2019 # Smart apostrophe, closer
+
+<Multi_key> <percent> <1>		: "ⅰ"	U2170		# SMALL ROMAN NUMERAL ONE
+<Multi_key> <percent> <2>		: "ⅱ"	U2171		# SMALL ROMAN NUMERAL TWO
+<Multi_key> <percent> <3>		: "ⅲ"	U2172		# SMALL ROMAN NUMERAL THREE
+<Multi_key> <percent> <4>		: "ⅳ"	U2173		# SMALL ROMAN NUMERAL FOUR
+<Multi_key> <percent> <5>		: "ⅴ"	U2174		# SMALL ROMAN NUMERAL FIVE
+<Multi_key> <percent> <6>		: "ⅵ"	U2175		# SMALL ROMAN NUMERAL SIX
+<Multi_key> <percent> <7>		: "ⅶ"	U2176		# SMALL ROMAN NUMERAL SEVEN
+<Multi_key> <percent> <8>		: "ⅷ"	U2177		# SMALL ROMAN NUMERAL EIGHT
+<Multi_key> <percent> <9>		: "ⅸ"	U2178		# SMALL ROMAN NUMERAL NINE
+<Multi_key> <percent> <x>		: "ⅹ"	U2179		# SMALL ROMAN NUMERAL TEN
+<Multi_key> <percent> <underscore> <1>	: "ⅺ"	U217A		# SMALL ROMAN NUMERAL ELEVEN
+<Multi_key> <percent> <underscore> <2>	: "ⅻ"	U217B		# SMALL ROMAN NUMERAL TWELVE
+<Multi_key> <percent> <l>		: "ⅼ"	U217C		# SMALL ROMAN NUMERAL FIFTY
+<Multi_key> <percent> <c>		: "ⅽ"	U217D		# SMALL ROMAN NUMERAL ONE HUNDRED
+<Multi_key> <percent> <d>		: "ⅾ"	U217E		# SMALL ROMAN NUMERAL FIVE HUNDRED
+<Multi_key> <percent> <m>		: "ⅿ"	U217F		# SMALL ROMAN NUMERAL ONE THOUSAND
+<Multi_key> <percent> <0> <1>		: "Ⅰ"	U2160		# ROMAN NUMERAL ONE
+<Multi_key> <percent> <0> <2>		: "Ⅱ"	U2161		# ROMAN NUMERAL TWO
+<Multi_key> <percent> <0> <3>		: "Ⅲ"	U2162		# ROMAN NUMERAL THREE
+<Multi_key> <percent> <0> <4>		: "Ⅳ"	U2163		# ROMAN NUMERAL FOUR
+<Multi_key> <percent> <0> <5>		: "Ⅴ"	U2164		# ROMAN NUMERAL FIVE
+<Multi_key> <percent> <0> <6>		: "Ⅵ"	U2165		# ROMAN NUMERAL SIX
+<Multi_key> <percent> <0> <7>		: "Ⅶ"	U2166		# ROMAN NUMERAL SEVEN
+<Multi_key> <percent> <0> <8>		: "Ⅷ"	U2167		# ROMAN NUMERAL EIGHT
+<Multi_key> <percent> <0> <9>		: "Ⅸ"	U2168		# ROMAN NUMERAL NINE
+<Multi_key> <percent> <0> <x>		: "Ⅹ"	U2169		# ROMAN NUMERAL TEN
+<Multi_key> <percent> <underscore> <0> <1>	: "Ⅺ"	U216A	# ROMAN NUMERAL ELEVEL
+<Multi_key> <percent> <underscore> <0> <2>	: "Ⅻ"	U216B	# ROMAN NUMERAL TWELVE
+<Multi_key> <percent> <0> <l>		: "Ⅼ"	U216C		# ROMAN NUMERAL FIFTY
+<Multi_key> <percent> <0> <c>		: "Ⅽ"	U216D		# ROMAN NUMERAL ONE HUNDRED
+<Multi_key> <percent> <0> <d>		: "Ⅾ"	U216E		# ROMAN NUMERAL FIVE HUNDRED
+<Multi_key> <percent> <0> <m>		: "Ⅿ"	U216F		# ROMAN NUMERAL ONE THOUSAND
+<Multi_key> <percent> <X>		: "Ⅹ"	U2169		# ROMAN NUMERAL TEN
+<Multi_key> <percent> <L>		: "Ⅼ"	U216C		# ROMAN NUMERAL FIFTY
+<Multi_key> <percent> <C>		: "Ⅽ"	U216D		# ROMAN NUMERAL ONE HUNDRED
+<Multi_key> <percent> <D>		: "Ⅾ"	U216E		# ROMAN NUMERAL FIVE HUNDRED
+<Multi_key> <percent> <M>		: "Ⅿ"	U216F		# ROMAN NUMERAL ONE THOUSAND
+
+<Multi_key> <at> <numbersign>	: "⌘" U2318	# PLACE OF INTEREST SIGN
+
+<Multi_key> <numbersign> <G>		: "𝄞"  U0001d11e # MUSICAL SYMBOL G CLEF
+<Multi_key> <numbersign> <F>		: "𝄢"  U0001d122 # MUSICAL SYMBOL F CLEF
+<Multi_key> <numbersign> <C>		: "𝄡" U0001d121 # MUSICAL SYMBOL C CLEF
+
+<Multi_key> <M> <F>		: "Matthew Fellenz"	# MY NAME (FORMAL)
+<Multi_key> <m> <f>		: "Matt Fellenz"	# MY NAME (INFORMAL)

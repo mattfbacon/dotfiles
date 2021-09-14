@@ -1,0 +1,35 @@
+#!/bin/sh
+BB="$(acpi -b 2>/dev/null| grep 'Battery 1' | cut -d' ' -f3,4,5)"
+if test -z "$BB" || echo $BB | grep '0%' -q; then
+	BB="$(acpi -b 2>/dev/null| grep 'Battery 0' | cut -d' ' -f3,4,5)"
+fi
+echo $BB | awk -F' ' '{gsub(":[0-9][0-9]$", "", $3); print $2, $3}' | xargs
+echo $BB | awk -F' ' '{gsub(":[0-9][0-9]$", "", $3); print $2, $3}' | xargs
+
+LVL="$(echo $BB | cut -d' ' -f2 | sed 's/[%,]//g')"
+if test "$LVL" -le 10; then
+	exit 33
+fi
+# if test "$(echo $BB | cut -d' ' -f1)" != 'Charging,'; then
+# 	if test "$LVL" -ge 80; then
+# 		echo '#00ff00'
+# 		exit 0
+# 	elif test "$LVL" -le 20; then
+# 		echo '#ff0000'
+# 		exit 0
+# 	elif test "$LVL" -le 40; then
+# 		echo '#ffff00'
+# 		exit 0
+# 	fi
+# else
+# 	if test "$LVL" -le 95; then
+# 		echo '#00ff00'
+# 	else
+# 		echo '#ccffcc'
+# 	fi
+# fi
+if test "$LVL" -le 20; then
+	echo '#ff0000'
+elif test "$LVL" -le 40; then
+	echo '#ffff00'
+fi

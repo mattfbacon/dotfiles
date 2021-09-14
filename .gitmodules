@@ -1,0 +1,60 @@
+[submodule "vim/.vim/pack/colors/opt/edge"]
+	path = vim/.vim/pack/colors/opt/edge
+	url = https://github.com/sainnhe/edge.git
+[submodule "vim/.vim/pack/colors/opt/srcery"]
+	path = vim/.vim/pack/colors/opt/srcery
+	url = https://github.com/srcery-colors/srcery-vim.git
+[submodule "vim/.vim/pack/colors/opt/everforest"]
+	path = vim/.vim/pack/colors/opt/everforest
+	url = https://github.com/sainnhe/everforest.git
+[submodule "vim/.vim/pack/colors/opt/disco"]
+	path = vim/.vim/pack/colors/opt/disco
+	url = https://github.com/jsit/disco.vim.git
+[submodule "vim/.vim/pack/plugins/opt/airline-themes"]
+	path = vim/.vim/pack/plugins/opt/airline-themes
+	url = https://github.com/vim-airline/vim-airline-themes.git
+[submodule "vim/.vim/pack/plugins/opt/bufferline"]
+	path = vim/.vim/pack/plugins/opt/bufferline
+	url = https://github.com/bling/vim-bufferline
+[submodule "vim/.vim/pack/plugins/opt/airline"]
+	path = vim/.vim/pack/plugins/opt/airline
+	url = https://github.com/vim-airline/vim-airline.git
+[submodule "vim/.vim/pack/plugins/opt/coc.nvim"]
+	path = vim/.vim/pack/plugins/opt/coc.nvim
+	url = https://github.com/neoclide/coc.nvim.git
+[submodule "vim/.vim/pack/plugins/opt/syntastic"]
+	path = vim/.vim/pack/plugins/opt/syntastic
+	url = https://github.com/vim-syntastic/syntastic.git
+[submodule "vim/.vim/pack/plugins/opt/eunuch"]
+	path = vim/.vim/pack/plugins/opt/eunuch
+	url = https://github.com/tpope/vim-eunuch.git
+[submodule "vim/.vim/pack/plugins/opt/gitgutter"]
+	path = vim/.vim/pack/plugins/opt/gitgutter
+	url = https://github.com/airblade/vim-gitgutter.git
+[submodule "vim/.vim/pack/plugins/opt/tagbar"]
+	path = vim/.vim/pack/plugins/opt/tagbar
+	url = https://github.com/preservim/tagbar.git
+[submodule "vim/.vim/pack/plugins/start/commentary"]
+	path = vim/.vim/pack/plugins/start/commentary
+	url = https://github.com/tpope/vim-commentary.git
+[submodule "vim/.vim/pack/plugins/start/polyglot"]
+	path = vim/.vim/pack/plugins/start/polyglot
+	url = https://github.com/sheerun/vim-polyglot
+[submodule "vim/.vim/pack/plugins/start/better-whitespace"]
+	path = vim/.vim/pack/plugins/start/better-whitespace
+	url = https://github.com/ntpeters/vim-better-whitespace.git
+[submodule "vim/.vim/pack/plugins/start/chadtree"]
+	path = vim/.vim/pack/plugins/start/chadtree
+	url = https://github.com/ms-jpq/chadtree.git
+[submodule "vim/.vim/pack/plugins/start/signature"]
+	path = vim/.vim/pack/plugins/start/signature
+	url = https://github.com/kshenoy/vim-signature.git
+[submodule "vim/.vim/pack/syntax/start/gemini"]
+	path = vim/.vim/pack/syntax/start/gemini
+	url = https://github.com/pirmd/gemini.vim.git
+[submodule "vim/.vim/pack/plugins/start/textobj-quote"]
+	path = vim/.vim/pack/plugins/start/textobj-quote
+	url = https://github.com/preservim/vim-textobj-quote.git
+[submodule "vim/.vim/pack/plugins/start/textobj-user"]
+	path = vim/.vim/pack/plugins/start/textobj-user
+	url = https://github.com/kana/vim-textobj-user

@@ -1,0 +1,12 @@
+#!/bin/sh
+case $button in
+	1)
+		i3-sensible-terminal sudo pacman -Syu
+		;;
+esac
+npkgs=$(checkupdates | wc -l)
+echo $npkgs
+echo $npkgs
+if [ $npkgs -gt 10 ]; then
+	echo '#ff0000'
+fi

@@ -1,0 +1,8 @@
+#!/bin/sh
+case $BLOCK_BUTTON in
+	1)
+		source /home/matt/.local/bin/toggle-headset-mic.sh
+		;;
+esac
+pactl list sources | grep -i 'active port' | cut -d ' ' -f3 | cut -d '-' -f3
+

@@ -1,0 +1,32 @@
+[user]
+	name = Matt Fellenz
+	email = mattf53190@gmail.com
+	signingKey = 906DD2E6CADB44C774B7B92165AA03A4E6F03CD4
+[core]
+	editor = nvim
+	sshCommand = ssh -i ~/.ssh/id_rsa -F /dev/null
+	excludesfile = /home/matt/.gitignore
+[credential]
+	helper = store --file ~/.git-creds
+[pull]
+	rebase = false
+[bash]
+	showInformativeStatus = true
+[diff]
+	colorMoved = true
+	algorithm = histogram
+[push]
+	default = matching
+[init]
+	defaultBranch = main
+[alias]
+	tree = log --graph --oneline --all
+[commit]
+	gpgsign = true
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+[credential "https://github.com/mattf552814"]
+	username = mattf552814
