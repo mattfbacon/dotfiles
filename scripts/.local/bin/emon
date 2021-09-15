@@ -1,0 +1,32 @@
+#!/bin/sh
+
+xrandr --output eDP-1 --scale 0.99999x0.99999
+
+xmodmap -e 'keycode 105 = Multi_key'
+xmodmap -e 'remove control = Multi_key'
+xmodmap -e "add mod3 = Scroll_Lock"
+
+if [ $1 = 'on' ] 2>/dev/null
+then
+	if xrandr --output DP-3 --mode 3840x2160 --refresh 59.94 --right-of eDP-1 --primary && xrandr --output DP-3 --scale 0.99999x0.99999
+	then
+		xrandr --output DP-1 --mode 1920x1080 --refresh 60 --right-of DP-3 --rotate left --scale 1.75x1.75
+	fi
+	python3 /usr/share/xfce4-panel-profiles/xfce4-panel-profiles/panelconfig.py load ~/.local/share/threemon.tar.bz2
+elif [ $1 = 'off' ] 2>/dev/null
+then
+	xrandr --output DP-3 --off
+	xrandr --output DP-1 --off
+	xrandr --output eDP-1 --primary
+	python3 /usr/share/xfce4-panel-profiles/xfce4-panel-profiles/panelconfig.py load ~/.local/share/onemon.tar.bz2
+else
+	echo 'usage: '$0' (on|off)'
+	exit 1
+fi
+
+sleep '0.1'
+/home/matt/.local/bin/background.sh &
+# not with xfce
+if false; then
+/home/matt/.local/bin/toggle-headset-mic.sh
+fi
