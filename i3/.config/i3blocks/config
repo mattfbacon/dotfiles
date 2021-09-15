@@ -157,10 +157,6 @@ interval=5
 
 [separator]
 
-[clipster]
-full_text=CLIP
-command=clipster -sc
-
 [run]
 full_text=RUN
 command=~/.local/bin/apppicker.sh
