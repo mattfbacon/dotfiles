@@ -81,7 +81,6 @@ DIR=/
 interval=30
 [disk]
 label=HOME
-DIR=~
 interval=30
 
 [separator]
