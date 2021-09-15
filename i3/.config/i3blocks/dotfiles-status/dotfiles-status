@@ -1,0 +1,16 @@
+#!/bin/sh
+case $button in
+	1)
+		cd $DIR
+		i3-sensible-terminal -d $DIR
+		;;
+esac
+cd $DIR
+if test "$(git status --porcelain | wc -l)" -gt 0; then
+	echo DIRTY
+	echo D
+	echo '#ff3333'
+else
+	echo CLEAN
+	echo C
+fi

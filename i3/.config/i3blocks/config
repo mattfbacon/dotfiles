@@ -167,6 +167,12 @@ command=i3-msg -q -- exec gnome-screenshot -c --area
 
 [separator]
 
+[dotfiles-status]
+DIR=~/dotfiles
+interval=60
+
+[separator]
+
 # Generic media player support
 #
 # This displays "ARTIST - SONG" if a music is playing.
