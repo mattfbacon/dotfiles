@@ -16,6 +16,4 @@ source $HOME/.xprofile
 
 # start_jack.sh </dev/null 2>&1 >/dev/null &
 
-# dbus-launch i3
-# xfce:
-xfce4-session
+dbus-launch i3
