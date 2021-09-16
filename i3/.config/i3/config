@@ -323,7 +323,7 @@ mode "app_launch" {
 	bindsym c exec code, mode "default"
 	bindsym d exec discord-canary --force-device-scale-factor=2, mode "default"
 	bindsym m exec gnome-system-monitor, mode "default"
-	bindsym f exec i3-sensible-terminal -e clifm, mode "default"
+	bindsym f exec thunar, mode "default"
 	bindsym shift+f exec nemo, mode "default"
 	bindsym r exec rhythmbox, mode "default"
 	bindsym v exec pavucontrol, mode "default"
