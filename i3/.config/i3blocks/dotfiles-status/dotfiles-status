@@ -7,10 +7,18 @@ case $button in
 esac
 cd $DIR
 if test "$(git status --porcelain | wc -l)" -gt 0; then
-	echo DIRTY
+	if test -z $ALWAYS_SHORT; then
+		echo DIRTY
+	else
+		echo D
+	fi
 	echo D
 	echo '#ff3333'
 else
-	echo CLEAN
+	if test -z $ALWAYS_SHORT; then
+		echo CLEAN
+	else
+		echo C
+	fi
 	echo C
 fi

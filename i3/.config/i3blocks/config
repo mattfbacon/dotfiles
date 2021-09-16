@@ -168,6 +168,7 @@ command=i3-msg -q -- exec gnome-screenshot -c --area
 
 [dotfiles-status]
 DIR=~/dotfiles
+ALWAYS_SHORT=true
 interval=60
 
 [separator]
