@@ -1,2 +1,3 @@
 #!/bin/sh
-feh --bg-fill ~/Pictures/wallhaven-z8oe8g_3840x2160.png
+bg=$(xrdb -query | grep -E '^i3.Background:' | cut -f2)
+feh --bg-fill ~/$bg

@@ -1,3 +1,4 @@
 #!/bin/sh
+bg=$(xrdb -query | grep -E '^i3.Background.color:' | cut -f2)
 echo -n $1
-awk '/^[^#].+$/ { print $1; exit }' /home/matt/.config/bgcolor
+echo $bg | sed 's/^#//'
