@@ -28,7 +28,7 @@ font pango:Fira Code 10
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
-# exec --no-startup-id xss-lock --transfer-sleep-lock -- /home/matt/.local/bin/i3lock.sh nodim
+exec --no-startup-id xss-lock --transfer-sleep-lock -- /home/matt/.local/bin/i3lock.py -n
 
 exec --no-startup-id easyeffects --gapplication-service
 
@@ -38,13 +38,13 @@ exec --no-startup-id nm-applet --indicator
 
 # redshift for blue light filter
 # exec --no-startup-id /home/matt/.local/bin/redshift.sh
-# exec --no-startup-id redshift-gtk
+exec --no-startup-id redshift-gtk
 
 # udiskie for automount
-# exec --no-startup-id udiskie --tray
+exec --no-startup-id udiskie --tray
 
 # dunst for notifications
-# exec --no-startup-id dunst
+exec --no-startup-id dunst
 
 # IBUS Daemon
 exec --no-startup-id ibus-daemon -drR
@@ -52,13 +52,14 @@ exec --no-startup-id ibus-daemon -drR
 # exec --no-startup-id fcitx -d
 
 # Gnome Keyring Daemon
-#exec --no-startup-id gnome-keyring-daemon --start
+# this is started in .profile
+# exec --no-startup-id gnome-keyring-daemon --start
 
 # MPD
-# exec --no-startup-id mpd
+exec --no-startup-id mpd
 
 # Clipster daemon
-exec --no-startup-id clipster -d
+exec --no-startup-id xfce4-clipman
 
 # GTK utilities
 
@@ -68,6 +69,7 @@ exec --no-startup-id clipster -d
 # exec --no-startup-id mplayer -loop 0 -rootwin -ao null -noconsolecontrols -nosound -fs /home/matt/Downloads/vid.webm
 # exec --no-startup-id "hsetroot -solid $(/home/matt/.local/bin/getbgcolor.sh '#')"
 # exec --no-startup-id "hsetroot -cover ~/Pictures/wallhaven-z8oe8g_3840x2160.png"
+exec --no-startup-id nitrogen --restore
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status pkill -RTMIN+10 i3blocks
@@ -187,9 +189,7 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-# bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
-# instead, activate xfce exit-er
-bindsym $mod+Shift+e exec xfce4-session-logout
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 for_window [class="galculator"] floating enable
 # resize window (you can also use the mouse for that)
@@ -277,8 +277,7 @@ client.urgent $inactive_urgent_fg $inactive $urgent_fg
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
 # bindsym $mod+d exec --no-startup-id "i3-dmenu-desktop --dmenu='dmenu -i -fn monospace:pixelsize=34 -nb #002934 -nf #ffffff -sb #025b54 -sf #ffffff'"
-bindsym $mod+d exec --no-startup-id ~/.local/bin/apppicker.sh
-# bindsym $mod+d exec xfce4-popup-whiskermenu
+bindsym $mod+d exec --no-startup-id /home/matt/.local/bin/apppicker.sh
 bindsym $mod+n exec --no-startup-id rofi -show window
 
 # Media player keybinds
@@ -299,16 +298,13 @@ bindsym $mod+minus move scratchpad
 bindsym $mod+plus scratchpad show
 
 # XIdleHook
-# exec --no-startup-id xidlehook --not-when-audio --timer 160 "~/.local/bin/i3lock.sh" ":"
-# xfce manages this for us
+exec --no-startup-id xidlehook --not-when-audio --timer 160 "~/.local/bin/i3lock.py -d" ":"
 # Screen lock on Win+,
-# bindsym $mod+comma exec "~/.local/bin/i3lock.sh nodimtime"
-# instead, tell xfce to lock
-bindsym $mod+comma exec xflock4
+bindsym $mod+comma exec loginctl lock-session
 
 exec --no-startup-id setxkbmap -option compose:rctrl
 
-mode "applaunch" {
+mode "app_launch" {
 	bindsym b exec brave --force-device-scale-factor=2 --profile-directory="Default", mode "default"
 	bindsym shift+b exec brave --force-device-scale-factor=2 --profile-directory="Default" --incognito, mode "default"
 	bindsym mod1+b exec brave --force-device-scale-factor=2 --profile-directory="Profile 3", mode "default"
@@ -316,7 +312,7 @@ mode "applaunch" {
 	bindsym c exec code, mode "default"
 	bindsym d exec discord-canary --force-device-scale-factor=2, mode "default"
 	bindsym m exec gnome-system-monitor, mode "default"
-	bindsym f exec exec thunar, mode "default"
+	bindsym f exec i3-sensible-terminal -e clifm, mode "default"
 	bindsym shift+f exec nemo, mode "default"
 	bindsym r exec rhythmbox, mode "default"
 	bindsym v exec pavucontrol, mode "default"
@@ -330,14 +326,12 @@ mode "applaunch" {
 	bindsym $mod+o mode "default"
 }
 
-bindsym $mod+o mode "applaunch"
+bindsym $mod+o mode "app_launch"
 
-# all the below are obsoleted by xfce
+bindsym --release Caps_Lock exec pkill -SIGRTMIN+11 i3blocks
+bindsym --release Num_Lock  exec pkill -SIGRTMIN+11 i3blocks
 
-# bindsym --release Caps_Lock exec pkill -SIGRTMIN+11 i3blocks
-# bindsym --release Num_Lock  exec pkill -SIGRTMIN+11 i3blocks
-
-# exec --no-startup-id sh -c "acpi_listen | xargs -L1 -i'{}' pkill -SIGRTMIN+3 i3blocks"
+exec --no-startup-id sh -c "acpi_listen | xargs -L1 -i'{}' pkill -SIGRTMIN+3 i3blocks"
 
 exec --no-startup-id picom -r 0 -o 0 -i 1 --vsync --no-fading-openclose -I 1 -O 1 -D 0 -m 1
 
@@ -360,18 +354,15 @@ bindsym Print exec xfce4-screenshooter
 
 bindsym $mod+x [urgent=latest] focus
 
-default_border pixel 1
-default_floating_border normal 1
+default_border pixel
+default_floating_border normal
 
 exec discord-canary --force-device-scale-factor=2 --start-minimized
 exec evolution
 exec --no-startup-id android-messages-desktop
 
 for_window [class="lxqt-openssh-askpass"] floating enable
-# picture in picture
 bindsym $mod+y fullscreen disable; floating enable; resize set 640 360; sticky enable; move position 3150 1750
 
 smart_borders on
 hide_edge_borders both
-
-exec --no-startup-id nitrogen --restore
