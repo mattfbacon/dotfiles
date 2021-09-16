@@ -7,7 +7,7 @@
 	sshCommand = ssh -i ~/.ssh/id_rsa -F /dev/null
 	excludesfile = /home/matt/.gitignore
 [credential]
-	helper = store --file ~/.git-creds
+	helper = /usr/lib/git-core/git-credential-libsecret
 [pull]
 	rebase = false
 [bash]

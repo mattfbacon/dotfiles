@@ -50,6 +50,6 @@ export XKB_DEFAULT_LAYOUT="us"
 export XKB_DEFAULT_VARIANT="dvorak"
 export XKB_DEFAULT_OPTIONS="compose:rctrl,terminate:ctrl_alt_bksp"
 
-export SSH_ASKPASS=/usr/lib/ssh/ssh-askpass
-
 export ENV=~/.shinit
+
+export SSH_ASKPASS="/usr/lib/seahorse/ssh-askpass"
