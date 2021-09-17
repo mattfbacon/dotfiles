@@ -6,7 +6,7 @@ case $button in
 		;;
 esac
 cd $DIR
-if test "$(git status --porcelain | wc -l)" -gt 0; then
+if test "$(git status --porcelain | wc -l)" -gt 0 || test "$(git log "origin/$(git rev-parse --abbrev-ref HEAD)..." --oneline | wc -l)" -gt 0; then
 	if test -z $ALWAYS_SHORT; then
 		echo DIRTY
 	else
