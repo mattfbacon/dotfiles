@@ -371,6 +371,7 @@ default_floating_border normal
 exec discord-canary --force-device-scale-factor=2 --start-minimized
 exec evolution
 exec --no-startup-id android-messages-desktop
+exec opensnitch-ui
 
 for_window [class="lxqt-openssh-askpass"] floating enable
 bindsym $mod+y fullscreen disable; floating enable; resize set 640 360; sticky enable; move position 3150 1750
