@@ -344,7 +344,7 @@ bindsym --release Num_Lock  exec pkill -SIGRTMIN+11 i3blocks
 
 exec --no-startup-id sh -c "acpi_listen | xargs -L1 -i'{}' pkill -SIGRTMIN+3 i3blocks"
 
-exec --no-startup-id picom -r 0 -o 0 -i 1 --vsync --no-fading-openclose -I 1 -O 1 -D 0 -m 1
+exec --no-startup-id picom
 
 bindsym XF86Mail exec brave --profile-directory="Default"
 bindsym shift+XF86Mail exec brave --profile-directory="Profile 1"
