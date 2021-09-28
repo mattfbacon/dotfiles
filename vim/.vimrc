@@ -45,8 +45,8 @@ endif
 set backupdir=$HOME/.vimbackup//
 set directory=$HOME/.vimswap//
 
-" Maximum highlighting and indentation
-filetype plugin indent on
+" Maximum highlighting (not indentation because tabs)
+filetype plugin on
 syntax on
 
 " Various syntax matchers
