@@ -6,8 +6,6 @@
 	editor = nvim
 	sshCommand = ssh -i ~/.ssh/id_rsa -F /dev/null
 	excludesfile = /home/matt/.gitignore
-[credential]
-	helper = /usr/lib/git-core/git-credential-libsecret
 [pull]
 	rebase = false
 [bash]
@@ -30,3 +28,5 @@
 	clean = git-lfs clean -- %f
 [credential "https://github.com/mattf552814"]
 	username = mattf552814
+[credential]
+	helper = store
