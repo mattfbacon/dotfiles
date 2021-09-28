@@ -53,3 +53,5 @@ export XKB_DEFAULT_OPTIONS="compose:rctrl,terminate:ctrl_alt_bksp"
 export ENV=~/.shinit
 
 export SSH_ASKPASS="/usr/lib/seahorse/ssh-askpass"
+
+export TZ='America/Los_Angeles'
