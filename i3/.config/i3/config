@@ -47,7 +47,7 @@ exec --no-startup-id udiskie --tray
 exec --no-startup-id dunst
 
 # IBUS Daemon
-exec --no-startup-id ibus-daemon -drR
+exec --no-startup-id ibus-daemon -drxR
 # FCITX Daemon
 # exec --no-startup-id fcitx -d
 
