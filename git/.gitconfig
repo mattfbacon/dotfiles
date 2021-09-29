@@ -5,7 +5,7 @@
 [core]
 	editor = nvim
 	sshCommand = ssh -i ~/.ssh/id_rsa -F /dev/null
-	excludesfile = /home/matt/.gitignore
+	excludesfile = ~/.gitignore
 [pull]
 	rebase = false
 [bash]
