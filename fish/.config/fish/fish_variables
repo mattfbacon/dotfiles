@@ -1,15 +1,7 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
-SETUVAR --path COWPATH:\x1d
-SETUVAR EDITOR:nvim
-SETUVAR --export GDK_DPI_SCALE:0\x2e5
-SETUVAR --export GDK_SCALE:2
-SETUVAR LC_ALL:\x1d
-SETUVAR --export SSH_ASKPASS:/usr/lib/ssh/ssh\x2daskpass
 SETUVAR --export __fish_git_prompt_showupstream:verbose
 SETUVAR __fish_initialized:3100
-SETUVAR _fisher_jorgebucaran_2F_fisher_files:/home/matt/\x2econfig/fish/functions/fisher\x2efish\x1e/home/matt/\x2econfig/fish/completions/fisher\x2efish
-SETUVAR _fisher_plugins:jorgebucaran/fisher
 SETUVAR fish_color_autosuggestion:555\x1ebrblack
 SETUVAR fish_color_cancel:\x2dr
 SETUVAR fish_color_command:005fd7
