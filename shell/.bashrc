@@ -38,7 +38,6 @@ xterm*|rxvt*)
     ;;
 esac
 
-alias extmonconf="xrandr --output eDP1 --auto --output DP3 --auto --scale 2x2 --right-of eDP1"
 alias rm="rm -I --preserve-root"
 alias mv="mv -i"
 alias cp="cp -i"
