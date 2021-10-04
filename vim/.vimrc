@@ -45,9 +45,9 @@ endif
 set backupdir=$HOME/.vimbackup//
 set directory=$HOME/.vimswap//
 
-" Maximum highlighting (not indentation because tabs)
+" Maximum helping (not indentation because tabs)
 filetype plugin on
-syntax on
+syntax off
 
 " Various syntax matchers
 autocmd Filetype ts setlocal syntax=typescript commentstring=//\ %s
@@ -57,6 +57,7 @@ autocmd Filetype xdefaults setlocal commentstring=!\ %s
 
 " Highlight trailing whitespace
 autocmd Filetype * EnableWhitespace
+autocmd Filetype * syntax off
 
 " Insert text at the current cursor position
 function! InsertText(text)
