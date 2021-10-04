@@ -3,7 +3,7 @@ set nocompatible
 " NeoVim stuff
 let g:python3_host_prog = $HOME . '/.pyenv/versions/3.9.4/bin/python'
 let g:python_host_prog = $HOME . '/.pyenv/versions/2.7.18/bin/python'
-let g:node_host_pog = '/usr/local/bin/neovim-node-host'
+let g:node_host_prog = '/usr/local/bin/neovim-node-host'
 
 " True color
 if has('termguicolors')
