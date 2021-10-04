@@ -1,0 +1,226 @@
+{
+	"editor.fontFamily": "\"JetbrainsMono Nerd Font Mono\"",
+	"editor.fontLigatures": true,
+	"editor.tabSize": 2,
+	"workbench.iconTheme": "file-icons",
+	"less.lint.zeroUnits": "warning",
+	"editor.emptySelectionClipboard": false,
+	"eslint.format.enable": true,
+	"gitlens.advanced.messages": {
+		"suppressGitDisabledWarning": true
+	},
+	"update.mode": "start",
+	"javascript.suggest.autoImports": false,
+	"files.associations": {
+		"*.ejs": "plaintext",
+		".htmlhintrc": "json",
+		"*.h": "c",
+		"*.html": "html",
+		"*.qss": "css",
+		"*.make": "makefile",
+		"*.tpp": "cpp"
+	},
+	"git.autofetch": true,
+	"terminal.integrated.profiles.linux": {
+		"fish": {
+			"path": "/usr/bin/fish",
+			"icon": "star-full",
+			"env": {
+				"GIT_EDITOR": "code --wait",
+				"GIT_DIFFTOOL": "code --wait --diff $LOCAL $REMOTE",
+				"GIT_MERGETOOL": "code --wait $MERGED"
+			},
+			"overrideName": true
+		},
+	},
+	"terminal.integrated.defaultProfile.linux": "fish",
+	"terminal.integrated.env.linux": {
+		"GIT_EDITOR": "code --wait",
+		"GIT_DIFFTOOL": "code --wait --diff $LOCAL $REMOTE",
+		"GIT_MERGETOOL": "code --wait $MERGED"
+	},
+	"[javascript]": {
+		"editor.defaultFormatter": "dbaeumer.vscode-eslint"
+	},
+	"[xml]": {
+		"editor.wordWrap": "on",
+	},
+	"files.exclude": {
+		"**/.git": false,
+		"**/.classpath": true,
+		"**/.project": true,
+		"**/.settings": true,
+		"**/.factorypath": true
+	},
+	"editor.autoSurround": "never",
+	"editor.renderWhitespace": "boundary",
+	"workbench.editor.tabSizing": "shrink",
+	"editor.suggest.localityBonus": true,
+	"python.showStartPage": false,
+	"workbench.startupEditor": "newUntitledFile",
+	"python.linting.pylintEnabled": false,
+	"gitlens.advanced.abbreviatedShaLength": 8,
+	"gitlens.codeLens.enabled": false,
+	"python.terminal.activateEnvironment": false,
+	"editor.rulers": [
+		79,
+		160
+	],
+	"editor.fontSize": 13,
+	"terminal.integrated.fontSize": 13,
+	"terminal.integrated.lineHeight": 1.1,
+	"workbench.preferredDarkColorTheme": "MattTheme Dark",
+	"workbench.preferredLightColorTheme": "MattTheme Light",
+	"spellright.language": [
+		"en-US-9-0."
+	],
+	"spellright.documentTypes": [
+		"markdown",
+		"latex",
+		"plaintext",
+		"c"
+	],
+	"files.trimFinalNewlines": true,
+	"files.insertFinalNewline": true,
+	"html.format.endWithNewline": true,
+	"workbench.tree.renderIndentGuides": "always",
+	"workbench.tree.indent": 9.5,
+	"vim.foldfix": true,
+	"editor.lineNumbers": "relative",
+	"workbench.editorAssociations": {
+		"*.ts": "default",
+		"*.ipynb": "jupyter.notebook.ipynb"
+	},
+	"discord.largeImage": "Editing a {lang} file",
+	"discord.removeTimestamp": true,
+	"discord.detailsEditing": "Editing {file_name}: {current_line},{current_column}",
+	"editor.quickSuggestions": false,
+	"less.lint.duplicateProperties": "warning",
+	"less.lint.float": "warning",
+	"less.lint.important": "warning",
+	"less.lint.importStatement": "error",
+	"less.lint.unknownAtRules": "error",
+	"less.lint.unknownProperties": "error",
+	"eslint.packageManager": "yarn",
+	"eslint.validate": [
+		"typescript",
+		"javascript",
+	],
+	"typescript.format.enable": false,
+	"C_Cpp.updateChannel": "Insiders",
+	"terminal.external.linuxExec": "kitty",
+	"terminal.integrated.cursorBlinking": true,
+	"editor.fontWeight": 500,
+	"terminal.integrated.fontWeight": 500,
+	"terminal.integrated.fontWeightBold": 700,
+	"terminal.integrated.allowChords": false,
+	"terminal.integrated.drawBoldTextInBrightColors": false,
+	"terminal.integrated.experimentalLinkProvider": false,
+	"terminal.integrated.allowMnemonics": false,
+	"terminal.integrated.altClickMovesCursor": true,
+	"terminal.integrated.fastScrollSensitivity": 5,
+	"terminal.integrated.gpuAcceleration": "on",
+	"editor.cursorStyle": "line",
+	"editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
+	"editor.wordWrap": "on",
+	"terminal.integrated.automationShell.linux": "bash",
+	"workbench.colorTheme": "MattTheme Light",
+	"sundial.sunset": "21:00",
+	"sundial.sunrise": "06:30",
+	"[jsonc]": {
+		"editor.quickSuggestions": {
+			"strings": true
+		},
+		"editor.suggest.insertMode": "replace",
+		"gitlens.codeLens.scopes": [
+			"document"
+		]
+	},
+	"[cpp]": {
+		"editor.wordBasedSuggestions": false,
+		"editor.suggest.insertMode": "replace",
+		"editor.semanticHighlighting.enabled": true,
+		"editor.defaultFormatter": "xaver.clang-format"
+	},
+	"qtForPython.rcc.liveExecution": false,
+	"editor.wrappingIndent": "indent",
+	"workbench.productIconTheme": "fluent-icons",
+	"debug.showInlineBreakpointCandidates": false,
+	"editor.glyphMargin": false,
+	"python.languageServer": "Jedi",
+	"vscode-neovim.neovimExecutablePaths.linux": "/usr/bin/nvim",
+	"vscode-neovim.neovimInitVimPaths.linux": "~/.config/nvim/init.vim",
+	"editor.tokenColorCustomizations": {
+		"textMateRules": [
+			{
+				"scope": "heading.1.markdown entity.name.section.markdown, heading.1.markdown punctuation.definition.heading.markdown",
+				"settings": {
+					"foreground": "#e66767",
+				}
+			},
+			{
+				"scope": "heading.2.markdown entity.name.section.markdown, heading.2.markdown punctuation.definition.heading.markdown",
+				"settings": {
+					"foreground": "#f19066",
+				}
+			},
+			{
+				"scope": "heading.3.markdown entity.name.section.markdown, heading.3.markdown punctuation.definition.heading.markdown",
+				"settings": {
+					"foreground": "#f6b93b",
+				}
+			},
+			{
+				"scope": "heading.4.markdown entity.name.section.markdown, heading.4.markdown punctuation.definition.heading.markdown",
+				"settings": {
+					"foreground": "#78e08f",
+				}
+			},
+			{
+				"scope": "heading.5.markdown entity.name.section.markdown, heading.5.markdown punctuation.definition.heading.markdown",
+				"settings": {
+					"foreground": "#546de5",
+				}
+			},
+			{
+				"scope": "heading.6.markdown entity.name.section.markdown, heading.6.markdown punctuation.definition.heading.markdown",
+				"settings": {
+					"foreground": "#574b90",
+				}
+			}
+		]
+	},
+	"[less]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[css]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
+		"editor.suggest.insertMode": "replace",
+		"gitlens.codeLens.scopes": [
+			"document"
+		]
+	},
+	"[html]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"editor.insertSpaces": false,
+	"haskell.serverExecutablePath": "~/.ghcup/bin/haskell-language-server-8.10.7",
+	"[haskell]": {
+		"editor.defaultFormatter": "sjurmillidahl.ormolu-vscode"
+	},
+	"emmet.syntaxProfiles": {
+		"c++": {
+			"System Include": {
+				"prefix": "i<",
+				"body": "#include <$1>",
+				"description": "Include system header"
+			},
+			"Quote Include": {
+				"prefix": "i\"",
+				"body": "#include \"$1\"",
+				"description": "Include local header"
+			}
+		}
+	},
+	"window.zoomLevel": -1
+}

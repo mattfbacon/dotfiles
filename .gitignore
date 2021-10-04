@@ -1,3 +1,9 @@
 /vim/.vim/.netrwhist
 /vim/.vim/spell
 /scripts/.local/bin/show_time
+/vscode/.vscode-oss/extensions
+/vscode/.config/Code - OSS/*
+!/vscode/.config/Code - OSS/User
+/vscode/.config/Code - OSS/User/*
+!/vscode/.config/Code - OSS/User/keybindings.json
+!/vscode/.config/Code - OSS/User/settings.json
