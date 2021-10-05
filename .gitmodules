@@ -61,3 +61,8 @@
 [submodule "vim/.vim/pack/colors/opt/colors-off"]
 	path = vim/.vim/pack/colors/opt/colors-off
 	url = https://github.com/pbrisbin/vim-colors-off.git
+[submodule "vim/.vim/pack/colors/opt/boring"]
+	path = vim/.vim/pack/colors/opt/boring
+	url = https://github.com/t184256/vim-boring.git
+[submodule "https://github.com/mattfbacon/vim-boring.git"]
+	url = vim/.vim/pack/colors/opt/boring

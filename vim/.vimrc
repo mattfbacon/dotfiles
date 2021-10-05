@@ -10,6 +10,7 @@ if has('termguicolors')
 	set termguicolors
 endif
 
+function! OldTheme()
 " Load theme based on time and $TERM
 " in non-xterm terminals, use a really simple theme that uses 16-color
 " in xterm terminals, load a dark theme between 9 pm and 6 am, otherwise load a light theme
@@ -40,6 +41,11 @@ else
 		set undofile
 	endif
 endif
+endfunction
+
+set background=light
+packadd! boring
+colorscheme boring
 
 " Swap and Backup
 set backupdir=$HOME/.vimbackup//
@@ -47,7 +53,7 @@ set directory=$HOME/.vimswap//
 
 " Maximum helping (not indentation because tabs)
 filetype plugin on
-syntax off
+syntax on
 
 " Various syntax matchers
 autocmd Filetype ts setlocal syntax=typescript commentstring=//\ %s
@@ -57,7 +63,6 @@ autocmd Filetype xdefaults setlocal commentstring=!\ %s
 
 " Highlight trailing whitespace
 autocmd Filetype * EnableWhitespace
-autocmd Filetype * syntax off
 
 " Insert text at the current cursor position
 function! InsertText(text)
@@ -106,6 +111,7 @@ set tabstop=2
 set shiftwidth=2
 set noexpandtab
 set softtabstop=-1
+set cursorline
 
 set modeline
 set whichwrap+=<,>,[,]
