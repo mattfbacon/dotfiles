@@ -47,6 +47,10 @@ set background=light
 packadd! boring
 colorscheme boring
 
+lua << EOF
+require('feline').setup({ preset = 'noicon' })
+EOF
+
 " Swap and Backup
 set backupdir=$HOME/.vimbackup//
 set directory=$HOME/.vimswap//

@@ -66,3 +66,6 @@
 	url = https://github.com/t184256/vim-boring.git
 [submodule "https://github.com/mattfbacon/vim-boring.git"]
 	url = vim/.vim/pack/colors/opt/boring
+[submodule "vim/.vim/pack/plugins/start/feline"]
+	path = vim/.vim/pack/plugins/start/feline
+	url = https://github.com/famiu/feline.nvim.git
