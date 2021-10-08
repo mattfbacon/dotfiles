@@ -9,7 +9,7 @@
 	"gitlens.advanced.messages": {
 		"suppressGitDisabledWarning": true
 	},
-	"update.mode": "start",
+	"update.mode": "none",
 	"javascript.suggest.autoImports": false,
 	"files.associations": {
 		"*.ejs": "plaintext",
@@ -223,5 +223,10 @@
 		}
 	},
 	"window.zoomLevel": -1,
-	"editor.occurrencesHighlight": false
+	"editor.occurrencesHighlight": false,
+	"workbench.enableExperiments": false,
+	"workbench.settings.enableNaturalLanguageSearch": false,
+	"update.showReleaseNotes": false,
+	"json.schemaDownload.enable": false,
+	"settingsSync.keybindingsPerPlatform": false
 }
