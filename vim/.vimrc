@@ -52,8 +52,8 @@ require('feline').setup({ preset = 'noicon' })
 EOF
 
 " Swap and Backup
-set backupdir=$HOME/.vimbackup//
-set directory=$HOME/.vimswap//
+set backupdir=$HOME/.cache/vimbackup//
+set directory=$HOME/.cache/vimswap//
 
 " Maximum helping (not indentation because tabs)
 filetype plugin on
