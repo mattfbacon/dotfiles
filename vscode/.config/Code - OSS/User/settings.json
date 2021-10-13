@@ -228,5 +228,8 @@
 	"workbench.settings.enableNaturalLanguageSearch": false,
 	"update.showReleaseNotes": false,
 	"json.schemaDownload.enable": false,
-	"settingsSync.keybindingsPerPlatform": false
+	"settingsSync.keybindingsPerPlatform": false,
+	"cSpell.userWords": [
+		"Idxs"
+	]
 }
