@@ -122,8 +122,6 @@ set whichwrap+=<,>,[,]
 set spell spelllang=en_us
 
 set mouse=a
-noremap <MouseWheelUp> <C-Y><C-Y>
-noremap <MouseWheelDown> <C-E><C-E>
 
 " Insert current date and time
 nnoremap <silent> <Leader>t :call InsertText(strftime('%A, %e %B %Y'))<CR>
