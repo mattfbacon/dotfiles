@@ -52,17 +52,15 @@
 [submodule "vim/.vim/pack/syntax/start/gemini"]
 	path = vim/.vim/pack/syntax/start/gemini
 	url = https://github.com/pirmd/gemini.vim.git
-[submodule "vim/.vim/pack/plugins/start/textobj-quote"]
-	path = vim/.vim/pack/plugins/start/textobj-quote
-	url = https://github.com/preservim/vim-textobj-quote.git
 [submodule "vim/.vim/pack/plugins/start/textobj-user"]
 	path = vim/.vim/pack/plugins/start/textobj-user
 	url = https://github.com/kana/vim-textobj-user
-[submodule "vim/.vim/pack/colors/opt/boring"]
-	path = vim/.vim/pack/colors/opt/boring
-	url = https://github.com/t184256/vim-boring.git
-[submodule "https://github.com/mattfbacon/vim-boring.git"]
-	url = vim/.vim/pack/colors/opt/boring
 [submodule "vim/.vim/pack/plugins/start/feline"]
 	path = vim/.vim/pack/plugins/start/feline
 	url = https://github.com/famiu/feline.nvim.git
+[submodule "vim/.vim/pack/plugins/start/textobj-quote"]
+	path = vim/.vim/pack/plugins/start/textobj-quote
+	url = https://github.com/preservim/vim-textobj-quote.git
+[submodule "vim/.vim/pack/colors/opt/boring"]
+	path = vim/.vim/pack/colors/opt/boring
+	url = https://github.com/mattfbacon/vim-boring.git
