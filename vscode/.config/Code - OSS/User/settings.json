@@ -230,6 +230,8 @@
 	"json.schemaDownload.enable": false,
 	"settingsSync.keybindingsPerPlatform": false,
 	"cSpell.userWords": [
-		"Idxs"
+		"cmake",
+		"Idxs",
+		"vendoring"
 	]
 }
