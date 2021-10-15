@@ -24,8 +24,6 @@
 #   \e]PFf5eeeb"
 # fi
 
-shopt -q login_shell && ssh-add
-
 shopt -q login_shell || test "$fish_subprocess" == 1 || [[ $(realpath $(which $(ps -o command= $(ps -o ppid= $$) | tr ' ' '\n' | head --lines 1))) == "/usr/bin/fish" ]] || exec fish
 
 alias ls='ls --color=auto'
