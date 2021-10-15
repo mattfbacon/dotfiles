@@ -26,18 +26,18 @@
 			"path": "/usr/bin/fish",
 			"icon": "star-full",
 			"env": {
-				"GIT_EDITOR": "code --wait",
-				"GIT_DIFFTOOL": "code --wait --diff $LOCAL $REMOTE",
-				"GIT_MERGETOOL": "code --wait $MERGED"
+				"GIT_EDITOR": "vscodium --wait",
+				"GIT_DIFFTOOL": "vscodium --wait --diff $LOCAL $REMOTE",
+				"GIT_MERGETOOL": "vscodium --wait $MERGED"
 			},
 			"overrideName": true
 		},
 	},
 	"terminal.integrated.defaultProfile.linux": "fish",
 	"terminal.integrated.env.linux": {
-		"GIT_EDITOR": "code --wait",
-		"GIT_DIFFTOOL": "code --wait --diff $LOCAL $REMOTE",
-		"GIT_MERGETOOL": "code --wait $MERGED"
+		"GIT_EDITOR": "vscodium --wait",
+		"GIT_DIFFTOOL": "vscodium --wait --diff $LOCAL $REMOTE",
+		"GIT_MERGETOOL": "vscodium --wait $MERGED"
 	},
 	"[javascript]": {
 		"editor.defaultFormatter": "dbaeumer.vscode-eslint"
