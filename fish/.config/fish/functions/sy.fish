@@ -1,0 +1,1 @@
+alias sy=systemctl
