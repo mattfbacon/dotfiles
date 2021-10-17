@@ -232,6 +232,7 @@
 	"cSpell.userWords": [
 		"cmake",
 		"Idxs",
+		"msgpack",
 		"vendoring"
 	]
 }
