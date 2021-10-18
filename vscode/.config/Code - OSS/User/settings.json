@@ -231,8 +231,11 @@
 	"settingsSync.keybindingsPerPlatform": false,
 	"cSpell.userWords": [
 		"cmake",
+		"Fellenz",
+		"fuser",
 		"Idxs",
 		"msgpack",
+		"untagging",
 		"vendoring"
 	]
 }
