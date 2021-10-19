@@ -232,9 +232,11 @@
 	"cSpell.userWords": [
 		"cmake",
 		"Fellenz",
+		"filesystems",
 		"fuser",
 		"Idxs",
 		"msgpack",
+		"NTFS",
 		"untagging",
 		"vendoring"
 	]
