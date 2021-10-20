@@ -7,7 +7,9 @@ export SESSION="$DESKTOP_SESSION"
 export MDMSESSION="$DESKTOP_SESSION"
 export GDMSESSION="$DESKTOP_SESSION"
 
-source /etc/X11/xinit/xinitrc.d/50-systemd-user.sh
+for f in /etc/X11/xinit/xinitrc.d/*.sh; do
+	source "$f"
+done
 
 xrandr --dpi 192
 xrandr --dpi 192
