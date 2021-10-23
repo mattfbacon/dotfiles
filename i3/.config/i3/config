@@ -317,7 +317,7 @@ mode "app_launch" {
 	bindsym b exec brave --force-device-scale-factor=2 --profile-directory="Default", mode "default"
 	bindsym shift+b exec brave --force-device-scale-factor=2 --profile-directory="Default" --incognito, mode "default"
 	bindsym mod1+b exec brave --force-device-scale-factor=2 --profile-directory="Profile 3", mode "default"
-	bindsym s exec brave --force-device-scale-factor=2 --profile-directory="Profile 1", mode "default"
+	bindsym s exec google-chrome-stable, mode "default"
 	bindsym c exec vscodium, mode "default"
 	bindsym d exec discord-canary --force-device-scale-factor=2, mode "default"
 	bindsym m exec gnome-system-monitor, mode "default"
