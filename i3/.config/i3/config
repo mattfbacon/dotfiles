@@ -30,8 +30,6 @@ font pango:Fira Code 10
 # screen before suspend. Use loginctl lock-session to lock your screen.
 exec --no-startup-id xss-lock --transfer-sleep-lock -- /home/matt/.local/bin/i3lock.py -n
 
-exec --no-startup-id easyeffects --gapplication-service
-
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id nm-applet --indicator
