@@ -23,6 +23,8 @@ class Notify:
 
 notify = Notify()
 
+def set_dunst_pause(is_paused):
+    subprocess.run(['dunstctl', 'set-paused', 'true' if is_paused else 'false'])
 
 # returns (x, y) of cursor
 def cursor_pos():
@@ -109,9 +111,12 @@ def lock():
     if on_battery():
         suspend()
     else:
+        set_dunst_pause(True)
         while True:
             dpms_off()
-            if sleep_with_check(STAY_OFF_INTERVAL) == False: return
+            if sleep_with_check(STAY_OFF_INTERVAL) == False:
+                set_dunst_pause(False)
+                return
 
 
 if __name__ == "__main__":
