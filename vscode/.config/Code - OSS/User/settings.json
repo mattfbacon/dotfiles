@@ -203,6 +203,9 @@
 	"[html]": {
 		"editor.defaultFormatter": "esbenp.prettier-vscode"
 	},
+	"[c]": {
+		"editor.defaultFormatter": "xaver.clang-format"
+	},
 	"editor.insertSpaces": false,
 	"haskell.serverExecutablePath": "~/.ghcup/bin/haskell-language-server-8.10.7",
 	"[haskell]": {
