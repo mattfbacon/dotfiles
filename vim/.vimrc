@@ -31,6 +31,7 @@ else
 	packadd! disco
 	colorscheme disco
 endif
+endfunction
 
 " Backups and undo files
 if has("vms")
@@ -41,7 +42,6 @@ else
 		set undofile
 	endif
 endif
-endfunction
 
 set background=light
 packadd! boring
