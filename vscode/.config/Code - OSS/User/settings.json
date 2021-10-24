@@ -234,6 +234,7 @@
 	"settingsSync.keybindingsPerPlatform": false,
 	"cSpell.userWords": [
 		"cmake",
+		"constexpr",
 		"Fellenz",
 		"filesystems",
 		"fuser",
