@@ -1,2 +1,3 @@
 #!/bin/sh
-test -z "$1" && echo 'please provide size in mb' || sudo mount -t tmpfs -o size=$1m tmpfs /media/matt/ramdisk
+mkdir -p /media/${USER}/ramdisk
+test -z "$1" && echo 'please provide size in mb' || doas mount -t tmpfs -o size=$1m tmpfs /media/${USER}/ramdisk

@@ -1,2 +1,2 @@
 #!/bin/sh
-sudo umount /media/matt/ramdisk
+doas umount /media/${USER}/ramdisk
