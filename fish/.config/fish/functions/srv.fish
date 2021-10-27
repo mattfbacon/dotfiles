@@ -1,1 +1,1 @@
-alias srv='ssh support@192.168.1.84 -p 69'
+alias srv='ssh support@mynfs -p 69'
