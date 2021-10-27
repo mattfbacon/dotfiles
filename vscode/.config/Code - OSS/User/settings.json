@@ -236,5 +236,10 @@
 		"untagging",
 		"vendoring"
 	],
-	"editor.formatOnSave": true
+	"editor.formatOnSave": true,
+	"RPC.fileInfoText": "{language} file ({currentline})",
+	"RPC.placeholderText": "VSCodium",
+	"RPC.placeholderTextInsiders": "VSCodium Insiders",
+	"RPC.showProblems": false,
+	"RPC.showTime": false
 }
