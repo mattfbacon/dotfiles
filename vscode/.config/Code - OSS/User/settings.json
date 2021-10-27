@@ -235,5 +235,6 @@
 		"NTFS",
 		"untagging",
 		"vendoring"
-	]
+	],
+	"editor.formatOnSave": true
 }
