@@ -56,7 +56,6 @@
 	"editor.renderWhitespace": "boundary",
 	"workbench.editor.tabSizing": "shrink",
 	"editor.suggest.localityBonus": true,
-	"python.showStartPage": false,
 	"workbench.startupEditor": "newUntitledFile",
 	"python.linting.pylintEnabled": false,
 	"gitlens.advanced.abbreviatedShaLength": 8,
@@ -71,29 +70,16 @@
 	"terminal.integrated.lineHeight": 1.1,
 	"workbench.preferredDarkColorTheme": "MattTheme Dark",
 	"workbench.preferredLightColorTheme": "MattTheme Light",
-	"spellright.language": [
-		"en-US-9-0."
-	],
-	"spellright.documentTypes": [
-		"markdown",
-		"latex",
-		"plaintext",
-		"c"
-	],
 	"files.trimFinalNewlines": true,
 	"files.insertFinalNewline": true,
 	"html.format.endWithNewline": true,
 	"workbench.tree.renderIndentGuides": "always",
 	"workbench.tree.indent": 9.5,
-	"vim.foldfix": true,
 	"editor.lineNumbers": "relative",
 	"workbench.editorAssociations": {
 		"*.ts": "default",
 		"*.ipynb": "jupyter.notebook.ipynb"
 	},
-	"discord.largeImage": "Editing a {lang} file",
-	"discord.removeTimestamp": true,
-	"discord.detailsEditing": "Editing {file_name}: {current_line},{current_column}",
 	"editor.quickSuggestions": false,
 	"less.lint.duplicateProperties": "warning",
 	"less.lint.float": "warning",
