@@ -68,7 +68,9 @@ autocmd Filetype fish setlocal syntax=fish commentstring=#\ %s
 autocmd Filetype xdefaults setlocal commentstring=!\ %s
 
 " Highlight trailing whitespace
-autocmd Filetype * EnableWhitespace
+if !exists('g:vscode')
+	autocmd Filetype * EnableWhitespace
+endif
 
 " Insert text at the current cursor position
 function! InsertText(text)

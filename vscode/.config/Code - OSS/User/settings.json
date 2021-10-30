@@ -241,5 +241,9 @@
 	"RPC.placeholderText": "VSCodium",
 	"RPC.placeholderTextInsiders": "VSCodium Insiders",
 	"RPC.showProblems": false,
-	"RPC.showTime": false
+	"RPC.showTime": false,
+	"trailing-spaces.borderColor": "transparent",
+	"trailing-spaces.backgroundColor": "red",
+	"trailing-spaces.regexp": "[ \\t]+",
+	"trailing-spaces.liveMatching": false
 }
