@@ -14,7 +14,7 @@
 	"files.associations": {
 		"*.ejs": "plaintext",
 		".htmlhintrc": "json",
-		"*.h": "c",
+		"*.h": "cpp",
 		"*.html": "html",
 		"*.qss": "css",
 		"*.make": "makefile",
