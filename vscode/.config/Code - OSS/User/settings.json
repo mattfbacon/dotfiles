@@ -40,7 +40,7 @@
 		"GIT_MERGETOOL": "vscodium --wait $MERGED"
 	},
 	"[javascript]": {
-		"editor.defaultFormatter": "dbaeumer.vscode-eslint"
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
 	},
 	"[xml]": {
 		"editor.wordWrap": "on"
