@@ -1,4 +1,3 @@
-// Place your key bindings in this file to override the defaults
 [
   {
     "key": "ctrl+c",
@@ -10,78 +9,19 @@
     "command": "workbench.action.splitEditorRight"
   },
   {
-    "key": "ctrl+alt+]",
-    "command": "workbench.action.moveEditorToNextGroup"
-  },
-  {
     "key": "ctrl+alt+right",
-    "command": "-workbench.action.moveEditorToNextGroup"
-  },
-  {
-    "key": "ctrl+alt+[",
-    "command": "workbench.action.moveEditorToPreviousGroup"
+    "command": "-workbench.action.moveEditorToRightGroup"
   },
   {
     "key": "ctrl+alt+left",
-    "command": "-workbench.action.moveEditorToPreviousGroup"
+    "command": "-workbench.action.moveEditorToLeftGroup"
   },
   {
-    "key": "f9",
-    "command": "-editor.debug.action.toggleBreakpoint",
-    "when": "debuggersAvailable && editorTextFocus"
+    "key": "ctrl+alt+down",
+    "command": "-workbench.action.moveEditorToBelowGroup"
   },
   {
-    "key": "alt+delete",
-    "command": "editor.action.deleteLines",
-    "when": "textInputFocus && !editorReadonly"
-  },
-  {
-    "key": "ctrl+shift+k",
-    "command": "-editor.action.deleteLines",
-    "when": "textInputFocus && !editorReadonly"
-  },
-  {
-    "key": "ctrl+; c",
-    "command": "-jupyter.changeCellToCode",
-    "when": "editorTextFocus && jupyter.hascodecells && !notebookEditorFocused"
-  },
-  {
-    "key": "ctrl+; m",
-    "command": "-jupyter.changeCellToMarkdown",
-    "when": "editorTextFocus && jupyter.hascodecells && !notebookEditorFocused"
-  },
-  {
-    "key": "ctrl+; x",
-    "command": "-jupyter.deleteCells",
-    "when": "editorTextFocus && jupyter.hascodecells && !notebookEditorFocused"
-  },
-  {
-    "key": "ctrl+; a",
-    "command": "-jupyter.insertCellAbove",
-    "when": "editorTextFocus && jupyter.hascodecells && !notebookEditorFocused"
-  },
-  {
-    "key": "ctrl+; b",
-    "command": "-jupyter.insertCellBelow",
-    "when": "editorTextFocus && jupyter.hascodecells && !notebookEditorFocused"
-  },
-  {
-    "key": "ctrl+; s",
-    "command": "-jupyter.insertCellBelowPosition",
-    "when": "editorTextFocus && jupyter.hascodecells && !notebookEditorFocused"
-  },
-  {
-    "key": "ctrl+; d",
-    "command": "-jupyter.moveCellsDown",
-    "when": "editorTextFocus && jupyter.hascodecells && !notebookEditorFocused"
-  },
-  {
-    "key": "ctrl+; u",
-    "command": "-jupyter.moveCellsUp",
-    "when": "editorTextFocus && jupyter.hascodecells && !notebookEditorFocused"
-  },
-  {
-    "key": "ctrl+e",
-    "command": "-workbench.action.quickOpen"
+    "key": "ctrl+alt+up",
+    "command": "-workbench.action.moveEditorToAboveGroup"
   }
 ]
