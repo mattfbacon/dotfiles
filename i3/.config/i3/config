@@ -280,6 +280,8 @@ client.unfocused $inactive_opaque $inactive_opaque $foreground_dim
 client.focused_inactive $inactive_opaque $inactive_opaque $foreground_dim
 client.urgent $inactive_urgent_fg $inactive $urgent_fg
 
+bindsym $mod+m exec --no-startup-id emon auto
+
 # start dmenu (a program launcher)
 # bindsym $mod+d exec dmenu_run
 # There also is the (new) i3-dmenu-desktop which only displays applications
