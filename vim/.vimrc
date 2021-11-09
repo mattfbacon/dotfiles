@@ -1,5 +1,7 @@
 set nocompatible
 
+set viminfofile=~/.cache/viminfo
+
 " NeoVim stuff
 let g:python3_host_prog = $HOME . '/.pyenv/versions/3.9.4/bin/python'
 let g:python_host_prog = $HOME . '/.pyenv/versions/2.7.18/bin/python'
