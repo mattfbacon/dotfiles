@@ -10,18 +10,18 @@
   },
   {
     "key": "ctrl+alt+right",
-    "command": "-workbench.action.moveEditorToRightGroup"
+    "command": "workbench.action.moveEditorToRightGroup"
   },
   {
     "key": "ctrl+alt+left",
-    "command": "-workbench.action.moveEditorToLeftGroup"
+    "command": "workbench.action.moveEditorToLeftGroup"
   },
   {
     "key": "ctrl+alt+down",
-    "command": "-workbench.action.moveEditorToBelowGroup"
+    "command": "workbench.action.moveEditorToBelowGroup"
   },
   {
     "key": "ctrl+alt+up",
-    "command": "-workbench.action.moveEditorToAboveGroup"
+    "command": "workbench.action.moveEditorToAboveGroup"
   }
 ]
