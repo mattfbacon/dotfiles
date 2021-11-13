@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
-from os import system
+from os import system, waitpid
+import os
 import dbus
 import pathlib
+import contextlib
 from sys import exit
 import argparse
 from Xlib import display
@@ -98,7 +100,7 @@ def dim():
     return True
 
 def lock():
-    subprocess.run(['i3lock', '-e', '-f', '-c', bg_color()])
+    sp = subprocess.Popen(['i3lock', '-n', '-e', '-f', '-c', bg_color()])
     sleep(1)
     dpms_off()
 
@@ -111,13 +113,22 @@ def lock():
     if on_battery():
         suspend()
     else:
-        set_dunst_pause(True)
         while True:
             dpms_off()
             if sleep_with_check(STAY_OFF_INTERVAL) == False:
-                set_dunst_pause(False)
-                return
+                return sp
+    return sp
 
+@contextlib.contextmanager
+def close_notify_on_exit():
+    yield
+    notify.close()
+
+@contextlib.contextmanager
+def pause_dunst():
+    set_dunst_pause(True)
+    yield
+    set_dunst_pause(False)
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Lock i3 with indication, etc")
@@ -125,13 +136,7 @@ if __name__ == "__main__":
     parser.add_argument('-d', '--dim', action='store_true', dest='dim')
     args = parser.parse_args()
 
-    def func():
-        if args.dim:
-            if inhibited(): return
-            if dim() == False: return
-            notify.close()
-            subprocess.run(['loginctl', 'lock-session'])
-        else:
-            lock()
-    func()
-    notify.close()
+    with close_notify_on_exit(), pause_dunst():
+        if not args.dim or (not inhibited() and not (dim() == False)):
+            lock_pid = lock().pid
+            waitpid(lock_pid, os.WUNTRACED)
