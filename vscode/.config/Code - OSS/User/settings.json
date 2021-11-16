@@ -234,6 +234,7 @@
 		"mattfellenz",
 		"msgpack",
 		"NOLINT",
+		"NOLINTNEXTLINE",
 		"NTFS",
 		"subprojects",
 		"untagging",
