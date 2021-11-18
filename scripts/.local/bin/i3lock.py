@@ -128,7 +128,7 @@ def pause_dunst():
     yield
     set_dunst_pause(False)
 
-if __name__ == "__main__":
+def main():
     parser = argparse.ArgumentParser(description="Lock i3 with indication, etc")
     parser.add_argument('-n', '--no-dim', action='store_false', dest='dim')
     parser.add_argument('-d', '--dim', action='store_true', dest='dim')
@@ -137,6 +137,9 @@ if __name__ == "__main__":
     with close_notify_on_exit():
         if args.dim and (inhibited() or not dim()):
             return
-    with pause_dunst();
+    with pause_dunst():
         lock_pid = lock().pid
         waitpid(lock_pid, os.WUNTRACED)
+
+if __name__ == "__main__":
+    main()
