@@ -113,10 +113,8 @@ def lock():
     if on_battery():
         suspend()
     else:
-        while True:
+        while sleep_with_check(STAY_OFF_INTERVAL):
             dpms_off()
-            if sleep_with_check(STAY_OFF_INTERVAL) == False:
-                return sp
     return sp
 
 @contextlib.contextmanager
@@ -136,7 +134,9 @@ if __name__ == "__main__":
     parser.add_argument('-d', '--dim', action='store_true', dest='dim')
     args = parser.parse_args()
 
-    with close_notify_on_exit(), pause_dunst():
-        if not args.dim or (not inhibited() and not (dim() == False)):
-            lock_pid = lock().pid
-            waitpid(lock_pid, os.WUNTRACED)
+    with close_notify_on_exit():
+        if args.dim and (inhibited() or not dim()):
+            return
+    with pause_dunst();
+        lock_pid = lock().pid
+        waitpid(lock_pid, os.WUNTRACED)
