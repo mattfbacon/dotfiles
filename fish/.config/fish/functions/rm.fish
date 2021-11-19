@@ -1,1 +1,3 @@
-alias rm="rm -I --preserve-root"
+function rm --wraps=rip --description 'alias rm=rip'
+  rip $argv; 
+end
