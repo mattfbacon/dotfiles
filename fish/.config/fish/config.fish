@@ -8,6 +8,8 @@ status --is-interactive; or exit
 
 pyenv init --path | source
 
+set -a fish_complete_path /usr/local/share/fish/vendor_completions.d
+
 #if test -f ~/.ssh/agent.env
 #  . ~/.ssh/agent.env > /dev/null
 #  if ! kill -0 -- $SSH_AGENT_PID > /dev/null 2>/dev/null
