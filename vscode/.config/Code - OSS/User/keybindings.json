@@ -23,5 +23,9 @@
   {
     "key": "ctrl+alt+up",
     "command": "workbench.action.moveEditorToAboveGroup"
+  },
+  {
+    "key": "ctrl+shift+`",
+    "command": "workbench.action.toggleMaximizedPanel"
   }
 ]
