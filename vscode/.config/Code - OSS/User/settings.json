@@ -250,5 +250,6 @@
 	"trailing-spaces.borderColor": "transparent",
 	"trailing-spaces.backgroundColor": "red",
 	"trailing-spaces.regexp": "[ \\t]+",
-	"trailing-spaces.liveMatching": false
+	"trailing-spaces.liveMatching": false,
+	"C_Cpp.intelliSenseEngineFallback": "Enabled"
 }
