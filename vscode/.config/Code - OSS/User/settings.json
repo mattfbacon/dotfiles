@@ -177,7 +177,7 @@
 		]
 	},
 	"[less]": {
-		"editor.defaultFormatter": "esbenp.prettier-vscode"
+		"editor.defaultFormatter": "stylelint.vscode-stylelint"
 	},
 	"[css]": {
 		"editor.defaultFormatter": "esbenp.prettier-vscode",
