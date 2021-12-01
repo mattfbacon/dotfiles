@@ -251,5 +251,6 @@
 	"trailing-spaces.backgroundColor": "red",
 	"trailing-spaces.regexp": "[ \\t]+",
 	"trailing-spaces.liveMatching": false,
-	"C_Cpp.intelliSenseEngineFallback": "Enabled"
+	"C_Cpp.intelliSenseEngineFallback": "Enabled",
+	"ccls.codeLens.enabled": false
 }
