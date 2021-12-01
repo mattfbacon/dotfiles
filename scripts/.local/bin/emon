@@ -6,9 +6,9 @@ xmodmap -e "add mod3 = Scroll_Lock"
 
 if [ $1 = 'on' ] 2>/dev/null
 then
-	if xrandr --output DP-3 --mode 3840x2160 --refresh 59.94 --right-of eDP-1 --primary
+	if xrandr --output DP-1 --mode 3840x2160 --refresh 59.94 --right-of eDP-1 --primary
 	then
-		xrandr --output DP-1 --mode 1920x1080 --refresh 60 --right-of DP-3 --rotate left --scale 1.75x1.75
+		xrandr --output DP-3 --mode 1920x1080 --refresh 60 --right-of DP-1 --rotate left --scale 1.75x1.75
 	fi
 elif [ $1 = 'off' ] 2>/dev/null
 then
