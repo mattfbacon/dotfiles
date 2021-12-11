@@ -252,5 +252,6 @@
 	"trailing-spaces.regexp": "[ \\t]+",
 	"trailing-spaces.liveMatching": false,
 	"C_Cpp.intelliSenseEngineFallback": "Enabled",
-	"ccls.codeLens.enabled": false
+	"ccls.codeLens.enabled": false,
+	"ccls.cache.directory": "/home/matt/.cache/ccls/${workspaceFolder}"
 }
