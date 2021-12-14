@@ -1,2 +1,2 @@
 #!/bin/sh
-rofi -show drun
+dmenu_path | bemenu | xargs swaymsg exec --
