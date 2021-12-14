@@ -2,6 +2,8 @@
 # ~/.config/fish/config.fish
 #
 
+set -p PATH ~/.local/bin
+
 pyenv init - | source
 
 status --is-interactive; or exit
