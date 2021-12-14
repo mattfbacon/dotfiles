@@ -1,7 +1,7 @@
 [user]
 	name = Matt Fellenz
 	email = mattf53190@gmail.com
-	signingKey = 906DD2E6CADB44C774B7B92165AA03A4E6F03CD4
+	signingkey = D0061A7BB596E3B3
 [core]
 	editor = nvim
 	sshCommand = ssh -i ~/.ssh/id_rsa -F /dev/null
@@ -31,3 +31,5 @@
 	username = mattf552814
 [credential]
 	helper = store
+[gpg]
+	command = gpg
