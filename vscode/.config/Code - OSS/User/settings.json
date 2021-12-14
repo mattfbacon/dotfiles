@@ -1,5 +1,5 @@
 {
-	"editor.fontFamily": "\"JetbrainsMono Nerd Font Mono\"",
+	"editor.fontFamily": "monospace",
 	"editor.fontLigatures": true,
 	"editor.tabSize": 2,
 	"workbench.iconTheme": "file-icons",
@@ -211,7 +211,6 @@
 			}
 		}
 	},
-	"window.zoomLevel": -1,
 	"editor.occurrencesHighlight": false,
 	"workbench.enableExperiments": false,
 	"workbench.settings.enableNaturalLanguageSearch": false,
