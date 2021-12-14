@@ -183,8 +183,6 @@ bindsym $mod+plus scratchpad show
 # Screen lock on Win+,
 bindsym $mod+comma exec loginctl lock-session
 
-exec --no-startup-id setxkbmap -option compose:rctrl
-
 set $chromeflags --ozone-platform=wayland --enable-features=UseOzonePlatform,WebRTCPipeWireCapturer
 
 mode "app_launch" {
@@ -236,6 +234,7 @@ hide_edge_borders both
 input "*" {
 	xkb_layout us
 	xkb_variant dvorak
+	xkb_options compose:rctrl
 }
 
 input "type:touchpad" {
