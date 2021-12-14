@@ -2,7 +2,7 @@
 case $button in
 	1)
 		cd $DIR
-		i3-sensible-terminal -d $DIR
+		$TERMINAL -d $DIR
 		;;
 esac
 cd $DIR
