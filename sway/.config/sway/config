@@ -260,3 +260,5 @@ exec_always {
 	gsettings set $gnome_schema cursor-theme 'Breeze'
 	gsettings set $gnome_schema font-name 'sans-serif'
 }
+
+exec --no-startup-id gammastep
