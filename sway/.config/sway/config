@@ -146,7 +146,7 @@ mode "resize" {
 exec swayidle -w \
 				timeout 110 'swaylock -f -c 21577B' \
 				timeout 120 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
-				timeout 180 '[ "$(cat /sys/class/power_supply/ADP1/online)" -eq 0 ] && systemctl suspend || killall swaylock' \
+				timeout 180 '[ "$(cat /sys/class/power_supply/ADP1/online)" -eq 0 ] && systemctl suspend && swaymsg "output * dpms on"' \
 				before-sleep 'swaylock -f -c 21577B' \
 				lock 'sleep 1; killall -USR1 swayidle'
 
