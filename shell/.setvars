@@ -15,7 +15,7 @@ export CPU_FLAGS_X86='aes avx avx2 f16c fma3 mmx mmxext pclmul popcnt rdrand sse
 export CC="$(command -v gcc)"
 export CXX="$(command -v g++)"
 
-export CFLAGS='-march=skylake -O2 -pipe '
+export CFLAGS='-march=native -O2 -pipe '
 export CXXFLAGS="${CFLAGS}"
 export LESS='-RiF --mouse --wheel-lines=3'
 export LESS_TERMCAP_mb=$'\e[1;32m'
