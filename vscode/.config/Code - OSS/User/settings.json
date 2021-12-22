@@ -253,5 +253,6 @@
 	"trailing-spaces.liveMatching": false,
 	"C_Cpp.intelliSenseEngineFallback": "Enabled",
 	"ccls.codeLens.enabled": false,
-	"ccls.cache.directory": "/home/matt/.cache/ccls/${workspaceFolder}"
+	"ccls.cache.directory": "/home/matt/.cache/ccls/${workspaceFolder}",
+	"security.workspace.trust.untrustedFiles": "open"
 }
