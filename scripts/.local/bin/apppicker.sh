@@ -1,2 +1,2 @@
 #!/bin/sh
-dmenu_path | bemenu | xargs swaymsg exec --
+bemenu-run -H 24 | xargs swaymsg exec --
