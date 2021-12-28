@@ -19,7 +19,7 @@ exec --no-startup-id udiskie --tray
 exec --no-startup-id mako
 
 # IBUS Daemon
-exec --no-startup-id ibus-daemon -drxR
+exec --no-startup-id fcitx5 -d
 
 # MPD
 exec --no-startup-id mpd
