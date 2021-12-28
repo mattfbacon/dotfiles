@@ -56,5 +56,5 @@ export SSH_ASKPASS="/usr/lib/seahorse/ssh-askpass"
 
 export TZ="$(timedatectl show | grep -E '^Timezone' | cut -d'=' -f2)"
 
-export XDG_CURRENT_DESKTOP="sway"
+export XDG_CURRENT_DESKTOP="Unity" # electron apps...
 export MOZ_ENABLE_WAYLAND=1
