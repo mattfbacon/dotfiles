@@ -1,5 +1,7 @@
 set nocompatible
 
+let g:rust_recommended_style=0
+
 set viminfofile=~/.cache/viminfo
 
 " NeoVim stuff
