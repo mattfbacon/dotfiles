@@ -253,5 +253,13 @@
 	"C_Cpp.intelliSenseEngineFallback": "Enabled",
 	"window.zoomLevel": -1,
 	"ccls.codeLens.enabled": false,
-	"ccls.cache.directory": "/home/matt/.cache/ccls/${workspaceFolder}"
+	"ccls.cache.directory": "/home/matt/.cache/ccls/${workspaceFolder}",
+	"terminal.integrated.sendKeybindingsToShell": true,
+	"editor.inlayHints.enabled": false,
+	"python.formatting.provider": "yapf",
+	"editor.unicodeHighlight.includeComments": true,
+	"editor.unicodeHighlight.nonBasicASCII": true,
+	"security.workspace.trust.enabled": false,
+	"window.menuBarVisibility": "toggle",
+	"rust.clippy_preference": "on"
 }
