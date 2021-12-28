@@ -1,0 +1,6 @@
+include /etc/kanshi/config.d/*
+
+profile {
+	output eDP-1 enable
+	output HDMI-A-1 enable position 1920,0
+}
