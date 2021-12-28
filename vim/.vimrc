@@ -51,6 +51,8 @@ set background=light
 packadd! boring
 colorscheme boring
 
+packadd! gitgutter
+
 lua << EOF
 require('feline').setup({ preset = 'noicon' })
 EOF
