@@ -375,3 +375,10 @@ bindsym $mod+y fullscreen disable; floating enable; resize set 640 360; sticky e
 
 smart_borders on
 hide_edge_borders both
+
+bindsym $mod+F7 exec --no-startup-id playerctl play-pause
+bindsym $mod+F8 exec --no-startup-id playerctl next
+bindsym $mod+F6 exec --no-startup-id playerctl previous
+bindsym $mod+F11 exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +3% && $refresh_i3status
+bindsym $mod+F10 exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -3% && $refresh_i3status
+bindsym $mod+F9 exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
