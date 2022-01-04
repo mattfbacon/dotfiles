@@ -4,6 +4,8 @@ xmodmap -e 'keycode 105 = Multi_key'
 xmodmap -e 'remove control = Multi_key'
 xmodmap -e "add mod3 = Scroll_Lock"
 
+xrandr --output eDP-1 --mode 3840x2160
+
 if [ $1 = 'on' ] 2>/dev/null
 then
 	if xrandr --output DP-1 --mode 3840x2160 --refresh 59.94 --right-of eDP-1 --primary
