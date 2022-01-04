@@ -254,5 +254,6 @@
 	"C_Cpp.intelliSenseEngineFallback": "Enabled",
 	"ccls.codeLens.enabled": false,
 	"ccls.cache.directory": "/home/matt/.cache/ccls/${workspaceFolder}",
-	"security.workspace.trust.untrustedFiles": "open"
+	"security.workspace.trust.untrustedFiles": "open",
+	"security.workspace.trust.enabled": false
 }
