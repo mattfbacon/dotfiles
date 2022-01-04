@@ -30,4 +30,4 @@
 [credential "https://github.com/mattf552814"]
 	username = mattf552814
 [credential]
-	helper = store
+	helper = store --file ~/.git-credentials
