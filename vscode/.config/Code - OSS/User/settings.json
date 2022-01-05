@@ -222,6 +222,7 @@
 		"cmake",
 		"constexpr",
 		"elidable",
+		"endianness",
 		"Fellenz",
 		"filesystems",
 		"fuser",
@@ -238,6 +239,7 @@
 		"NTFS",
 		"repr",
 		"subprojects",
+		"Uninit",
 		"untagging",
 		"vendoring"
 	],
