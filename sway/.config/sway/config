@@ -192,7 +192,7 @@ mode "app_launch" {
 	bindsym mod1+b mode "default"; exec browse.sh college
 	bindsym s mode "default"; exec browse.sh school
 	bindsym c mode "default"; exec vscodium $chromeflags
-	bindsym d mode "default"; exec discord-canary $chromeflags
+	bindsym d mode "default"; exec discord-ptb $chromeflags
 	bindsym m mode "default"; exec gnome-system-monitor
 	bindsym f mode "default"; exec thunar
 	bindsym shift+f mode "default"; exec nemo
@@ -222,7 +222,7 @@ bindsym $mod+x [urgent=latest] focus
 default_border pixel
 default_floating_border normal
 
-exec discord-canary $chromeflags --start-minimized
+exec discord-ptb $chromeflags --start-minimized
 exec --no-startup-id android-messages-desktop $chromeflags
 exec opensnitch-ui
 
