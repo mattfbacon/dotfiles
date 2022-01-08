@@ -5,7 +5,9 @@ default_location() {
 }
 
 TYPE="$(echo -e 'screen\narea' | bemenu -p Type)"
+test $? -ne 0 && exit 1
 OUTPUT="$(echo -e 'file\nclipboard' | bemenu -p Output)"
+test $? -ne 0 && exit 1
 
 REGION=""
 test "$TYPE" = area && REGION="$(slurp)"
