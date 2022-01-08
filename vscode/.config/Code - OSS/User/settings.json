@@ -221,6 +221,7 @@
 		"cmake",
 		"constexpr",
 		"elidable",
+		"endianness",
 		"Fellenz",
 		"filesystems",
 		"fuser",
