@@ -18,3 +18,8 @@ text-color=#8ca6a6
 border-color=#8ca6a6
 [urgency=critical]
 background-color=#ff4000ff
+[app-name=brave-browser urgency=critical]
+# brave's "critical" is not actually critical.
+# in fact, it's low priority
+text-color=#8ca6a6
+border-color=#8ca6a6
