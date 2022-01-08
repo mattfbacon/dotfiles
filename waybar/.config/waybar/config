@@ -11,7 +11,8 @@
 		"pulseaudio",
 		"cpu",
 		"memory",
-		"sway/language",
+		"custom/uptime",
+		"custom/archpkgs",
 		"battery",
 		"clock",
 		"tray",
@@ -22,49 +23,14 @@
 		"all-outputs": false,
 		"format": "{name}",
 	},
-	"keyboard-state": {
-		"numlock": true,
-		"capslock": true,
-		"format": "{name} {icon}",
-		"format-icons": {
-			"locked": "",
-			"unlocked": ""
-		}
-	},
 	"sway/mode": {
 		"format": "<span style=\"italic\">{}</span>"
-	},
-	"mpd": {
-		"format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",
-		"format-disconnected": "Disconnected ",
-		"format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
-		"unknown-tag": "N/A",
-		"interval": 2,
-		"consume-icons": {
-			"on": " "
-		},
-		"random-icons": {
-			"off": "<span color=\"#f53c3c\"></span> ",
-			"on": " "
-		},
-		"repeat-icons": {
-			"on": " "
-		},
-		"single-icons": {
-			"on": "1 "
-		},
-		"state-icons": {
-			"paused": "",
-			"playing": ""
-		},
-		"tooltip-format": "MPD (connected)",
-		"tooltip-format-disconnected": "MPD (disconnected)"
 	},
 	"idle_inhibitor": {
 		"format": "{icon}",
 		"format-icons": {
-			"activated": "",
-			"deactivated": ""
+			"activated": "🧿",
+			"deactivated": "⚪"
 		}
 	},
 	"tray": {
@@ -77,11 +43,11 @@
 		"format-alt": "{:%Y-%m-%d}"
 	},
 	"cpu": {
-		"format": "{load} ",
+		"format": "{load} 🧠",
 		"tooltip": false
 	},
 	"memory": {
-		"format": "{}% "
+		"format": "{}% 🔖"
 	},
 	"temperature": {
 		// "thermal-zone": 2,
@@ -137,17 +103,18 @@
 		},
 		"on-click": "pavucontrol"
 	},
-	"custom/media": {
-		"format": "{icon} {}",
-		"return-type": "json",
-		"max-length": 40,
-		"format-icons": {
-			"spotify": "",
-			"default": "🎜"
-		},
-		"escape": true,
-		"exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
-		// "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
+	"custom/uptime": {
+		"format": " {} 🆙 ",
+		"exec": "uptime -p | cut -d' ' -f2- | sed 's/ \\([a-zA-Z]\\)[a-zA-Z]*\\(,\\|$\\)/\\1/g'",
+		"interval": 20,
+		"tooltip": false
+	},
+	"custom/archpkgs": {
+		"format": " {} 📦 ",
+		"exec": "checkupdates | wc -l",
+		"interval": 3600,
+		"tooltip": false,
+		"on-click": "$TERMINAL ~/.local/bin/update.sh"
 	}
 }
 
