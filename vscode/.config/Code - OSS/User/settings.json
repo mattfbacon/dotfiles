@@ -231,6 +231,7 @@
 		"gobj",
 		"gobject",
 		"gtkmm",
+		"Hasher",
 		"Idxs",
 		"mattfellenz",
 		"msgpack",
