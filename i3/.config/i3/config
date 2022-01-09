@@ -318,7 +318,7 @@ mode "app_launch" {
 	bindsym mod1+b exec brave --force-device-scale-factor=2 --profile-directory="Profile 3", mode "default"
 	bindsym s exec google-chrome-stable, mode "default"
 	bindsym c exec vscodium, mode "default"
-	bindsym d exec discord-canary --force-device-scale-factor=2, mode "default"
+	bindsym d exec discord-ptb --force-device-scale-factor=2, mode "default"
 	bindsym m exec gnome-system-monitor, mode "default"
 	bindsym f exec thunar, mode "default"
 	bindsym shift+f exec nemo, mode "default"
@@ -349,7 +349,7 @@ bindsym mod1+XF86Mail exec brave --profile-directory="Default" --incognito
 # tools = music note icon
 bindsym XF86Tools exec rhythmbox
 bindsym shift+XF86Tools exec pavucontrol
-bindsym XF86Calculator exec discord-canary --force-device-scale-factor=2
+bindsym XF86Calculator exec discord-ptb --force-device-scale-factor=2
 bindsym shift+XF86Calculator exec gnome-system-monitor
 bindsym mod1+XF86Calculator exec android-messages-desktop
 bindsym XF86Explorer exec termite -e fish
@@ -365,7 +365,7 @@ bindsym $mod+x [urgent=latest] focus
 default_border pixel
 default_floating_border normal
 
-exec discord-canary --force-device-scale-factor=2 --start-minimized
+exec discord-ptb --force-device-scale-factor=2 --start-minimized
 exec evolution
 exec --no-startup-id android-messages-desktop
 exec opensnitch-ui
