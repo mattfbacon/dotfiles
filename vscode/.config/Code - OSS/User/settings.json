@@ -258,5 +258,11 @@
 	"ccls.codeLens.enabled": false,
 	"ccls.cache.directory": "/home/matt/.cache/ccls/${workspaceFolder}",
 	"security.workspace.trust.untrustedFiles": "open",
-	"security.workspace.trust.enabled": false
+	"security.workspace.trust.enabled": false,
+	"[javascriptreact]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[json]": {
+		"editor.defaultFormatter": "vscode.json-language-features"
+	}
 }
