@@ -313,10 +313,10 @@ bindsym $mod+comma exec loginctl lock-session
 exec --no-startup-id setxkbmap -option compose:rctrl
 
 mode "app_launch" {
-	bindsym b exec brave --force-device-scale-factor=2 --profile-directory="Default", mode "default"
-	bindsym shift+b exec brave --force-device-scale-factor=2 --profile-directory="Default" --incognito, mode "default"
-	bindsym mod1+b exec brave --force-device-scale-factor=2 --profile-directory="Profile 3", mode "default"
-	bindsym s exec google-chrome-stable, mode "default"
+	bindsym b exec firefox --profile ~/.mozilla/firefox/wff1w50m.default --browser, mode "default"
+	bindsym shift+b exec firefox --profile ~/.mozilla/firefox/wff1w50m.default --private-window 'about:newtab', mode "default"
+	bindsym mod1+b exec firefox --profile ~/.cache/mozilla/firefox/wohsu3z7.College --browser,  mode "default"
+	bindsym s exec firefox --profile ~/.mozilla/firefox/imih07mv.School --browser, mode "default"
 	bindsym c exec vscodium, mode "default"
 	bindsym d exec discord-ptb --force-device-scale-factor=2, mode "default"
 	bindsym m exec gnome-system-monitor, mode "default"
