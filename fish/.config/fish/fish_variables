@@ -1,5 +1,6 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
+SETUVAR --export RUSTC_WRAPPER:sccache
 SETUVAR --export __fish_git_prompt_showupstream:verbose
 SETUVAR __fish_initialized:3100
 SETUVAR fish_color_autosuggestion:8e908c
