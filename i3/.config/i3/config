@@ -343,18 +343,6 @@ exec --no-startup-id sh -c "acpi_listen | xargs -L1 -i'{}' pkill -SIGRTMIN+3 i3b
 
 exec --no-startup-id picom
 
-bindsym XF86Mail exec brave --profile-directory="Default"
-bindsym shift+XF86Mail exec brave --profile-directory="Profile 1"
-bindsym mod1+XF86Mail exec brave --profile-directory="Default" --incognito
-# tools = music note icon
-bindsym XF86Tools exec rhythmbox
-bindsym shift+XF86Tools exec pavucontrol
-bindsym XF86Calculator exec discord-ptb --force-device-scale-factor=2
-bindsym shift+XF86Calculator exec gnome-system-monitor
-bindsym mod1+XF86Calculator exec android-messages-desktop
-bindsym XF86Explorer exec termite -e fish
-bindsym shift+XF86Explorer exec nemo
-
 bindsym Control+mod1+Delete exec gnome-system-monitor
 bindsym $mod+period exec rofimoji
 
