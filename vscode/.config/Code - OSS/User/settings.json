@@ -18,7 +18,8 @@
 		"*.html": "html",
 		"*.qss": "css",
 		"*.make": "makefile",
-		"*.tpp": "cpp"
+		"*.tpp": "cpp",
+		"TODO": "markdown"
 	},
 	"git.autofetch": true,
 	"terminal.integrated.profiles.linux": {
@@ -61,10 +62,7 @@
 	"gitlens.advanced.abbreviatedShaLength": 8,
 	"gitlens.codeLens.enabled": false,
 	"python.terminal.activateEnvironment": false,
-	"editor.rulers": [
-		79,
-		160
-	],
+	"editor.rulers": [79, 160],
 	"editor.fontSize": 13,
 	"terminal.integrated.fontSize": 13,
 	"terminal.integrated.lineHeight": 1.1,
@@ -88,10 +86,7 @@
 	"less.lint.unknownAtRules": "error",
 	"less.lint.unknownProperties": "error",
 	"eslint.packageManager": "yarn",
-	"eslint.validate": [
-		"typescript",
-		"javascript"
-	],
+	"eslint.validate": ["typescript", "javascript"],
 	"typescript.format.enable": false,
 	"C_Cpp.updateChannel": "Insiders",
 	"terminal.external.linuxExec": "kitty",
@@ -118,9 +113,7 @@
 			"strings": true
 		},
 		"editor.suggest.insertMode": "replace",
-		"gitlens.codeLens.scopes": [
-			"document"
-		]
+		"gitlens.codeLens.scopes": ["document"]
 	},
 	"[cpp]": {
 		"editor.wordBasedSuggestions": false,
@@ -177,14 +170,12 @@
 		]
 	},
 	"[less]": {
-		"editor.defaultFormatter": "stylelint.vscode-stylelint"
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
 	},
 	"[css]": {
 		"editor.defaultFormatter": "esbenp.prettier-vscode",
 		"editor.suggest.insertMode": "replace",
-		"gitlens.codeLens.scopes": [
-			"document"
-		]
+		"gitlens.codeLens.scopes": ["document"]
 	},
 	"[html]": {
 		"editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -211,7 +202,6 @@
 			}
 		}
 	},
-	"window.zoomLevel": -1,
 	"editor.occurrencesHighlight": false,
 	"workbench.enableExperiments": false,
 	"workbench.settings.enableNaturalLanguageSearch": false,
@@ -219,13 +209,28 @@
 	"json.schemaDownload.enable": false,
 	"settingsSync.keybindingsPerPlatform": false,
 	"cSpell.userWords": [
+		"Appender",
+		"bitvec",
+		"Bonemeal",
+		"Chestplate",
+		"chrono",
 		"cmake",
+		"Composter",
 		"constexpr",
+		"Cooldown",
+		"crypter",
+		"datetime",
+		"Eexist",
 		"elidable",
+		"Elytra",
 		"endianness",
+		"Enoent",
+		"Enospc",
 		"Fellenz",
+		"fieldless",
 		"filesystems",
 		"fuser",
+		"gamemode",
 		"GDKMM",
 		"gmmproc",
 		"gobj",
@@ -233,15 +238,31 @@
 		"gtkmm",
 		"Hasher",
 		"Idxs",
+		"jobserver",
 		"mattfellenz",
+		"memmap",
+		"Minecart",
+		"minecraft",
+		"Mmap",
+		"Mojang",
 		"msgpack",
+		"nacks",
 		"NOLINT",
 		"NOLINTNEXTLINE",
 		"NTFS",
+		"Overworld",
+		"pkcs",
 		"repr",
+		"respawn",
+		"rsplit",
+		"Shulker",
+		"Smithing",
+		"structs",
 		"subprojects",
 		"Uninit",
+		"Unprefixed",
 		"untagging",
+		"varint",
 		"vendoring"
 	],
 	"editor.formatOnSave": true,
@@ -264,5 +285,51 @@
 	},
 	"[json]": {
 		"editor.defaultFormatter": "vscode.json-language-features"
-	}
+	},
+	"cSpell.spellCheckOnlyWorkspaceFiles": true,
+	"[rust]": {
+		"editor.defaultFormatter": "statiolake.vscode-rustfmt"
+	},
+	"redhat.telemetry.enabled": true,
+	"cSpell.enableFiletypes": [
+		"asm-intel-x86-generic",
+		"clojure",
+		"cmake",
+		"dart",
+		"dockerfile",
+		"elm",
+		"fish",
+		"fsharp",
+		"gas",
+		"glsl",
+		"groovy",
+		"ini",
+		"jinja",
+		"jsx-tags",
+		"julia",
+		"juliamarkdown",
+		"lex",
+		"lisp",
+		"lua",
+		"markdown-math",
+		"ninja",
+		"nix",
+		"nunjucks",
+		"objective-c",
+		"objective-cpp",
+		"perl",
+		"perl6",
+		"pip-requirements",
+		"ruby",
+		"sass",
+		"shellscript",
+		"sql",
+		"svelte",
+		"toml",
+		"troff",
+		"xml",
+		"xsl",
+		"yacc"
+	],
+	"window.zoomLevel": -1
 }

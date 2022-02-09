@@ -27,5 +27,9 @@
   {
     "key": "ctrl+shift+`",
     "command": "workbench.action.toggleMaximizedPanel"
+  },
+  {
+    "key": "ctrl+n",
+    "command": "-workbench.action.files.newUntitledFile"
   }
 ]
