@@ -318,7 +318,7 @@ mode "app_launch" {
 	bindsym mod1+b exec firefox --profile ~/.cache/mozilla/firefox/wohsu3z7.College --browser,  mode "default"
 	bindsym s exec firefox --profile ~/.mozilla/firefox/imih07mv.School --browser, mode "default"
 	bindsym c exec vscodium, mode "default"
-	bindsym d exec discord-ptb --force-device-scale-factor=2, mode "default"
+	bindsym d exec discord-canary --force-device-scale-factor=2, mode "default"
 	bindsym m exec gnome-system-monitor, mode "default"
 	bindsym f exec thunar, mode "default"
 	bindsym shift+f exec nemo, mode "default"
@@ -353,7 +353,7 @@ bindsym $mod+x [urgent=latest] focus
 default_border pixel
 default_floating_border normal
 
-exec discord-ptb --force-device-scale-factor=2 --start-minimized
+exec discord-canary --force-device-scale-factor=2 --start-minimized
 exec evolution
 exec --no-startup-id android-messages-desktop
 exec opensnitch-ui
