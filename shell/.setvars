@@ -30,7 +30,7 @@ export GTK_IM_MODULE=ibus
 export XMODIFIERS=@im=ibus
 export QT_IM_MODULE=ibus
 export EDITOR=/usr/bin/nvim
-export BROWSER=/usr/bin/brave
+export BROWSER=/usr/bin/firefox
 export TERMINAL=/usr/bin/kitty
 #export PAGER=/usr/bin/bat
 #export MANPAGER=/usr/bin/bat
