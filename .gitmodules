@@ -64,3 +64,6 @@
 [submodule "vim/.vim/pack/colors/opt/boring"]
 	path = vim/.vim/pack/colors/opt/boring
 	url = https://github.com/mattfbacon/vim-boring.git
+[submodule "vim/.vim/pack/plugins/opt/copilot"]
+	path = vim/.vim/pack/plugins/opt/copilot
+	url = https://github.com/github/copilot.vim.git
