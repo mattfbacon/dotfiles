@@ -17,6 +17,9 @@ exec --no-startup-id mako
 
 # exec --no-startup-id fcitx5 -d
 
+# clipboard manager
+exec --no-startup-id wl-paste -t text --watch clipman store
+bindsym $mod+c exec --no-startup-id clipman pick -t bemenu
 
 # Use pactl to adjust volume in PulseAudio.
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +3%
