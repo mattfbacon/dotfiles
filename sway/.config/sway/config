@@ -12,24 +12,17 @@ font pango:Fira Code 8
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
 #font pango:DejaVu Sans Mono 8
 
-# udiskie for automount
-exec --no-startup-id udiskie --tray
-
 # dunst for notifications
 exec --no-startup-id mako
 
-# IBUS Daemon
-exec --no-startup-id fcitx5 -d
+# exec --no-startup-id fcitx5 -d
 
-# MPD
-exec --no-startup-id mpd
 
 # Use pactl to adjust volume in PulseAudio.
-set $refresh_i3status pkill -RTMIN+10 i3blocks
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +3% && $refresh_i3status
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -3% && $refresh_i3status
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
-bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +3%
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -3%
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle
+bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle
 
 # Automatically switch to headset mic when headphones are plugged in
 exec --no-startup-id /home/matt/.local/bin/automic.sh
@@ -199,7 +192,6 @@ mode "app_launch" {
 	bindsym r mode "default"; exec rhythmbox
 	bindsym v mode "default"; exec pavucontrol
 	bindsym x mode "default"; exec xkill
-	bindsym p mode "default"; exec android-messages-desktop $chromeflags
 	bindsym t mode "default"; exec torbrowser-launcher
 
 	# back to normal: Enter or Escape or $mod+o
@@ -222,8 +214,6 @@ bindsym $mod+x [urgent=latest] focus
 default_border pixel
 default_floating_border normal
 
-exec discord-ptb $chromeflags --start-minimized
-exec --no-startup-id android-messages-desktop $chromeflags
 exec opensnitch-ui
 
 for_window [class="lxqt-openssh-askpass"] floating enable
