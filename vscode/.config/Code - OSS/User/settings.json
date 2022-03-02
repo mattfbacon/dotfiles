@@ -18,6 +18,9 @@
 		"editor.suggest.insertMode": "replace",
 		"gitlens.codeLens.scopes": ["document"]
 	},
+	"[handlebars]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
 	"[haskell]": {
 		"editor.defaultFormatter": "sjurmillidahl.ormolu-vscode"
 	},
@@ -259,6 +262,7 @@
 	"gitlens.codeLens.enabled": false,
 	"gitlens.statusBar.enabled": false,
 	"haskell.serverExecutablePath": "~/.ghcup/bin/haskell-language-server-8.10.7",
+	"html.autoCreateQuotes": false,
 	"html.format.endWithNewline": true,
 	"javascript.suggest.autoImports": false,
 	"json.schemaDownload.enable": false,
