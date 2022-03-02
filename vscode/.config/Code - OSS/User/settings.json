@@ -16,9 +16,7 @@
 	"[css]": {
 		"editor.defaultFormatter": "esbenp.prettier-vscode",
 		"editor.suggest.insertMode": "replace",
-		"gitlens.codeLens.scopes": [
-			"document"
-		]
+		"gitlens.codeLens.scopes": ["document"]
 	},
 	"[haskell]": {
 		"editor.defaultFormatter": "sjurmillidahl.ormolu-vscode"
@@ -169,14 +167,12 @@
 	"editor.formatOnSave": true,
 	"editor.glyphMargin": false,
 	"editor.insertSpaces": false,
+	"editor.lineHeight": 1.5,
 	"editor.lineNumbers": "relative",
 	"editor.occurrencesHighlight": false,
 	"editor.quickSuggestions": false,
 	"editor.renderWhitespace": "boundary",
-	"editor.rulers": [
-		79,
-		160
-	],
+	"editor.rulers": [79, 160],
 	"editor.suggest.localityBonus": true,
 	"editor.tabSize": 2,
 	"editor.tokenColorCustomizations": {
