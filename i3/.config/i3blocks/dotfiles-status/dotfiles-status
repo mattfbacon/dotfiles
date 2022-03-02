@@ -2,7 +2,7 @@
 case $button in
 	1)
 		cd $DIR
-		i3-sensible-terminal -d $DIR
+		i3-sensible-terminal -d $DIR fish -C 'git status' -i
 		;;
 esac
 cd $DIR
