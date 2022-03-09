@@ -87,6 +87,7 @@
 	],
 	"cSpell.spellCheckOnlyWorkspaceFiles": true,
 	"cSpell.userWords": [
+		"actix",
 		"Appender",
 		"bitvec",
 		"Bonemeal",
