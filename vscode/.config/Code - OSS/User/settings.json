@@ -50,6 +50,7 @@
 		"chrono",
 		"cmake",
 		"constexpr",
+		"dotfiles",
 		"elidable",
 		"ellipsize",
 		"endianness",
@@ -71,6 +72,7 @@
 		"pango",
 		"pangocairo",
 		"repr",
+		"rsplit",
 		"subprojects",
 		"untagging",
 		"vendoring"
