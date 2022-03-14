@@ -35,7 +35,7 @@ export TERMINAL=/usr/bin/kitty
 #export MANPAGER=/usr/bin/bat
 export VISUAL=$EDITOR
 
-export BAT_THEME=gruvbox-white
+export BAT_THEME=gruvbox-light
 export BAT_STYLE=auto
 
 export DOCKER_HOST=unix://$XDG_RUNTIME_DIR/docker.sock
