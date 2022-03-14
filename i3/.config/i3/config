@@ -277,8 +277,6 @@ client.unfocused $inactive_opaque $inactive_opaque $foreground_dim
 client.focused_inactive $inactive_opaque $inactive_opaque $foreground_dim
 client.urgent $inactive_urgent_fg $inactive $urgent_fg
 
-bindsym $mod+m exec --no-startup-id emon auto
-
 # start dmenu (a program launcher)
 # bindsym $mod+d exec dmenu_run
 # There also is the (new) i3-dmenu-desktop which only displays applications
@@ -370,3 +368,5 @@ bindsym $mod+F6 exec --no-startup-id playerctl previous
 bindsym $mod+F11 exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +3% && $refresh_i3status
 bindsym $mod+F10 exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -3% && $refresh_i3status
 bindsym $mod+F9 exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
+
+exec --no-startup-id ~/.local/bin/emon
