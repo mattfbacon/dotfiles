@@ -31,7 +31,7 @@ markup=none
 
 # separator config
 align=center
-color=#ffffff
+color=#005661
 full_text=|
 separator=false
 separator_block_width=6
