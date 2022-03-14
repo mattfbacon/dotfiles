@@ -44,8 +44,11 @@ def bg_color():
     return '#' + data
 
 def on_battery():
-    with open('/sys/class/power_supply/AC/online', 'r') as f:
-        return f.readline().strip() == '0'
+    try:
+        with open('/sys/class/power_supply/AC/online', 'r') as f:
+            return f.readline().strip() == '0'
+    except Exception:
+        return False
 
 def dpms_off():
     subprocess.run(['xset', 'dpms', 'force', 'off'])

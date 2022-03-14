@@ -121,16 +121,6 @@ interval=3
 
 [separator]
 
-# Battery indicator
-#
-# The battery instance defaults to 0.
-[battery]
-#BAT_NUMBER=1
-label=
-interval=5
-
-[separator]
-
 # Weather
 [weather]
 interval=180
