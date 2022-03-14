@@ -301,7 +301,7 @@ bindsym XF86MonBrightnessDown exec light -U 2
 bindsym $mod+minus move scratchpad
 
 # Show the first scratchpad window
-bindsym $mod+plus scratchpad show
+bindsym $mod+shift+plus scratchpad show
 
 # XIdleHook
 exec --no-startup-id xidlehook --not-when-audio --timer 160 "~/.local/bin/i3lock.py -d" ":"
