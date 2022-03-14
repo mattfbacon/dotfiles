@@ -1,7 +1,7 @@
 Xft.dpi: 192
 ! Xft.dpi: 96
 Xcursor.theme: Breeze
-Xcursor.size: 256
+Xcursor.size: 48
 
 URxvt*xft:JetbrainsMono Nerd Font Mono:pixelsize=14
 
