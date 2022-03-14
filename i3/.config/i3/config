@@ -352,7 +352,6 @@ default_border pixel
 default_floating_border normal
 
 exec discord-canary --force-device-scale-factor=2 --start-minimized
-exec evolution
 exec --no-startup-id android-messages-desktop
 exec opensnitch-ui
 
