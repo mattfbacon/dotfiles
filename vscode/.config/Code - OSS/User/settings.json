@@ -1,9 +1,4 @@
 {
-	"RPC.fileInfoText": "{language} file ({currentline})",
-	"RPC.placeholderText": "VSCodium",
-	"RPC.placeholderTextInsiders": "VSCodium Insiders",
-	"RPC.showProblems": false,
-	"RPC.showTime": false,
 	"[c]": {
 		"editor.defaultFormatter": "xaver.clang-format"
 	},
@@ -16,7 +11,9 @@
 	"[css]": {
 		"editor.defaultFormatter": "esbenp.prettier-vscode",
 		"editor.suggest.insertMode": "replace",
-		"gitlens.codeLens.scopes": ["document"]
+		"gitlens.codeLens.scopes": [
+			"document"
+		]
 	},
 	"[handlebars]": {
 		"editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -34,6 +31,9 @@
 		"editor.defaultFormatter": "esbenp.prettier-vscode"
 	},
 	"[json]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[jsonc]": {
 		"editor.defaultFormatter": "esbenp.prettier-vscode"
 	},
 	"[less]": {
@@ -179,7 +179,10 @@
 	"editor.occurrencesHighlight": false,
 	"editor.quickSuggestions": false,
 	"editor.renderWhitespace": "boundary",
-	"editor.rulers": [79, 160],
+	"editor.rulers": [
+		79,
+		160
+	],
 	"editor.suggest.localityBonus": true,
 	"editor.tabSize": 2,
 	"editor.tokenColorCustomizations": {
@@ -280,7 +283,11 @@
 	"python.languageServer": "Jedi",
 	"python.linting.pylintEnabled": false,
 	"python.terminal.activateEnvironment": false,
-	"qtForPython.rcc.liveExecution": false,
+	"rpc.lowerDetailsEditing": "Editing {file_name}",
+	"rpc.detailsViewing": "In {workspace}",
+	"rpc.detailsEditing": "In {workspace}",
+	"rpc.lowerDetailsNoWorkspaceFound": "undefined",
+	"rpc.removeElapsedTime": true,
 	"rust.clippy_preference": "on",
 	"rust.rust-analyzer.path": "/usr/bin/rust-analyzer",
 	"rust.rust-analyzer.releaseTag": "stable",
@@ -303,7 +310,6 @@
 		"GIT_DIFFTOOL": "vscodium --wait --diff $LOCAL $REMOTE",
 		"GIT_MERGETOOL": "vscodium --wait $MERGED"
 	},
-	"terminal.integrated.experimentalLinkProvider": false,
 	"terminal.integrated.fastScrollSensitivity": 5,
 	"terminal.integrated.fontSize": 13,
 	"terminal.integrated.fontWeight": 480,
@@ -342,5 +348,5 @@
 	"workbench.settings.enableNaturalLanguageSearch": false,
 	"workbench.startupEditor": "newUntitledFile",
 	"workbench.tree.indent": 7,
-	"workbench.tree.renderIndentGuides": "always",
+	"workbench.tree.renderIndentGuides": "always"
 }
