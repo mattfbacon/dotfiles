@@ -29,7 +29,7 @@ URxvt*xft:JetbrainsMono Nerd Font Mono:pixelsize=14
 ! i3.Background.color: #025b54
 
 ! NEW:::
-i3.Background: Pictures/arch_nz.png
+i3.Background: Pictures/wallpaper.png
 i3.Background.color: #095874
 
 i3.Theme.primary: #8ca6a6
