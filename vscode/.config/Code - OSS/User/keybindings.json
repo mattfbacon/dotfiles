@@ -31,5 +31,66 @@
   {
     "key": "ctrl+n",
     "command": "-workbench.action.files.newUntitledFile"
+  },
+  {
+    "key": "ctrl+right",
+    "command": "-vscode-neovim.send",
+    "when": "neovim.recording || editorTextFocus && neovim.init && neovim.mode != 'insert'"
+  },
+  {
+    "key": "ctrl+right",
+    "command": "-cursorWordEndRight",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "ctrl+right",
+    "command": "workbench.action.focusRightGroup",
+    "when": "neovim.init && neovim.mode != 'insert'"
+  },
+  {
+    "key": "ctrl+k ctrl+right",
+    "command": "-workbench.action.focusRightGroup"
+  },
+  {
+    "key": "ctrl+left",
+    "command": "workbench.action.focusLeftGroup",
+    "when": "neovim.init && neovim.mode != 'insert'"
+  },
+  {
+    "key": "ctrl+k ctrl+left",
+    "command": "-workbench.action.focusLeftGroup"
+  },
+  {
+    "key": "ctrl+up",
+    "command": "workbench.action.focusAboveGroup",
+    "when": "neovim.init && neovim.mode != 'insert'"
+  },
+  {
+    "key": "ctrl+k ctrl+up",
+    "command": "-workbench.action.focusAboveGroup"
+  },
+  {
+    "key": "ctrl+down",
+    "command": "workbench.action.focusBelowGroup",
+    "when": "neovim.init && neovim.mode != 'insert'"
+  },
+  {
+    "key": "ctrl+k ctrl+down",
+    "command": "-workbench.action.focusBelowGroup"
+  },
+  {
+    "key": "ctrl+right",
+    "command": "cursorWordRight",
+    "when": "!neovim.init || neovim.mode == 'insert'"
+  },
+  {
+    "key": "ctrl+left",
+    "command": "cursorWordLeft",
+    "when": "!neovim.init || neovim.mode == 'insert'"
+  },
+  {
+    "key": "ctrl+left",
+    "command": "-cursorWordLeft",
+    "when": "textInputFocus"
   }
 ]
