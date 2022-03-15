@@ -320,8 +320,6 @@ bindsym --release Num_Lock  exec pkill -SIGRTMIN+11 i3blocks
 
 exec --no-startup-id sh -c "acpi_listen | xargs -L1 -i'{}' pkill -SIGRTMIN+3 i3blocks"
 
-exec --no-startup-id picom
-
 bindsym Control+mod1+Delete exec gnome-system-monitor
 bindsym $mod+period exec rofimoji
 
@@ -350,3 +348,4 @@ bindsym $mod+F10 exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -3% &
 bindsym $mod+F9 exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 
 exec --no-startup-id ~/.local/bin/emon
+exec --no-startup-id picom
