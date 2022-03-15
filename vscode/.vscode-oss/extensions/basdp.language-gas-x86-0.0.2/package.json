@@ -1,0 +1,50 @@
+{
+	"name": "language-gas-x86",
+	"displayName": "GNU Assembler Language Support",
+	"description": "GNU Assembler x86/x86_64 language support",
+	"version": "0.0.2",
+	"license": "MIT",
+	"publisher": "basdp",
+	"repository": {
+		"url": "https://github.com/basdp/vscode-language-gas-x86.git"
+	},
+	"engines": {
+		"vscode": "^1.0.0"
+	},
+	"categories": [
+		"Programming Languages"
+	],
+	"contributes": {
+		"languages": [
+			{
+				"id": "gas",
+				"aliases": [
+					"GAS/AT&T x86/x64",
+					"gas"
+				],
+				"extensions": [
+					".s",
+					".S",
+					".sx"
+				],
+				"configuration": "./language-configuration.json"
+			}
+		],
+		"grammars": [
+			{
+				"language": "gas",
+				"scopeName": "source.x86",
+				"path": "./syntaxes/gas.tmLanguage"
+			}
+		]
+	},
+	"icon": "logo.png",
+	"__metadata": {
+		"id": "75dcb385-9b1a-4065-a72b-aab05260382e",
+		"publisherId": "8c8e33bf-f368-4c9d-83f2-8e58f90a0fda",
+		"publisherDisplayName": "Bas du Pré",
+		"isPreReleaseVersion": false,
+		"preRelease": false,
+		"installedTimestamp": 1647359099303
+	}
+}

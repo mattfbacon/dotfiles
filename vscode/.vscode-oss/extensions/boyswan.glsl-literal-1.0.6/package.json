@@ -1,0 +1,56 @@
+{
+	"name": "glsl-literal",
+	"displayName": "glsl-literal",
+	"description": "Syntax highlighting for GLSL inside of JavaScript tagged template strings",
+	"version": "1.0.6",
+	"publisher": "boyswan",
+	"repository": {
+		"url": "https://github.com/boyswan/vscode-glsl-literal.git"
+	},
+	"bugs": {
+		"url": "https://github.com/boyswan/vscode-glsl-literal/issues"
+	},
+	"engines": {
+		"vscode": "^1.15.0"
+	},
+	"categories": [
+		"Programming Languages"
+	],
+	"keywords": [
+		"shader",
+		"glsl-literal",
+		"webgl",
+		"javascript",
+		"glsl",
+		"template"
+	],
+	"extensionDependencies": [
+		"slevesque.shader"
+	],
+	"contributes": {
+		"grammars": [
+			{
+				"injectTo": [
+					"source.js",
+					"source.js.jsx",
+					"source.jsx",
+					"source.ts",
+					"source.tsx"
+				],
+				"scopeName": "glsl-literal",
+				"path": "./syntaxes/glsl-literal.json",
+				"embeddedLanguages": {
+					"source.glsl": "glsl"
+				}
+			}
+		]
+	},
+	"__metadata": {
+		"id": "432f7778-4fca-4484-9693-f040155f5f71",
+		"publisherId": "bf178cba-d3bf-4815-850f-957bb3faa6e2",
+		"publisherDisplayName": "boyswan",
+		"isPreReleaseVersion": false,
+		"preRelease": false,
+		"installedTimestamp": 1647359101576
+	}
+}

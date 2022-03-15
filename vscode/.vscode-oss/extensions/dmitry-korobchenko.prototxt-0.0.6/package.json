@@ -1,0 +1,44 @@
+{
+	"name": "prototxt",
+	"displayName": "prototxt",
+	"description": "prototxt syntax highlighting, useful for Caffe users",
+	"icon": "images/icon.png",
+	"version": "0.0.6",
+	"publisher": "dmitry-korobchenko",
+	"engines": {
+		"vscode": "^1.0.0"
+	},
+	"categories": [
+		"Languages"
+	],
+	"contributes": {
+		"languages": [
+			{
+				"id": "prototxt",
+				"aliases": [
+					"prototxt",
+					"prototxt"
+				],
+				"extensions": [
+					".prototxt"
+				],
+				"configuration": "./language-configuration.json"
+			}
+		],
+		"grammars": [
+			{
+				"language": "prototxt",
+				"scopeName": "source.prototxt",
+				"path": "./syntaxes/prototxt.tmLanguage"
+			}
+		]
+	},
+	"__metadata": {
+		"id": "6a044663-ad82-4bb1-ac51-301c82e6f213",
+		"publisherId": "affdd71e-b7bd-41ed-9a57-44059ad991ad",
+		"publisherDisplayName": "Dmitry Korobchenko",
+		"isPreReleaseVersion": false,
+		"preRelease": false,
+		"installedTimestamp": 1647359099361
+	}
+}

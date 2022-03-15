@@ -1,0 +1,66 @@
+{
+	"name": "io",
+	"displayName": "io",
+	"description": "io language syntax highlighting tool.",
+	"scripts": {
+		"compile": "gulp compile-extension:io",
+		"watch": "gulp watch-extension:io"
+	},
+	"keywords": [
+		"languages",
+		"syntax highlighting",
+		"vscode",
+		"io",
+		"iolang"
+	],
+	"galleryBanner": {
+		"color": "#191919",
+		"theme": "dark"
+	},
+	"icon": "images/logo.png",
+	"version": "0.0.3",
+	"publisher": "kennethceyer",
+	"engines": {
+		"vscode": "^1.15.0"
+	},
+	"categories": [
+		"Languages",
+		"Snippets",
+		"Linters",
+		"Debuggers",
+		"Formatters"
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/KennethanCeyer/vscode-io-extension.git"
+	},
+	"contributes": {
+		"languages": [
+			{
+				"id": "io",
+				"aliases": [
+					"io"
+				],
+				"extensions": [
+					".io"
+				],
+				"configuration": "./language-configuration.json"
+			}
+		],
+		"grammars": [
+			{
+				"language": "io",
+				"scopeName": "source.io",
+				"path": "./syntaxes/io.tmLanguage.json"
+			}
+		]
+	},
+	"__metadata": {
+		"id": "6a118177-cd37-4daf-827c-7be58ebe7268",
+		"publisherId": "ef52eca5-c4ec-4bf1-9963-53a75a8b2a5b",
+		"publisherDisplayName": "kennethceyer",
+		"isPreReleaseVersion": false,
+		"preRelease": false,
+		"installedTimestamp": 1647359099413
+	}
+}

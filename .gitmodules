@@ -67,3 +67,6 @@
 [submodule "vim/.vim/pack/plugins/opt/copilot"]
 	path = vim/.vim/pack/plugins/opt/copilot
 	url = https://github.com/github/copilot.vim.git
+[submodule "vscode/.vscode-oss/extensions/mattf.matt-theme"]
+	path = vscode/.vscode-oss/extensions/mattf.matt-theme
+	url = https://github.com/mattfbacon/vscode-theme

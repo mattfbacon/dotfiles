@@ -1,0 +1,438 @@
+{
+	"name": "haskell",
+	"displayName": "Haskell",
+	"description": "Haskell language support powered by the Haskell Language Server",
+	"version": "1.8.0",
+	"license": "MIT",
+	"publisher": "haskell",
+	"engines": {
+		"vscode": "^1.52.0"
+	},
+	"keywords": [
+		"language",
+		"haskell",
+		"cabal",
+		"stack",
+		"lsp",
+		"multi-root ready"
+	],
+	"homepage": "https://github.com/haskell/vscode-haskell",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/haskell/vscode-haskell.git"
+	},
+	"bugs": {
+		"url": "https://github.com/haskell/vscode-haskell/issues"
+	},
+	"categories": [
+		"Programming Languages",
+		"Formatters",
+		"Linters",
+		"Other"
+	],
+	"icon": "images/hls-logo.png",
+	"galleryBanner": {
+		"color": "#22172A",
+		"theme": "dark"
+	},
+	"activationEvents": [
+		"onLanguage:haskell",
+		"onLanguage:literate haskell"
+	],
+	"main": "./dist/extension",
+	"contributes": {
+		"languages": [
+			{
+				"id": "haskell",
+				"aliases": [
+					"Haskell",
+					"haskell"
+				],
+				"extensions": [
+					".hs"
+				]
+			},
+			{
+				"id": "literate haskell",
+				"aliases": [
+					"Literate Haskell",
+					"literate Haskell"
+				],
+				"extensions": [
+					".lhs"
+				]
+			}
+		],
+		"configuration": {
+			"type": "object",
+			"title": "Haskell",
+			"properties": {
+				"haskell.formattingProvider": {
+					"scope": "resource",
+					"type": "string",
+					"enum": [
+						"brittany",
+						"floskell",
+						"fourmolu",
+						"ormolu",
+						"stylish-haskell",
+						"none"
+					],
+					"default": "ormolu",
+					"description": "The formatter to use when formatting a document or range. Ensure the plugin is enabled."
+				},
+				"haskell.openDocumentationInHackage": {
+					"scope": "resource",
+					"type": "boolean",
+					"default": true,
+					"description": "When opening 'Documentation' for external libraries, open in hackage by default. Set to false to instead open in vscode."
+				},
+				"haskell.openSourceInHackage": {
+					"scope": "resource",
+					"type": "boolean",
+					"default": true,
+					"description": "When opening 'Source' for external libraries, open in hackage by default. Set to false to instead open in vscode."
+				},
+				"haskell.trace.server": {
+					"scope": "resource",
+					"type": "string",
+					"enum": [
+						"off",
+						"messages"
+					],
+					"default": "off",
+					"description": "Traces the communication between VS Code and the language server."
+				},
+				"haskell.trace.client": {
+					"scope": "resource",
+					"type": "string",
+					"enum": [
+						"off",
+						"error",
+						"info",
+						"debug"
+					],
+					"default": "info",
+					"description": "Sets the log level in the client side."
+				},
+				"haskell.logFile": {
+					"scope": "resource",
+					"type": "string",
+					"default": "",
+					"description": "If set, redirects the logs to a file."
+				},
+				"haskell.releasesURL": {
+					"scope": "resource",
+					"type": "string",
+					"default": "",
+					"description": "An optional URL to override where to check for haskell-language-server releases"
+				},
+				"haskell.releasesDownloadStoragePath": {
+					"scope": "resource",
+					"type": "string",
+					"default": "",
+					"markdownDescription": "An optional path where downloaded binaries will be stored. Check the default value [here](https://github.com/haskell/vscode-haskell#downloaded-binaries)"
+				},
+				"haskell.serverExecutablePath": {
+					"scope": "resource",
+					"type": "string",
+					"default": "",
+					"markdownDescription": "Manually set a language server executable. Can be something on the $PATH or the full path to the executable itself. Works with `~,` `${HOME}` and `${workspaceFolder}`. **Deprecated scope**: This option will be set to `machine` scope in a future release, so it can be changed only globally, not per workspace."
+				},
+				"haskell.serverExtraArgs": {
+					"scope": "resource",
+					"type": "string",
+					"default": "",
+					"markdownDescription": "Pass additional arguments to the language server."
+				},
+				"haskell.serverEnvironment": {
+					"scope": "resource",
+					"type": "object",
+					"default": {},
+					"markdownDescription": "Define environment variables for the language server."
+				},
+				"haskell.updateBehavior": {
+					"scope": "machine",
+					"type": "string",
+					"enum": [
+						"keep-up-to-date",
+						"prompt",
+						"never-check"
+					],
+					"enumDescriptions": [
+						"Always download the latest available version when it is published",
+						"Prompt before upgrading to a newer version",
+						"Don't check for newer versions"
+					],
+					"default": "keep-up-to-date",
+					"markdownDescription": "Determine what to do when a new version of the language server is available."
+				},
+				"haskell.checkProject": {
+					"scope": "resource",
+					"type": "boolean",
+					"default": true,
+					"description": "Whether to typecheck the entire project on load. It could drive to bad perfomance in large projects."
+				},
+				"haskell.maxCompletions": {
+					"scope": "resource",
+					"default": 40,
+					"type": "integer",
+					"description": "Maximum number of completions sent to the editor."
+				},
+				"haskell.plugin.importLens.codeActionsOn": {
+					"scope": "resource",
+					"type": "boolean",
+					"default": true,
+					"description": "Enables explicit imports code actions"
+				},
+				"haskell.plugin.importLens.codeLensOn": {
+					"scope": "resource",
+					"type": "boolean",
+					"default": true,
+					"description": "Enables explicit imports code lenses"
+				},
+				"haskell.plugin.hlint.codeActionsOn": {
+					"scope": "resource",
+					"type": "boolean",
+					"default": true,
+					"description": "Enables hlint code actions (apply hints)"
+				},
+				"haskell.plugin.hlint.diagnosticsOn": {
+					"scope": "resource",
+					"type": "boolean",
+					"default": true,
+					"description": "Enables hlint diagnostics"
+				},
+				"haskell.plugin.hlint.config.flags": {
+					"markdownDescription": "Flags used by hlint",
+					"scope": "resource",
+					"default": [],
+					"type": "array"
+				},
+				"haskell.plugin.eval.globalOn": {
+					"scope": "resource",
+					"type": "boolean",
+					"default": true,
+					"description": "Enables eval plugin"
+				},
+				"haskell.plugin.moduleName.globalOn": {
+					"scope": "resource",
+					"type": "boolean",
+					"default": true,
+					"description": "Enables module name plugin"
+				},
+				"haskell.plugin.splice.globalOn": {
+					"scope": "resource",
+					"type": "boolean",
+					"default": true,
+					"description": "Enables splice plugin (expand template haskell definitions)"
+				},
+				"haskell.plugin.haddockComments.globalOn": {
+					"scope": "resource",
+					"type": "boolean",
+					"default": true,
+					"description": "Enables haddock comments plugin"
+				},
+				"haskell.plugin.class.globalOn": {
+					"scope": "resource",
+					"type": "boolean",
+					"default": true,
+					"description": "Enables type class plugin"
+				},
+				"haskell.plugin.retrie.globalOn": {
+					"scope": "resource",
+					"type": "boolean",
+					"default": true,
+					"description": "Enables retrie plugin"
+				},
+				"haskell.plugin.tactics.globalOn": {
+					"scope": "resource",
+					"type": "boolean",
+					"default": true,
+					"description": "Enables Wingman (tactics) plugin"
+				},
+				"haskell.plugin.tactics.config.auto_gas": {
+					"markdownDescription": "The depth of the search tree when performing \"Attempt to fill hole\". Bigger values will be able to derive more solutions, but will take exponentially more time.",
+					"scope": "resource",
+					"default": 4,
+					"type": "integer"
+				},
+				"haskell.plugin.tactics.config.hole_severity": {
+					"enumDescriptions": [
+						"error",
+						"warning",
+						"info",
+						"hint",
+						"none"
+					],
+					"scope": "resource",
+					"description": "The severity to use when showing hole diagnostics.",
+					"enum": [
+						1,
+						2,
+						3,
+						4,
+						null
+					],
+					"default": null,
+					"type": "integer"
+				},
+				"haskell.plugin.tactics.config.max_use_ctor_actions": {
+					"title": "Max number of constructors",
+					"scope": "resource",
+					"type": "integer",
+					"default": 5,
+					"markdownDescription": "Maximum number of `Use constructor <x>` code actions that can appear"
+				},
+				"haskell.plugin.tactics.config.timeout_duration": {
+					"markdownDescription": "The timeout for Wingman actions, in seconds",
+					"scope": "resource",
+					"default": 2,
+					"type": "integer"
+				},
+				"haskell.plugin.tactics.config.proofstate_styling": {
+					"markdownDescription": "Should Wingman emit styling markup when showing metaprogram proof states?",
+					"scope": "resource",
+					"default": true,
+					"type": "boolean"
+				},
+				"haskell.plugin.pragmas.codeActionsOn": {
+					"scope": "resource",
+					"type": "boolean",
+					"default": true,
+					"description": "Enables pragmas code actions"
+				},
+				"haskell.plugin.pragmas.completionOn": {
+					"scope": "resource",
+					"type": "boolean",
+					"default": true,
+					"description": "Enables pragmas completions"
+				},
+				"haskell.plugin.ghcide-completions.config.autoExtendOn": {
+					"markdownDescription": "Extends the import list automatically when completing a out-of-scope identifier",
+					"scope": "resource",
+					"default": true,
+					"type": "boolean"
+				},
+				"haskell.plugin.ghcide-completions.config.snippetsOn": {
+					"markdownDescription": "Inserts snippets when using code completions",
+					"scope": "resource",
+					"default": true,
+					"type": "boolean"
+				},
+				"haskell.plugin.ghcide-type-lenses.globalOn": {
+					"scope": "resource",
+					"type": "boolean",
+					"default": true,
+					"description": "Enables type lenses plugin"
+				},
+				"haskell.plugin.ghcide-type-lenses.config.mode": {
+					"scope": "resource",
+					"type": "string",
+					"default": true,
+					"description": "Control how type lenses are shown",
+					"enum": [
+						"always",
+						"exported",
+						"diagnostics"
+					],
+					"enumDescriptions": [
+						"Always displays type lenses of global bindings",
+						"Only display type lenses of exported global bindings",
+						"Follows error messages produced by GHC about missing signatures"
+					]
+				},
+				"haskell.plugin.refineImports.globalOn": {
+					"scope": "resource",
+					"type": "boolean",
+					"default": true,
+					"description": "Enables refine imports plugin"
+				}
+			}
+		},
+		"commands": [
+			{
+				"command": "haskell.commands.importIdentifier",
+				"title": "Haskell: Import identifier",
+				"description": "Imports a function or type based on a Hoogle search"
+			},
+			{
+				"command": "haskell.commands.restartServer",
+				"title": "Haskell: Restart Haskell LSP server",
+				"description": "Restart the Haskell LSP server"
+			},
+			{
+				"command": "haskell.commands.startServer",
+				"title": "Haskell: Start Haskell LSP server",
+				"description": "Start the Haskell LSP server"
+			},
+			{
+				"command": "haskell.commands.stopServer",
+				"title": "Haskell: Stop Haskell LSP server",
+				"description": "Stop the Haskell LSP server"
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "webpack --mode production",
+		"webpack": "webpack --mode none",
+		"watch": "webpack --mode development --watch",
+		"tslint": "tslint -p tsconfig.json -c tslint.json --format stylish 'src/**/*.ts'",
+		"tslint-fix": "tslint --fix -p tsconfig.json  -c tslint.json --format stylish 'src/**/*.ts'",
+		"push-tag": "git tag -a $npm_package_version -m \"Version $npm_package_version\" && git push origin $npm_package_version",
+		"pretest": "tsc -p ./",
+		"test": "node ./out/test/runTest.js"
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "pretty-quick --staged"
+		}
+	},
+	"devDependencies": {
+		"@types/cheerio": "^0.22.30",
+		"@types/glob": "^7.1.4",
+		"@types/js-yaml": "^3.12.3",
+		"@types/lodash-es": "^4.17.3",
+		"@types/lru-cache": "^4.1.2",
+		"@types/mocha": "^9.0.0",
+		"@types/node": "^14.0.3",
+		"@types/request-promise-native": "^1.0.17",
+		"@types/vscode": "^1.52.0",
+		"@types/yauzl": "^2.9.1",
+		"@vscode/test-electron": "^1.6.2",
+		"glob": "^7.1.4",
+		"husky": "^7.0.2",
+		"mocha": "^9.1.2",
+		"prettier": "^2.0.5",
+		"pretty-quick": "^2.0.1",
+		"set-value": ">=4.0.1",
+		"ts-loader": "^6.2.2",
+		"tslint": "^5.20.1",
+		"tslint-loader": "^3.5.4",
+		"typescript": "^4.4.0",
+		"webpack": "^5.53.0",
+		"webpack-cli": "^4.8.0"
+	},
+	"extensionDependencies": [
+		"justusadam.language-haskell"
+	],
+	"dependencies": {
+		"cheerio": "^1.0.0-rc.10",
+		"extend": ">=3.0.2",
+		"js-yaml": "^3.13.1",
+		"lodash-es": "^4.17.15",
+		"lru-cache": "^4.1.5",
+		"request": "^2.88.2",
+		"request-promise-native": "^1.0.8",
+		"vscode-languageclient": "^7.0.0",
+		"yauzl": "^2.10.0"
+	},
+	"__metadata": {
+		"id": "aead9e6c-3483-4ce4-a09f-843e25ce696f",
+		"publisherId": "15dd703a-8dc9-4836-8bca-956652720b1c",
+		"publisherDisplayName": "Haskell",
+		"isPreReleaseVersion": false,
+		"preRelease": false,
+		"installedTimestamp": 1647359166977
+	}
+}

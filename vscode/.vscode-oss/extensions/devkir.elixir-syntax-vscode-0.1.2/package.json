@@ -1,0 +1,58 @@
+{
+	"name": "elixir-syntax-vscode",
+	"displayName": "Elixir Syntax",
+	"description": "Syntax highlighting support for the Elixir programming language.",
+	"version": "0.1.2",
+	"homepage": "https://github.com/devkir/elixir-syntax-vscode",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/devkir/elixir-syntax-vscode"
+	},
+	"publisher": "devkir",
+	"icon": "icon.png",
+	"galleryBanner": {
+		"color": "#ffffff",
+		"theme": "light"
+	},
+	"license": "SEE LICENSE IN LICENSE",
+	"engines": {
+		"vscode": "^1.40.0"
+	},
+	"keywords": [
+		"elixir"
+	],
+	"categories": [
+		"Programming Languages"
+	],
+	"contributes": {
+		"languages": [
+			{
+				"id": "elixir",
+				"aliases": [
+					"Elixir",
+					"elixir"
+				],
+				"extensions": [
+					".ex",
+					".exs"
+				],
+				"configuration": "./language-configuration.json"
+			}
+		],
+		"grammars": [
+			{
+				"language": "elixir",
+				"scopeName": "source.elixir",
+				"path": "./syntaxes/elixir.tmLanguage"
+			}
+		]
+	},
+	"__metadata": {
+		"id": "5214997b-2413-4ee4-88ac-d4c6ea1a6d57",
+		"publisherId": "0c53fc59-bb45-4880-ae6e-717b74bf3cee",
+		"publisherDisplayName": "devkir",
+		"isPreReleaseVersion": false,
+		"preRelease": false,
+		"installedTimestamp": 1647359099407
+	}
+}

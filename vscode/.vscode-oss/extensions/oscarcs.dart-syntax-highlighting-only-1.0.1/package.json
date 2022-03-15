@@ -1,0 +1,49 @@
+{
+	"name": "dart-syntax-highlighting-only",
+	"displayName": "Dart (Syntax Highlighting Only)",
+	"description": "Syntax highlighting for Dart and nothing else.",
+	"version": "1.0.1",
+	"publisher": "oscarcs",
+	"engines": {
+		"vscode": "^1.25.0"
+	},
+	"categories": [
+		"Programming Languages"
+	],
+	"icon": "logo.png",
+	"license": "see LICENSE.md",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/oscarcs/dart-syntax-highlighting-only"
+	},
+	"contributes": {
+		"languages": [
+			{
+				"id": "dart",
+				"aliases": [
+					"Dart",
+					"dart"
+				],
+				"extensions": [
+					".dart"
+				],
+				"configuration": "./syntaxes/dart-language-configuration.json"
+			}
+		],
+		"grammars": [
+			{
+				"language": "dart",
+				"scopeName": "source.dart",
+				"path": "./syntaxes/dart.json"
+			}
+		]
+	},
+	"__metadata": {
+		"id": "0f11c378-1d3f-4146-a572-85874384ee99",
+		"publisherId": "6e8a1923-9b5b-431d-b14b-54088e0858d6",
+		"publisherDisplayName": "oscarcs",
+		"isPreReleaseVersion": false,
+		"preRelease": false,
+		"installedTimestamp": 1647359099264
+	}
+}
