@@ -253,9 +253,9 @@ bar {
 # window border colors
 # format: border title-background title-foreground
 client.focused $foreground_primary $foreground_primary $background_primary
-client.unfocused $background_primary $background_primary $foreground_primary
+client.unfocused $background_tertiary $background_tertiary $foreground_primary
 # same as unfocused afaict
-client.focused_inactive $background_primary $background_primary $foreground_primary
+client.focused_inactive $background_tertiary $background_tertiary $foreground_primary
 client.urgent $urgent $urgent $foreground_primary
 
 # start dmenu (a program launcher)
