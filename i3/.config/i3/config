@@ -219,63 +219,44 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-# Color customization starts here
-# set $primary "#025b54"
-# set $primary_semi "#025b54bb"
-# set $primary_light "#478f6a"
-# set $foreground "#ffffff"
-# set $foreground_dim "#ffffff99"
-# set $inactive "#00000000"
-# set $inactive_opaque "#002934"
-# set $inactive_foreground "#ffffff77"
-# set $inactive_border "#ffffff20"
-# set $inactive_urgent_fg "#ff888899"
-# set $urgent_fg "#ff8888"
-set_from_resource $primary i3.Theme.primary "#025b54"
-set_from_resource $primary_semi i3.Theme.primary_semi "#025b54bb"
-set_from_resource $primary_light i3.Theme.primary_light "#478f6a"
-set_from_resource $foreground i3.Theme.foreground "#ffffff"
-set_from_resource $foreground_dim i3.Theme.foreground_dim "#ffffff99"
-set_from_resource $inactive i3.Theme.inactive "#00000000"
-set_from_resource $inactive_opaque i3.Theme.inactive_opaque "#002934"
-set_from_resource $inactive_foreground i3.Theme.inactive_foreground "#ffffff77"
-set_from_resource $inactive_border i3.Theme.inactive_border "#ffffff20"
-set_from_resource $inactive_urgent_fg i3.Theme.inactive_urgent_fg "#ff888899"
-set_from_resource $urgent_fg i3.Theme.urgent_fg "#ff8888"
+set $background_primary #fef8ec
+set $background_secondary #f7f2e3
+set $background_tertiary #f0e9d6
+set $foreground_primary #005661
+set $urgent #e64100
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
 	status_command i3blocks
-	i3bar_command i3bar -t
+	i3bar_command i3bar
 	position top
 	bindsym button4 nop
 	bindsym button5 nop
 	tray_output primary
 	strip_workspace_numbers yes
 	colors {
-		background $inactive
+		background #fef8ec
 		# format: border background foreground
 		# current workspace
-		focused_workspace $primary $primary_semi $foreground
+		focused_workspace $background_tertiary $background_tertiary $foreground_primary
 		# current workspace but on inactive monitor
-		active_workspace $primary $primary_semi $foreground
+		active_workspace $background_secondary $background_secondary $foreground_primary
 		# other workspaces
-		inactive_workspace $inactive_border $inactive $inactive_foreground
-		# self-explanatory
-		urgent_workspace $inactive_border $inactive $inactive_urgent_fg
+		inactive_workspace $background_primary $background_primary $foreground_primary
+		urgent_workspace $urgent $urgent $foreground_primary
 		# when you're in a mode
-		binding_mode $primary $primary_semi $foreground
+		binding_mode $background_secondary $background_secondary $foreground_primary
 	}
 }
 
 # window border colors
-# format: border background foreground
-client.focused $primary_light $primary_light $foreground
-client.unfocused $inactive_opaque $inactive_opaque $foreground_dim
+# format: border title-background title-foreground
+client.focused $foreground_primary $foreground_primary $background_primary
+client.unfocused $background_primary $background_primary $foreground_primary
 # same as unfocused afaict
-client.focused_inactive $inactive_opaque $inactive_opaque $foreground_dim
-client.urgent $inactive_urgent_fg $inactive $urgent_fg
+client.focused_inactive $background_primary $background_primary $foreground_primary
+client.urgent $urgent $urgent $foreground_primary
 
 # start dmenu (a program launcher)
 # bindsym $mod+d exec dmenu_run
