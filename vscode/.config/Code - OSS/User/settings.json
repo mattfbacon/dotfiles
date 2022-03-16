@@ -348,5 +348,6 @@
 	"workbench.settings.enableNaturalLanguageSearch": false,
 	"workbench.startupEditor": "newUntitledFile",
 	"workbench.tree.indent": 7,
-	"workbench.tree.renderIndentGuides": "always"
+	"workbench.tree.renderIndentGuides": "always",
+	"redhat.telemetry.enabled": false
 }
