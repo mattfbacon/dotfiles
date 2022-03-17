@@ -2,7 +2,7 @@
 	"name": "vscode-pylance",
 	"displayName": "Pylance",
 	"description": "A performant, feature-rich language server for Python in VS Code",
-	"version": "2022.3.1",
+	"version": "2022.3.2",
 	"license": "SEE LICENSE IN LICENSE.txt",
 	"author": {
 		"name": "Microsoft Corporation"
@@ -777,6 +777,17 @@
 								"error"
 							]
 						},
+						"reportUnusedExpression": {
+							"type": "string",
+							"description": "Diagnostics for simple expressions whose value is not used in any way.",
+							"default": "warning",
+							"enum": [
+								"none",
+								"information",
+								"warning",
+								"error"
+							]
+						},
 						"reportUnsupportedDunderAll": {
 							"type": "string",
 							"description": "Diagnostics for unsupported operations performed on __all__.",
@@ -948,7 +959,7 @@
 		"ts-loader": "^9.2.6",
 		"ts-mockito": "^2.6.1",
 		"typescript": "~4.4.4",
-		"vsce": "^2.6.4",
+		"vsce": "^2.7.0",
 		"webpack": "^5.68.0",
 		"webpack-cli": "^4.9.2",
 		"webpack-obfuscator": "^3.5.0"
@@ -969,6 +980,6 @@
 		"publisherDisplayName": "Microsoft",
 		"isPreReleaseVersion": false,
 		"preRelease": false,
-		"installedTimestamp": 1647359161127
+		"installedTimestamp": 1647487684875
 	}
 }
