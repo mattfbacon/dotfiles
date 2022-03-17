@@ -1,5 +1,6 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
+SETUVAR --export --path NIX_PATH:nixpkgs\x3d/home/matt/\x2enix\x2ddefexpr/channels/nixos\x2dunstable\x2dsmall
 SETUVAR --export RUSTC_WRAPPER:sccache
 SETUVAR --export __fish_git_prompt_showupstream:verbose
 SETUVAR __fish_initialized:3100
