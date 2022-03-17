@@ -9,4 +9,4 @@ xrandr --output HDMI-A-0 --mode 3840x2160 --refresh 59.94 --pos 3840x0 --primary
 xrandr --output HDMI-A-1 --mode 1920x1080 --refresh 60 --right-of HDMI-A-0 --rotate left --scale 1.75x1.75 || echo "not enabling right monitor due to previous error(s)" >&2
 
 sleep 0.1
-/home/matt/.local/bin/background.sh &
+/home/matt/.local/bin/background.sh
