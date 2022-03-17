@@ -348,4 +348,8 @@ bindsym $mod+F11 exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +3% &
 bindsym $mod+F10 exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -3% && $refresh_i3status
 bindsym $mod+F9 exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 
+exec --no-startup-id i3-msg 'workspace 1, move workspace to output DisplayPort-0'
+exec --no-startup-id i3-msg 'workspace 4, move workspace to output HDMI-A-0'
+exec --no-startup-id i3-msg 'workspace 7, move workspace to output HDMI-A-1'
+
 exec --no-startup-id picom
