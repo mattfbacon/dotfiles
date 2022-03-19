@@ -350,5 +350,6 @@
 	"workbench.startupEditor": "newUntitledFile",
 	"workbench.tree.indent": 7,
 	"workbench.tree.renderIndentGuides": "always",
-	"redhat.telemetry.enabled": false
+	"redhat.telemetry.enabled": false,
+	"rust.jobs": 32
 }
