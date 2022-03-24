@@ -148,3 +148,7 @@ function! CrateVersion(name)
 	let @b = l:output[1]
 endfunction
 noremap <silent><Leader>d :call CrateVersion(expand('<cword>'))<CR>
+
+if !has('termguicolors') || $TERM == 'linux'
+	set nocursorline
+endif
