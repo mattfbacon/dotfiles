@@ -293,10 +293,10 @@ bindsym $mod+comma exec loginctl lock-session
 exec --no-startup-id setxkbmap -option compose:rctrl
 
 mode "app_launch" {
-	bindsym b exec firefox --profile ~/.mozilla/firefox/st2fjblt.Home --browser, mode "default"
-	bindsym shift+b exec firefox --profile ~/.mozilla/firefox/st2fjblt.Home --private-window 'about:newtab', mode "default"
-	bindsym mod1+b exec firefox --profile ~/.cache/mozilla/firefox/l4xgjvs4.College --browser,  mode "default"
-	bindsym s exec firefox --profile ~/.mozilla/firefox/35gt8ti4.School --browser, mode "default"
+	bindsym b exec browse.sh home window, mode "default"
+	bindsym shift+b exec browse.sh home private, mode "default"
+	bindsym mod1+b exec browse.sh college window,  mode "default"
+	bindsym s exec browse.sh school window, mode "default"
 	bindsym c exec vscodium, mode "default"
 	bindsym d exec discord-canary --force-device-scale-factor=2, mode "default"
 	bindsym m exec gnome-system-monitor, mode "default"
