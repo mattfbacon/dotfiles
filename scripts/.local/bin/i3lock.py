@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+import signal
 from os import system, waitpid
 import os
 import dbus
@@ -103,7 +104,11 @@ def dim():
     return True
 
 def lock():
-    sp = subprocess.Popen(['i3lock', '-n', '-e', '-f', '-c', bg_color()])
+    # use existing i3lock process if it exists
+    if (sp := subprocess.run(["pgrep", "i3lock"], capture_output=True, text=True)).returncode == 0:
+        pid = int(sp.stdout.split('\n', 1)[0])
+    else:
+        pid = subprocess.Popen(['i3lock', '-n', '-e', '-f', '-c', bg_color()]).pid
     sleep(1)
     dpms_off()
 
@@ -118,7 +123,7 @@ def lock():
     else:
         while sleep_with_check(STAY_OFF_INTERVAL):
             dpms_off()
-    return sp
+    return pid
 
 @contextlib.contextmanager
 def close_notify_on_exit():
@@ -137,12 +142,23 @@ def main():
     parser.add_argument('-d', '--dim', action='store_true', dest='dim')
     args = parser.parse_args()
 
+    try:
+        with open('/tmp/i3lock.pid', 'r') as pidfile:
+            os.kill(int(pidfile.read()), signal.SIGINT)
+    except Exception:
+        pass
+    with open('/tmp/i3lock.pid', 'w') as pidfile:
+        pidfile.write(str(os.getpid()) + '\n')
+
     with close_notify_on_exit():
         if args.dim and (inhibited() or not dim()):
             return
     with pause_dunst():
-        lock_pid = lock().pid
-        waitpid(lock_pid, os.WUNTRACED)
+        lock_pid = lock()
+        try:
+            waitpid(lock_pid, os.WUNTRACED)
+        except KeyboardInterrupt:
+            pass
 
 if __name__ == "__main__":
     main()
