@@ -89,6 +89,7 @@
 	"cSpell.userWords": [
 		"actix",
 		"Appender",
+		"AUTOINCREMENT",
 		"bitvec",
 		"Bonemeal",
 		"Chestplate",
@@ -147,6 +148,7 @@
 		"repr",
 		"respawn",
 		"rsplit",
+		"rusqlite",
 		"Shulker",
 		"Smithing",
 		"struct",
