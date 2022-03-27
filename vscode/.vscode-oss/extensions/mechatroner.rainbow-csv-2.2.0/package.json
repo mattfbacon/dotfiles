@@ -2,7 +2,7 @@
 	"name": "rainbow-csv",
 	"displayName": "Rainbow CSV",
 	"description": "Highlight CSV and TSV files, Run SQL-like queries",
-	"version": "2.1.0",
+	"version": "2.2.0",
 	"publisher": "mechatroner",
 	"license": "MIT",
 	"icon": "rainbow_csv_logo.png",
@@ -124,12 +124,12 @@
 		"menus": {
 			"editor/context": [
 				{
-					"when": "editorHasSelection",
+					"when": "editorHasSelection && editorLangId == plaintext",
 					"command": "rainbow-csv.RainbowSeparator",
 					"group": "rainbow_csv"
 				},
 				{
-					"when": "editorTextFocus",
+					"when": "editorTextFocus && editorLangId =~ /^[ct]sv/",
 					"command": "rainbow-csv.SetHeaderLine",
 					"group": "rainbow_csv"
 				}
@@ -426,6 +426,6 @@
 		"publisherDisplayName": "mechatroner",
 		"isPreReleaseVersion": false,
 		"preRelease": false,
-		"installedTimestamp": 1647662348975
+		"installedTimestamp": 1648322733384
 	}
 }
