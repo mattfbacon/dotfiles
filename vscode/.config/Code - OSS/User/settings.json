@@ -353,5 +353,10 @@
 	"workbench.tree.indent": 7,
 	"workbench.tree.renderIndentGuides": "always",
 	"redhat.telemetry.enabled": false,
-	"rust.jobs": 32
+	"rust.jobs": 32,
+	"xml.completion.autoCloseTags": false,
+	"html.autoClosingTags": false,
+	"typescript.autoClosingTags": false,
+	"javascript.autoClosingTags": false,
+	"xml.completion.autoCloseRemovesContent": false
 }
