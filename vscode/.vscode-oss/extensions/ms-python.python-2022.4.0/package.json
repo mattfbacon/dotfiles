@@ -2,7 +2,7 @@
 	"name": "python",
 	"displayName": "Python",
 	"description": "IntelliSense (Pylance), Linting, Debugging (multi-threaded, remote), Jupyter Notebooks, code formatting, refactoring, unit tests, and more.",
-	"version": "2022.2.1924087327",
+	"version": "2022.4.0",
 	"featureFlags": {
 		"usingNewInterpreterStorage": true
 	},
@@ -81,9 +81,6 @@
 		"onCommand:python.enableLinting",
 		"onCommand:python.createTerminal",
 		"onCommand:python.configureTests",
-		"onCommand:python.switchOffInsidersChannel",
-		"onCommand:python.switchToDailyChannel",
-		"onCommand:python.switchToWeeklyChannel",
 		"onCommand:python.clearWorkspaceInterpreter",
 		"onCommand:python.enableSourceMapSupport",
 		"onCommand:python.launchTensorBoard",
@@ -141,84 +138,7 @@
 					{
 						"id": "python.createPythonFile",
 						"title": "Create a Python file",
-						"description": "[Open](command:toSide:workbench.action.files.openFile) or [create](command:toSide:workbench.action.files.newUntitledFile) a Python file - make sure to save it as \".py\".\n[Create Python File](command:toSide:workbench.action.files.newUntitledFile)",
-						"media": {
-							"svg": "resources/walkthrough/open-folder.svg",
-							"altText": "Open a Python file or a folder with a Python project."
-						},
-						"when": ""
-					},
-					{
-						"id": "python.selectInterpreter",
-						"title": "Select a Python Interpreter",
-						"description": "Choose which Python interpreter/environment you want to use for your Python project.\n[Select Python Interpreter](command:python.setInterpreter)\n**Tip**: Run the ``Python: Select Interpreter`` command in the [Command Palette](command:workbench.action.showCommands).\nReload the window if you installed Python but don't see it in the list (``Developer: Reload Window`` command). ",
-						"media": {
-							"svg": "resources/walkthrough/python-interpreter-v2.svg",
-							"altText": "Selecting a python interpreter from the status bar"
-						},
-						"when": ""
-					},
-					{
-						"id": "python.runAndDebug",
-						"title": "Run and debug your Python file",
-						"description": "Open your Python file  and click on the play button on the top right of the editor, or press F5 when on the file and select \"Python File\" to run with the debugger. \n  \n[Learn more](https://code.visualstudio.com/docs/python/python-tutorial#_run-hello-world)",
-						"media": {
-							"svg": "resources/walkthrough/rundebug2.svg",
-							"altText": "How to run and debug in VS Code with F5 or the play button on the top right."
-						},
-						"when": ""
-					},
-					{
-						"id": "python.learnMore",
-						"title": "Explore more resources",
-						"description": "🎨 Explore all the features the Python extension has to offer by looking for \"Python\" in the [Command Palette](command:workbench.action.showCommands). \n 💌 [Sign up](https://aka.ms/python-vscode-mailinglist) for tips and tutorials through our mailing list. \n ✨ Take a look at our [Release Notes](https://aka.ms/AA8dxtb) to learn more about the latest features. \n \n[Learn More](https://aka.ms/AA8dqti)",
-						"media": {
-							"altText": "Image representing our documentation page and mailing list resources.",
-							"svg": "resources/walkthrough/learnmore.svg"
-						},
-						"when": ""
-					}
-				]
-			},
-			{
-				"id": "pythonWelcomeWithDS",
-				"title": "Get started with Python development",
-				"description": "Your first steps to set up a Python project with all the powerful tools and features that the Python extension has to offer!",
-				"when": "false",
-				"steps": [
-					{
-						"id": "python.installPythonWin",
-						"title": "Install Python",
-						"description": "The Python Extension requires Python to be installed. Install Python from the [Microsoft Store](https://aka.ms/AAd9rms).\n\n[Install Python](https://aka.ms/AAd9rms)\n",
-						"media": {
-							"markdown": "resources/walkthrough/install-python-windows.md"
-						},
-						"when": "workspacePlatform == windows"
-					},
-					{
-						"id": "python.installPythonMac",
-						"title": "Install Python",
-						"description": "The Python Extension requires Python to be installed. Install Python 3 through the terminal.\n[Open Terminal](command:workbench.action.terminal.new)\n",
-						"media": {
-							"markdown": "resources/walkthrough/install-python-macos.md"
-						},
-						"when": "workspacePlatform == mac",
-						"command": "workbench.action.terminal.new"
-					},
-					{
-						"id": "python.installPythonLinux",
-						"title": "Install Python",
-						"description": "The Python Extension requires Python to be installed. Install Python 3 through the terminal.\n[Open Terminal](command:workbench.action.terminal.new)\n",
-						"media": {
-							"markdown": "resources/walkthrough/install-python-linux.md"
-						},
-						"when": "workspacePlatform == linux",
-						"command": "workbench.action.terminal.new"
-					},
-					{
-						"id": "python.createPythonFile",
-						"title": "Create a Python file",
-						"description": "[Open](command:toSide:workbench.action.files.openFile) or [create](command:toSide:workbench.action.files.newUntitledFile) a Python file - make sure to save it as \".py\".\n[Create Python File](command:toSide:workbench.action.files.newUntitledFile)",
+						"description": "[Open](command:toSide:workbench.action.files.openFile) or [create](command:toSide:python.createNewFile) a Python file - make sure to save it as \".py\".\n[Create Python File](command:toSide:python.createNewFile)",
 						"media": {
 							"svg": "resources/walkthrough/open-folder.svg",
 							"altText": "Open a Python file or a folder with a Python project."
@@ -248,7 +168,7 @@
 					{
 						"id": "python.learnMoreWithDS",
 						"title": "Explore more resources",
-						"description": "🎨 Explore all the features the Python extension has to offer by looking for \"Python\" in the [Command Palette](command:workbench.action.showCommands). \n 📈 Learn more about getting started with [data science](command:workbench.action.openWalkthrough?%7B%22category%22%3A%22ms-python.python%23pythonDataScienceWelcome%22%2C%22step%22%3A%22ms-python.python%23python.createNewNotebook%22%7D) in Python. \n 💌 [Sign up](https://aka.ms/python-vscode-mailinglist) for tips and tutorials through our mailing list. \n ✨ Take a look at our [Release Notes](https://aka.ms/AA8dxtb) to learn more about the latest features. \n \n[Learn More](https://aka.ms/AA8dqti)",
+						"description": "🎨 Explore all the features the Python extension has to offer by looking for \"Python\" in the [Command Palette](command:workbench.action.showCommands). \n 📈 Learn more about getting started with [data science](command:workbench.action.openWalkthrough?%7B%22category%22%3A%22ms-python.python%23pythonDataScienceWelcome%22%2C%22step%22%3A%22ms-python.python%23python.createNewNotebook%22%7D) in Python. \n ✨ Take a look at our [Release Notes](https://aka.ms/AA8dxtb) to learn more about the latest features. \n \n[Learn More](https://aka.ms/AA8dqti)",
 						"media": {
 							"altText": "Image representing our documentation page and mailing list resources.",
 							"svg": "resources/walkthrough/learnmore.svg"
@@ -326,8 +246,7 @@
 				"title": "%python.command.python.createNewFile.title%",
 				"shortTitle": "%python.menu.createNewFile.title%",
 				"category": "Python",
-				"command": "python.createNewFile",
-				"when": "config.python.createNewFileEnabled"
+				"command": "python.createNewFile"
 			},
 			{
 				"category": "Python",
@@ -467,21 +386,6 @@
 			},
 			{
 				"category": "Python",
-				"command": "python.switchOffInsidersChannel",
-				"title": "%python.command.python.switchOffInsidersChannel.title%"
-			},
-			{
-				"category": "Python",
-				"command": "python.switchToDailyChannel",
-				"title": "%python.command.python.switchToDailyChannel.title%"
-			},
-			{
-				"category": "Python",
-				"command": "python.switchToWeeklyChannel",
-				"title": "%python.command.python.switchToWeeklyChannel.title%"
-			},
-			{
-				"category": "Python",
 				"command": "python.viewLanguageServerOutput",
 				"enablement": "python.hasLanguageServerOutputChannel",
 				"title": "%python.command.python.viewLanguageServerOutput.title%"
@@ -509,15 +413,6 @@
 					"description": "Path to the conda executable to use for activation (version 4.4+).",
 					"scope": "machine",
 					"type": "string"
-				},
-				"python.createNewFileEnabled": {
-					"default": "false",
-					"description": "Enable the `Python: New Python File` command.",
-					"scope": "machine",
-					"type": "boolean",
-					"tags": [
-						"experimental"
-					]
 				},
 				"python.defaultInterpreterPath": {
 					"default": "python",
@@ -555,10 +450,7 @@
 					"items": {
 						"enum": [
 							"All",
-							"pythonDeprecatePythonPath",
-							"pythonSurveyNotification",
-							"pythonInterpreterInfoPinned",
-							"pythonInterpreterInfoUnpinned"
+							"pythonSurveyNotification"
 						]
 					},
 					"scope": "machine",
@@ -570,10 +462,7 @@
 					"items": {
 						"enum": [
 							"All",
-							"pythonDeprecatePythonPath",
-							"pythonSurveyNotification",
-							"pythonInterpreterInfoPinned",
-							"pythonInterpreterInfoUnpinned"
+							"pythonSurveyNotification"
 						]
 					},
 					"scope": "machine",
@@ -641,17 +530,6 @@
 					"description": "Whether to install Python modules globally when not using an environment.",
 					"scope": "resource",
 					"type": "boolean"
-				},
-				"python.insidersChannel": {
-					"default": "off",
-					"description": "Set to \"weekly\" or \"daily\" to automatically download and install the latest Insiders builds of the python extension, which include upcoming features and bug fixes.",
-					"enum": [
-						"daily",
-						"off",
-						"weekly"
-					],
-					"scope": "machine",
-					"type": "string"
 				},
 				"python.languageServer": {
 					"default": "Default",
@@ -1591,7 +1469,7 @@
 				"configuration": "./languages/pip-requirements.json",
 				"filenamePatterns": [
 					"**/*-requirements.{txt, in}",
-					"**/*-contstraints.txt",
+					"**/*-constraints.txt",
 					"**/requirements-*.{txt, in}",
 					"**/constraints-*.txt",
 					"**/requirements/*.{txt,in}",
@@ -1805,24 +1683,6 @@
 				},
 				{
 					"category": "Python",
-					"command": "python.switchOffInsidersChannel",
-					"title": "%python.command.python.switchOffInsidersChannel.title%",
-					"when": "config.python.insidersChannel != 'default' && !virtualWorkspace && shellExecutionSupported"
-				},
-				{
-					"category": "Python",
-					"command": "python.switchToDailyChannel",
-					"title": "%python.command.python.switchToDailyChannel.title%",
-					"when": "config.python.insidersChannel != 'daily' && !virtualWorkspace && shellExecutionSupported"
-				},
-				{
-					"category": "Python",
-					"command": "python.switchToWeeklyChannel",
-					"title": "%python.command.python.switchToWeeklyChannel.title%",
-					"when": "config.python.insidersChannel != 'weekly' && !virtualWorkspace && shellExecutionSupported"
-				},
-				{
-					"category": "Python",
 					"command": "python.viewOutput",
 					"title": "%python.command.python.viewOutput.title%",
 					"when": "!virtualWorkspace && shellExecutionSupported"
@@ -1883,7 +1743,7 @@
 				{
 					"command": "python.createNewFile",
 					"category": "file",
-					"when": "config.python.createNewFileEnabled"
+					"when": "!virtualWorkspace"
 				}
 			],
 			"view/title": [
@@ -1970,7 +1830,6 @@
 	"dependencies": {
 		"@vscode/jupyter-lsp-middleware": "^0.2.35",
 		"arch": "^2.1.0",
-		"chokidar": "^3.4.3",
 		"diff-match-patch": "^1.0.0",
 		"fs-extra": "^9.1.0",
 		"glob": "^7.1.2",
@@ -1991,7 +1850,6 @@
 		"semver": "^5.5.0",
 		"sudo-prompt": "^8.2.0",
 		"tmp": "^0.0.29",
-		"typescript-char": "^0.0.0",
 		"uint64be": "^1.0.1",
 		"unicode": "^10.0.0",
 		"untildify": "^3.0.2",
@@ -2076,8 +1934,7 @@
 		"ts-node": "^8.3.0",
 		"tsconfig-paths-webpack-plugin": "^3.2.0",
 		"typemoq": "^2.1.0",
-		"typescript": "4.1.5",
-		"typescript-formatter": "^7.1.0",
+		"typescript": "4.5.5",
 		"uuid": "^3.3.2",
 		"vsce": "^2.6.6",
 		"vscode-debugadapter-testsupport": "^1.27.0",
@@ -2097,7 +1954,7 @@
 		"publisherDisplayName": "Microsoft",
 		"isPreReleaseVersion": false,
 		"preRelease": false,
-		"installedTimestamp": 1647359158883
+		"installedTimestamp": 1648683578055
 	},
 	"extensionPack": [
 		"ms-toolsai.jupyter",

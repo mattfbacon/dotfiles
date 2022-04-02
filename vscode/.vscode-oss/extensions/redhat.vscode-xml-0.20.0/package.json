@@ -2,7 +2,7 @@
 	"name": "vscode-xml",
 	"displayName": "XML",
 	"description": "XML Language Support by Red Hat",
-	"version": "0.19.1",
+	"version": "0.20.0",
 	"author": "Red Hat",
 	"publisher": "redhat",
 	"icon": "icons/icon128.png",
@@ -16,12 +16,12 @@
 		"dtd"
 	],
 	"xmlServer": {
-		"version": "0.19.1"
+		"version": "0.20.0"
 	},
 	"binaryServerDownloadUrl": {
-		"linux": "https://download.jboss.org/jbosstools/vscode/stable/lemminx-binary/0.19.1-541/lemminx-linux.zip",
-		"osx-x86_64": "https://download.jboss.org/jbosstools/vscode/stable/lemminx-binary/0.19.1-541/lemminx-osx-x86_64.zip",
-		"win32": "https://download.jboss.org/jbosstools/vscode/stable/lemminx-binary/0.19.1-541/lemminx-win32.zip"
+		"linux": "https://github.com/redhat-developer/vscode-xml/releases/download/0.20.0/lemminx-linux.zip",
+		"osx-x86_64": "https://github.com/redhat-developer/vscode-xml/releases/download/0.20.0/lemminx-osx-x86_64.zip",
+		"win32": "https://github.com/redhat-developer/vscode-xml/releases/download/0.20.0/lemminx-win32.zip"
 	},
 	"capabilities": {
 		"untrustedWorkspaces": {
@@ -584,6 +584,6 @@
 		"publisherDisplayName": "Red Hat",
 		"isPreReleaseVersion": false,
 		"preRelease": false,
-		"installedTimestamp": 1647451383062
+		"installedTimestamp": 1648594909861
 	}
 }
