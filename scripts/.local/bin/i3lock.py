@@ -157,8 +157,9 @@ def main():
         lock_pid = lock()
         try:
             waitpid(lock_pid, os.WUNTRACED)
-        except KeyboardInterrupt:
-            pass
+        except:
+            set_dunst_pause(False)
+            raise
 
 if __name__ == "__main__":
     main()
