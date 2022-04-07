@@ -15,7 +15,7 @@ font pango:Fira Code 8
 # dunst for notifications
 exec --no-startup-id mako
 
-# exec --no-startup-id fcitx5 -d
+exec --no-startup-id fcitx5 -d
 
 # clipboard manager
 exec --no-startup-id wl-paste -t text --watch clipman store
