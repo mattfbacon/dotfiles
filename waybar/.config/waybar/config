@@ -99,7 +99,7 @@
 			"phone": "📲",
 			"portable": "📲",
 			"car": "🚗",
-			"default": ["a", "b", "c"]
+			"default": ["🔈", "🔉", "🔊"]
 		},
 		"on-click": "pavucontrol"
 	},
