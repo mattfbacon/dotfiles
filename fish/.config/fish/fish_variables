@@ -2,7 +2,7 @@
 # VERSION: 3.0
 SETUVAR --export QT_QPA_PLATFORM:wayland
 SETUVAR --export __fish_git_prompt_showupstream:verbose
-SETUVAR __fish_initialized:3100
+SETUVAR __fish_initialized:3400
 SETUVAR fish_color_autosuggestion:8e908c
 SETUVAR fish_color_cancel:\x2dr
 SETUVAR fish_color_command:4271ae
