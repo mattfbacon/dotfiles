@@ -270,5 +270,14 @@
 	"workbench.settings.enableNaturalLanguageSearch": false,
 	"workbench.startupEditor": "newUntitledFile",
 	"workbench.tree.indent": 9.5,
-	"workbench.tree.renderIndentGuides": "always"
+	"workbench.tree.renderIndentGuides": "always",
+	"[json]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[typescript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[rust]": {
+		"editor.defaultFormatter": "rust-lang.rust"
+	}
 }
