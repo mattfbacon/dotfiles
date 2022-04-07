@@ -4,7 +4,7 @@
 	signingkey = D0061A7BB596E3B3
 [core]
 	editor = nvim
-	sshCommand = ssh -i ~/.ssh/id_rsa -F /dev/null
+	sshCommand = ssh -i ~/.ssh/id_ed25519 -F /dev/null
 	excludesfile = ~/.gitignore
 [pull]
 	rebase = false
