@@ -46,9 +46,6 @@
 [submodule "vim/.vim/pack/plugins/start/chadtree"]
 	path = vim/.vim/pack/plugins/start/chadtree
 	url = https://github.com/ms-jpq/chadtree.git
-[submodule "vim/.vim/pack/plugins/start/signature"]
-	path = vim/.vim/pack/plugins/start/signature
-	url = https://github.com/kshenoy/vim-signature.git
 [submodule "vim/.vim/pack/syntax/start/gemini"]
 	path = vim/.vim/pack/syntax/start/gemini
 	url = https://github.com/pirmd/gemini.vim.git
