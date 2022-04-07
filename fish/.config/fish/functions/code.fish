@@ -1,6 +1,6 @@
 function code
     if test -n $DISPLAY
-        vscodium --ozone-platform=wayland --enable-features=UseOzonePlatform,WebRTCPipeWireCapturer $argv
+        vscodium $argv
     else
         nvim $argv
     end
