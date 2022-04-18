@@ -28,7 +28,7 @@ font pango:Fira Code 9
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
-exec --no-startup-id xss-lock --transfer-sleep-lock -- /home/matt/.local/bin/i3lock.py -n
+exec --no-startup-id xss-lock i3lock.sh
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
@@ -288,7 +288,7 @@ bindsym $mod+minus move scratchpad
 bindsym $mod+shift+plus scratchpad show
 
 # XIdleHook
-exec --no-startup-id xidlehook --not-when-audio --timer 160 "~/.local/bin/i3lock.py -d" ":"
+exec --no-startup-id xidlehook --not-when-audio --timer 150 "notify-send --expire-time=30000 --icon=/usr/share/icons/Adwaita/scalable/status/system-lock-screen-symbolic.svg 'Locking in 30 seconds'" "" --timer 30 "loginctl lock-session" ""
 # Screen lock on Win+,
 bindsym $mod+comma exec loginctl lock-session
 
