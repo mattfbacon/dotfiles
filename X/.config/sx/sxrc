@@ -12,4 +12,6 @@ source $HOME/.xinitrc
 
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 </dev/null 2>&1 >/dev/null &
 
+emon
+emon
 exec ${WM_BIN:-i3}

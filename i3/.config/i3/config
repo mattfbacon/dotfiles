@@ -23,8 +23,6 @@ font pango:Fira Code 9
 
 # exec --no-startup-id /usr/lib/gsd-xsettings
 
-exec --no-startup-id ~/.local/bin/emon
-
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
 
@@ -155,6 +153,10 @@ set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
+
+workspace $ws1 output HDMI-A-0
+workspace $ws4 output DisplayPort-0
+workspace $ws7 output HDMI-A-1
 
 # switch to workspace
 bindsym $mod+1 workspace number $ws1
@@ -348,8 +350,4 @@ bindsym $mod+F11 exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +3% &
 bindsym $mod+F10 exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -3% && $refresh_i3status
 bindsym $mod+F9 exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 
-exec --no-startup-id i3-msg 'workspace 1, move workspace to output HDMI-A-0'
-exec --no-startup-id sleep 0.5 && i3-msg 'workspace 4, move workspace to output DisplayPort-0'
-exec --no-startup-id sleep 1 && i3-msg 'workspace 7, move workspace to output HDMI-A-1'
-
-exec --no-startup-id 'sleep 2 && picom'
+exec --no-startup-id picom
