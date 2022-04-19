@@ -2,7 +2,7 @@
 	"name": "python",
 	"displayName": "Python",
 	"description": "IntelliSense (Pylance), Linting, Debugging (multi-threaded, remote), Jupyter Notebooks, code formatting, refactoring, unit tests, and more.",
-	"version": "2022.4.0",
+	"version": "2022.4.1",
 	"featureFlags": {
 		"usingNewInterpreterStorage": true
 	},
@@ -1899,6 +1899,7 @@
 		"cross-spawn": "^6.0.5",
 		"del": "^3.0.0",
 		"download": "^7.0.0",
+		"es5-ext": "0.10.53",
 		"eslint": "^7.2.0",
 		"eslint-config-airbnb": "^18.2.0",
 		"eslint-config-prettier": "^8.3.0",
@@ -1952,9 +1953,11 @@
 		"id": "f1f59ae4-9318-4f3c-a9b5-81b2eaa5f8a5",
 		"publisherId": "998b010b-e2af-44a5-a6cd-0b5fd3b9b6f8",
 		"publisherDisplayName": "Microsoft",
+		"targetPlatform": "undefined",
+		"updated": true,
 		"isPreReleaseVersion": false,
 		"preRelease": false,
-		"installedTimestamp": 1648683578055
+		"installedTimestamp": 1649442457703
 	},
 	"extensionPack": [
 		"ms-toolsai.jupyter",

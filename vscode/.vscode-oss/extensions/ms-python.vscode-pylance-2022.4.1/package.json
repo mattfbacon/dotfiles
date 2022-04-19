@@ -2,7 +2,7 @@
 	"name": "vscode-pylance",
 	"displayName": "Pylance",
 	"description": "A performant, feature-rich language server for Python in VS Code",
-	"version": "2022.3.4",
+	"version": "2022.4.1",
 	"license": "SEE LICENSE IN LICENSE.txt",
 	"author": {
 		"name": "Microsoft Corporation"
@@ -978,8 +978,10 @@
 		"id": "364d2426-116a-433a-a5d8-a5098dc3afbd",
 		"publisherId": "998b010b-e2af-44a5-a6cd-0b5fd3b9b6f8",
 		"publisherDisplayName": "Microsoft",
+		"targetPlatform": "undefined",
+		"updated": true,
 		"isPreReleaseVersion": false,
 		"preRelease": false,
-		"installedTimestamp": 1648738544761
+		"installedTimestamp": 1649903436955
 	}
 }
