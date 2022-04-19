@@ -266,7 +266,9 @@ client.urgent $urgent $urgent $foreground_primary
 # installed.
 # bindsym $mod+d exec --no-startup-id "i3-dmenu-desktop --dmenu='dmenu -i -fn monospace:pixelsize=34 -nb #002934 -nf #ffffff -sb #025b54 -sf #ffffff'"
 bindsym $mod+d exec --no-startup-id ~/.local/bin/apppicker.sh
+bindsym XF86LaunchA exec --no-startup-id ~/.local/bin/apppicker.sh
 bindsym $mod+n exec --no-startup-id rofi -show window
+bindsym XF86LaunchB exec --no-startup-id rofi -show window
 
 # Media player keybinds
 bindsym XF86AudioPlay exec playerctl play-pause
@@ -274,9 +276,6 @@ bindsym XF86AudioPause exec playerctl pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
-# Brightness keybinds
-bindsym XF86MonBrightnessUp exec light -A 2
-bindsym XF86MonBrightnessDown exec light -U 2
 
 # Minimizing
 # Make the currently focused window a scratchpad
@@ -289,6 +288,7 @@ bindsym $mod+shift+plus scratchpad show
 exec --no-startup-id xidlehook --not-when-audio --timer 150 "notify-send --expire-time=30000 --icon=/usr/share/icons/Adwaita/scalable/status/system-lock-screen-symbolic.svg 'Locking in 30 seconds'" "" --timer 30 "loginctl lock-session" ""
 # Screen lock on Win+,
 bindsym $mod+comma exec loginctl lock-session
+bindsym $mod+l exec loginctl lock-session
 
 exec --no-startup-id setxkbmap -option compose:rctrl
 
@@ -336,7 +336,6 @@ exec --no-startup-id android-messages-desktop
 exec opensnitch-ui
 
 for_window [class="lxqt-openssh-askpass"] floating enable
-bindsym $mod+y fullscreen disable; floating enable; resize set 640 360; sticky enable; move position 3150 1750
 
 smart_borders on
 hide_edge_borders both
