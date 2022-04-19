@@ -331,7 +331,8 @@ bindsym $mod+x [urgent=latest] focus
 default_border pixel
 default_floating_border normal
 
-exec discord-canary --force-device-scale-factor=2 --start-minimized
+exec discord-canary --force-device-scale-factor=2
+for_window [class="discord"] move container to workspace $ws7
 exec --no-startup-id android-messages-desktop
 exec opensnitch-ui
 
