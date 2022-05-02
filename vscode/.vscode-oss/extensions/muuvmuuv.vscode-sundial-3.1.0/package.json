@@ -1,7 +1,7 @@
 {
 	"name": "vscode-sundial",
 	"displayName": "Sundial – Automatic night mode and settings switch",
-	"version": "3.0.0",
+	"version": "3.1.0",
 	"description": "Automatically change your theme and settings based on your sunset, sunrise, system appearance or other preferences!",
 	"icon": "assets/icon.png",
 	"publisher": "muuvmuuv",
@@ -159,7 +159,7 @@
 				"sundial.debug": {
 					"type": "number",
 					"default": 1,
-					"description": "More verbose console logs. See: https://github.com/pimterry/loglevel/blob/master/lib/loglevel.js#L181"
+					"description": "Set debug level: silent = 0, info = 1, error = 2, debug = 3"
 				}
 			}
 		}
@@ -185,8 +185,10 @@
 		"id": "06c45f72-79b0-400c-a701-c420fa7d0a99",
 		"publisherId": "675354de-a06e-4038-8f69-e76d97901f66",
 		"publisherDisplayName": "Marvin Heilemann",
+		"targetPlatform": "undefined",
+		"updated": true,
 		"isPreReleaseVersion": false,
 		"preRelease": false,
-		"installedTimestamp": 1647359107133
+		"installedTimestamp": 1650654572655
 	}
 }

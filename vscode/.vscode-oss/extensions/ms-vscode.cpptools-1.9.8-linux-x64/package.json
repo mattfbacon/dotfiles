@@ -2,7 +2,7 @@
 	"name": "cpptools",
 	"displayName": "C/C++",
 	"description": "C/C++ IntelliSense, debugging, and code browsing.",
-	"version": "1.9.7",
+	"version": "1.9.8",
 	"publisher": "ms-vscode",
 	"icon": "LanguageCCPP_color_128x.png",
 	"readme": "README.md",
@@ -2755,6 +2755,8 @@
 					"cpp",
 					"cuda-cpp"
 				],
+				"_aiKeyComment": "Ignore 'Property aiKey is not allowed'. See https://github.com/microsoft/vscode/issues/76493",
+				"aiKey": "AIF-d9b70cd4-b9f9-4d70-929b-a071c400b217",
 				"variables": {
 					"pickProcess": "extension.pickNativeProcess",
 					"pickRemoteProcess": "extension.pickRemoteNativeProcess"
@@ -3430,6 +3432,8 @@
 					"cpp",
 					"cuda-cpp"
 				],
+				"_aiKeyComment": "Ignore 'Property aiKey is not allowed'. See https://github.com/microsoft/vscode/issues/76493",
+				"aiKey": "AIF-d9b70cd4-b9f9-4d70-929b-a071c400b217",
 				"variables": {
 					"pickProcess": "extension.pickNativeProcess"
 				},
@@ -4451,8 +4455,10 @@
 		"id": "690b692e-e8a9-493f-b802-8089d50ac1b2",
 		"publisherId": "5f5636e7-69ed-4afe-b5d6-8d231fb3d3ee",
 		"publisherDisplayName": "Microsoft",
+		"targetPlatform": "linux-x64",
+		"updated": true,
 		"isPreReleaseVersion": false,
 		"preRelease": false,
-		"installedTimestamp": 1648155717204
+		"installedTimestamp": 1650573211981
 	}
 }
