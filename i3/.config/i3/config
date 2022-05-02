@@ -285,7 +285,7 @@ bindsym $mod+minus move scratchpad
 bindsym $mod+shift+plus scratchpad show
 
 # XIdleHook
-exec --no-startup-id xidlehook --not-when-audio --timer 150 "notify-send --expire-time=30000 --icon=/usr/share/icons/Adwaita/scalable/status/system-lock-screen-symbolic.svg 'Locking in 30 seconds'" "" --timer 30 "loginctl lock-session" ""
+exec --no-startup-id xidlehook --not-when-audio --timer 150 "notify-send --expire-time=29500 --icon=/usr/share/icons/Adwaita/scalable/status/system-lock-screen-symbolic.svg 'Locking in 30 seconds'" "" --timer 30 "loginctl lock-session" ""
 # Screen lock on Win+,
 bindsym $mod+comma exec loginctl lock-session
 bindsym $mod+l exec loginctl lock-session
