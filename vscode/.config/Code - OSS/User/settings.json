@@ -88,7 +88,10 @@
 	"cSpell.spellCheckOnlyWorkspaceFiles": true,
 	"cSpell.userWords": [
 		"actix",
+		"alnum",
 		"Appender",
+		"arity",
+		"askama",
 		"AUTOINCREMENT",
 		"bincode",
 		"bitvec",
@@ -115,6 +118,7 @@
 		"endianness",
 		"Enoent",
 		"Enospc",
+		"enumset",
 		"Fellenz",
 		"fieldless",
 		"filesystems",
@@ -152,6 +156,7 @@
 		"relayout",
 		"repr",
 		"respawn",
+		"rfold",
 		"rsplit",
 		"rusqlite",
 		"serde",
@@ -170,7 +175,8 @@
 		"unshuffled",
 		"untagging",
 		"varint",
-		"vendoring"
+		"vendoring",
+		"viewspec"
 	],
 	"ccls.cache.directory": "/home/matt/.cache/ccls/${workspaceFolder}",
 	"ccls.codeLens.enabled": false,
