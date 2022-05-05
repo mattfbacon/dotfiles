@@ -5,8 +5,8 @@
 	"preview": true,
 	"private": true,
 	"icon": "icon.png",
-	"version": "0.2.1030",
-	"releaseTag": "2022-04-25",
+	"version": "0.2.1040",
+	"releaseTag": "2022-05-02",
 	"publisher": "matklad",
 	"repository": {
 		"url": "https://github.com/rust-analyzer/rust-analyzer.git",
@@ -1509,9 +1509,9 @@
 		"publisherId": "fd414b30-13f2-4ee5-98b9-659b34bea1e4",
 		"publisherDisplayName": "matklad",
 		"targetPlatform": "linux-x64",
-		"updated": false,
+		"updated": true,
 		"isPreReleaseVersion": false,
 		"preRelease": false,
-		"installedTimestamp": 1651288322611
+		"installedTimestamp": 1651598200328
 	}
 }
