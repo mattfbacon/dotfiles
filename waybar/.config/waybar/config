@@ -125,4 +125,3 @@
 		"on-click": "$TERMINAL ~/.local/bin/update.sh"
 	}
 }
-
