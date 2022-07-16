@@ -281,5 +281,7 @@
 	},
 	"[rust]": {
 		"editor.defaultFormatter": "rust-lang.rust"
-	}
+	},
+	"editor.bracketPairColorization.enabled": false,
+	"files.hotExit": "off"
 }
