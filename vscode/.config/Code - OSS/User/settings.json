@@ -59,6 +59,7 @@
 		"freetype",
 		"fuser",
 		"GDKMM",
+		"gebibytes",
 		"gmmproc",
 		"gobj",
 		"gobject",
@@ -75,7 +76,8 @@
 		"rsplit",
 		"subprojects",
 		"untagging",
-		"vendoring"
+		"vendoring",
+		"viewspec"
 	],
 	"ccls.cache.directory": "/home/matt/.cache/ccls/${workspaceFolder}",
 	"ccls.codeLens.enabled": false,
