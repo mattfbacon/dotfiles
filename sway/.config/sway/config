@@ -184,7 +184,7 @@ set $chromeflags --ozone-platform=wayland --enable-features=UseOzonePlatform,Web
 
 mode "app_launch" {
 	bindsym b mode "default"; exec browse.sh home
-	bindsym shift+b mode "default"; exec browse.sh home --incognito
+	bindsym shift+b mode "default"; exec browse.sh home --private-window
 	bindsym mod1+b mode "default"; exec browse.sh college
 	bindsym s mode "default"; exec browse.sh school
 	bindsym c mode "default"; exec vscodium
