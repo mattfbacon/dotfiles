@@ -1,7 +1,7 @@
 * {
 	border: none;
 	border-radius: 0;
-	font-family: monospace;
+	font-family: monospace, 'Noto Sans CJK JP';
 	font-size: 13px;
 	min-height: 0;
 }
