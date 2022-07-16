@@ -1,7 +1,7 @@
 [user]
 	name = Matt Fellenz
 	email = matt@felle.nz
-	signingkey = D0061A7BB596E3B3
+	signingKey = 00507F6492F147C2865E7558D0061A7BB596E3B3
 [core]
 	editor = nvim
 	sshCommand = ssh -i ~/.ssh/id_ed25519 -F /dev/null
@@ -20,7 +20,6 @@
 [alias]
 	tree = log --graph --oneline --all
 	amend-to = "!f() { SHA=`git rev-parse \"$1\"`; git stash -k && git commit --fixup \"$SHA\" && GIT_SEQUENCE_EDITOR=true git rebase --interactive --autosquash \"$SHA^\" && git stash pop; }; f"
-	shove = push --force
 [commit]
 	gpgsign = true
 [filter "lfs"]
@@ -31,6 +30,4 @@
 [credential "https://github.com/mattf552814"]
 	username = mattf552814
 [credential]
-	helper = store
-[gpg]
-	command = gpg
+	helper = store --file ~/.git-credentials

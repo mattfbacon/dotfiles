@@ -1,2 +1,0 @@
-#!/bin/sh
-/home/matt/.local/bin/show_time $(($(date '+%s') - $(date -d"$(uptime -s)" '+%s')))

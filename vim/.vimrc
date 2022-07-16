@@ -51,8 +51,6 @@ set background=light
 packadd! boring
 colorscheme boring
 
-packadd! gitgutter
-
 lua << EOF
 require('feline').setup({ preset = 'noicon' })
 EOF
@@ -144,3 +142,7 @@ inoremap <C-H> <C-W>
 
 let &t_SI = "\e[6 q"
 let &t_EI = "\e[2 q"
+
+if !has('termguicolors') || $TERM == 'linux'
+	set nocursorline
+endif

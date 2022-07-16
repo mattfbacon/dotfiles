@@ -61,3 +61,6 @@
 [submodule "vim/.vim/pack/colors/opt/boring"]
 	path = vim/.vim/pack/colors/opt/boring
 	url = https://github.com/mattfbacon/vim-boring.git
+[submodule "vim/.vim/pack/plugins/start/caser"]
+	path = vim/.vim/pack/plugins/start/caser
+	url = https://github.com/arthurxavierx/vim-caser.git

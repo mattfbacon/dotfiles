@@ -1,28 +1,45 @@
 #!/bin/sh
 
-PROFILE_DIR="$1"
-
-case "$PROFILE_DIR" in
-	school)
-		# PROFILE_DIR="Profile 3"
-		PROFILE_DIR="0td0hysr.School"
-		;;
+PROFILE=""
+case "$1" in
 	home)
-		# PROFILE_DIR="Profile 2"
-		PROFILE_DIR="5bmfmi8v.Home"
-		;;
+		PROFILE="5bmfmi8v.Home"
+	;;
+	school)
+		PROFILE="0td0hysr.School"
+	;;
 	college)
-		# PROFILE_DIR="Profile 1"
-		PROFILE_DIR="mh4f9c7h.College"
-		;;
+		PROFILE="mh4f9c7h.College"
+	;;
 	*)
-		echo "Invalid profile dir $PROFILE_DIR" >&2
+		echo 'Unknown profile' >&2
 		exit 1
-		;;
+	;;
 esac
-
-PROFILE_DIR=~/.mozilla/firefox/"$PROFILE_DIR"
 shift
 
-# exec brave --enable-features=UseOzonePlatform,WebRTCPipeWireCapture --ozone-platform=wayland --profile-directory="$PROFILE_DIR" $@
-exec firefox --profile "$PROFILE_DIR" $@
+ARGS=""
+case "$1" in
+	normal)
+		ARGS=""
+	;;
+	tab)
+		ARGS="--new-tab"
+	;;
+	window)
+		ARGS="--new-window"
+	;;
+	browse)
+		ARGS="--browser"
+	;;
+	private)
+		ARGS="--private-window"
+	;;
+	*)
+		echo 'Unknown browser type' >&2
+		exit 1
+	;;
+esac
+shift
+
+exec firefox --profile "$HOME/.mozilla/firefox/$PROFILE" $ARGS "$@"

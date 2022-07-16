@@ -27,9 +27,6 @@ bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle
 
-# Automatically switch to headset mic when headphones are plugged in
-exec --no-startup-id /home/matt/.local/bin/automic.sh
-
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
@@ -183,10 +180,10 @@ bindsym $mod+comma exec loginctl lock-session
 set $chromeflags --ozone-platform=wayland --enable-features=UseOzonePlatform,WebRTCPipeWireCapturer
 
 mode "app_launch" {
-	bindsym b mode "default"; exec browse.sh home
-	bindsym shift+b mode "default"; exec browse.sh home --private-window
-	bindsym mod1+b mode "default"; exec browse.sh college
-	bindsym s mode "default"; exec browse.sh school
+	bindsym b mode "default"; exec browse.sh home window
+	bindsym shift+b mode "default"; exec browse.sh home private
+	bindsym mod1+b mode "default"; exec browse.sh college window
+	bindsym s mode "default"; exec browse.sh school window
 	bindsym c mode "default"; exec vscodium
 	bindsym d mode "default"; exec discord-ptb $chromeflags
 	bindsym m mode "default"; exec gnome-system-monitor
@@ -205,10 +202,7 @@ mode "app_launch" {
 
 bindsym $mod+o mode "app_launch"
 
-exec --no-startup-id sh -c "acpi_listen | xargs -L1 -i'{}' pkill -SIGRTMIN+3 i3blocks"
-
 bindsym Control+mod1+Delete exec gnome-system-monitor
-bindsym $mod+period exec rofimoji
 
 bindsym Print exec ~/.local/bin/scrot.sh
 
@@ -216,8 +210,6 @@ bindsym $mod+x [urgent=latest] focus
 
 default_border pixel
 default_floating_border normal
-
-exec opensnitch-ui
 
 for_window [class="lxqt-openssh-askpass"] floating enable
 bindsym $mod+y fullscreen disable; floating enable; resize set 640 360; sticky enable; move position 3150 1750
