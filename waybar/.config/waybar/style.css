@@ -90,6 +90,40 @@ window#waybar.solo {
 }
 
 #battery {
+	padding-right: 22px;
+	background-position: calc(100% - 6px) 50%;
+	background-repeat: no-repeat;
+}
+
+#battery.pct-10-10 {
+	background-image: url("./pct-10-10.png");
+}
+#battery.pct-9-10 {
+	background-image: url("./pct-9-10.png");
+}
+#battery.pct-8-10 {
+	background-image: url("./pct-8-10.png");
+}
+#battery.pct-7-10 {
+	background-image: url("./pct-7-10.png");
+}
+#battery.pct-6-10 {
+	background-image: url("./pct-6-10.png");
+}
+#battery.pct-5-10 {
+	background-image: url("./pct-5-10.png");
+}
+#battery.pct-4-10 {
+	background-image: url("./pct-4-10.png");
+}
+#battery.pct-3-10 {
+	background-image: url("./pct-3-10.png");
+}
+#battery.pct-2-10 {
+	background-image: url("./pct-2-10.png");
+}
+#battery.pct-1-10 {
+	background-image: url("./pct-1-10.png");
 }
 
 #battery.charging, #battery.plugged {

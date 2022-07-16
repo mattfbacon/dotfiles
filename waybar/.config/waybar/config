@@ -63,14 +63,23 @@
 	},
 	"battery": {
 		"states": {
-			// "good": 95,
+			"pct-10-10": 100,
+			"pct-9-10": 90,
+			"pct-8-10": 80,
+			"pct-7-10": 70,
+			"pct-6-10": 60,
+			"pct-5-10": 50,
+			"pct-4-10": 40,
+			"pct-3-10": 30,
+			"pct-2-10": 20,
+			"pct-1-10": 10,
 			"warning": 30,
 			"critical": 15
 		},
-		"format": "{capacity}% {icon}",
-		"format-charging": "{capacity}% ",
-		"format-plugged": "{capacity}% ",
-		"format-alt": "{capacity}% {icon}",
+		"format": "{capacity}%",
+		"format-charging": "{capacity}% 🔌",
+		"format-plugged": "{capacity}% 🔌",
+		"format-alt": "{capacity}%",
 		// "format-good": "", // An empty format will hide the module
 		// "format-full": "",
 		"format-icons": ["", "", "", "", ""]
