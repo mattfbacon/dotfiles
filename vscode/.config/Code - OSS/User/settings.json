@@ -1,12 +1,14 @@
 {
+	"C_Cpp.intelliSenseEngineFallback": "Enabled",
+	"C_Cpp.updateChannel": "Insiders",
 	"[c]": {
 		"editor.defaultFormatter": "xaver.clang-format"
 	},
 	"[cpp]": {
-		"editor.wordBasedSuggestions": false,
-		"editor.suggest.insertMode": "replace",
+		"editor.defaultFormatter": "xaver.clang-format",
 		"editor.semanticHighlighting.enabled": true,
-		"editor.defaultFormatter": "xaver.clang-format"
+		"editor.suggest.insertMode": "replace",
+		"editor.wordBasedSuggestions": false
 	},
 	"[css]": {
 		"editor.defaultFormatter": "esbenp.prettier-vscode",
@@ -34,13 +36,23 @@
 		"editor.defaultFormatter": "esbenp.prettier-vscode"
 	},
 	"[jsonc]": {
-		"editor.defaultFormatter": "esbenp.prettier-vscode"
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
+		"editor.quickSuggestions": {
+			"strings": true
+		},
+		"editor.suggest.insertMode": "replace",
+		"gitlens.codeLens.scopes": [
+			"document"
+		]
 	},
 	"[less]": {
-		"editor.defaultFormatter": "esbenp.prettier-vscode"
+		"editor.defaultFormatter": "stylelint.vscode-stylelint"
 	},
 	"[rust]": {
-		"editor.defaultFormatter": "statiolake.vscode-rustfmt"
+		"editor.defaultFormatter": "rust-lang.rust"
+	},
+	"[typescript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
 	},
 	"[xml]": {
 		"editor.wordWrap": "on"
@@ -122,10 +134,12 @@
 		"Fellenz",
 		"fieldless",
 		"filesystems",
+		"freetype",
 		"fullscreen",
 		"fuser",
 		"gamemode",
 		"GDKMM",
+		"gebibytes",
 		"gmmproc",
 		"gobj",
 		"gobject",
@@ -182,6 +196,7 @@
 	"ccls.codeLens.enabled": false,
 	"debug.showInlineBreakpointCandidates": false,
 	"editor.autoSurround": "never",
+	"editor.bracketPairColorization.enabled": false,
 	"editor.cursorStyle": "line",
 	"editor.emptySelectionClipboard": false,
 	"editor.fontFamily": "monospace",
@@ -190,11 +205,16 @@
 	"editor.fontWeight": 480,
 	"editor.formatOnSave": true,
 	"editor.glyphMargin": false,
+	"editor.inlayHints.enabled": "off",
 	"editor.insertSpaces": false,
 	"editor.lineHeight": 1.5,
 	"editor.lineNumbers": "relative",
 	"editor.occurrencesHighlight": false,
-	"editor.quickSuggestions": false,
+	"editor.quickSuggestions": {
+		"comments": "off",
+		"other": "off",
+		"strings": "off"
+	},
 	"editor.renderWhitespace": "boundary",
 	"editor.rulers": [
 		79,
@@ -242,40 +262,49 @@
 			}
 		]
 	},
+	"editor.unicodeHighlight.includeComments": true,
+	"editor.unicodeHighlight.nonBasicASCII": true,
 	"editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
 	"editor.wordWrap": "on",
 	"editor.wrappingIndent": "indent",
 	"emmet.syntaxProfiles": {
 		"c++": {
-			"System Include": {
-				"prefix": "i<",
-				"body": "#include <$1>",
-				"description": "Include system header"
-			},
 			"Quote Include": {
-				"prefix": "i\"",
 				"body": "#include \"$1\"",
-				"description": "Include local header"
+				"description": "Include local header",
+				"prefix": "i\""
+			},
+			"System Include": {
+				"body": "#include <$1>",
+				"description": "Include system header",
+				"prefix": "i<"
 			}
 		}
 	},
+	"eslint.format.enable": true,
+	"eslint.packageManager": "yarn",
+	"eslint.validate": [
+		"typescript",
+		"javascript"
+	],
 	"files.associations": {
 		"*.ejs": "plaintext",
-		".htmlhintrc": "json",
 		"*.h": "cpp",
 		"*.html": "html",
-		"*.qss": "css",
 		"*.make": "makefile",
+		"*.qss": "css",
 		"*.tpp": "cpp",
+		".htmlhintrc": "json",
 		"TODO": "markdown"
 	},
 	"files.exclude": {
-		"**/.git": false,
 		"**/.classpath": true,
+		"**/.factorypath": true,
+		"**/.git": false,
 		"**/.project": true,
-		"**/.settings": true,
-		"**/.factorypath": true
+		"**/.settings": true
 	},
+	"files.hotExit": "off",
 	"files.insertFinalNewline": true,
 	"files.trimFinalNewlines": true,
 	"git.autofetch": true,
@@ -286,8 +315,10 @@
 	"gitlens.codeLens.enabled": false,
 	"gitlens.statusBar.enabled": false,
 	"haskell.serverExecutablePath": "~/.ghcup/bin/haskell-language-server-8.10.7",
+	"html.autoClosingTags": false,
 	"html.autoCreateQuotes": false,
 	"html.format.endWithNewline": true,
+	"javascript.autoClosingTags": false,
 	"javascript.suggest.autoImports": false,
 	"json.schemaDownload.enable": false,
 	"less.lint.duplicateProperties": "warning",
@@ -297,19 +328,28 @@
 	"less.lint.unknownAtRules": "error",
 	"less.lint.unknownProperties": "error",
 	"less.lint.zeroUnits": "warning",
+	"python.formatting.provider": "yapf",
 	"python.languageServer": "Jedi",
 	"python.linting.pylintEnabled": false,
 	"python.terminal.activateEnvironment": false,
-	"rpc.lowerDetailsEditing": "Editing {file_name}",
-	"rpc.detailsViewing": "In {workspace}",
+	"redhat.telemetry.enabled": false,
 	"rpc.detailsEditing": "In {workspace}",
+	"rpc.detailsViewing": "In {workspace}",
+	"rpc.fileInfoText": "{language} file ({currentline})",
+	"rpc.lowerDetailsEditing": "Editing {file_name}",
 	"rpc.lowerDetailsNoWorkspaceFound": "undefined",
+	"rpc.placeholderText": "VSCodium",
+	"rpc.placeholderTextInsiders": "VSCodium Insiders",
 	"rpc.removeElapsedTime": true,
+	"rpc.showProblems": false,
+	"rpc.showTime": false,
 	"rust.clippy_preference": "on",
+	"rust.jobs": 32,
 	"rust.rust-analyzer.path": "/usr/bin/rust-analyzer",
 	"rust.rust-analyzer.releaseTag": "stable",
 	"security.workspace.trust.enabled": false,
 	"security.workspace.trust.untrustedFiles": "open",
+	"settingsSync.keybindingsPerPlatform": false,
 	"sundial.sunrise": "06:30",
 	"sundial.sunset": "21:00",
 	"terminal.external.linuxExec": "kitty",
@@ -319,12 +359,13 @@
 	"terminal.integrated.automationProfile.linux": {
 		"path": "/usr/bin/bash"
 	},
+	"terminal.integrated.automationShell.linux": "bash",
 	"terminal.integrated.cursorBlinking": true,
 	"terminal.integrated.defaultProfile.linux": "fish",
 	"terminal.integrated.drawBoldTextInBrightColors": false,
 	"terminal.integrated.env.linux": {
-		"GIT_EDITOR": "vscodium --wait",
 		"GIT_DIFFTOOL": "vscodium --wait --diff $LOCAL $REMOTE",
+		"GIT_EDITOR": "vscodium --wait",
 		"GIT_MERGETOOL": "vscodium --wait $MERGED"
 	},
 	"terminal.integrated.fastScrollSensitivity": 5,
@@ -335,27 +376,30 @@
 	"terminal.integrated.lineHeight": 1.1,
 	"terminal.integrated.profiles.linux": {
 		"fish": {
-			"path": "/usr/bin/fish",
-			"icon": "star-full",
 			"env": {
-				"GIT_EDITOR": "vscodium --wait",
 				"GIT_DIFFTOOL": "vscodium --wait --diff $LOCAL $REMOTE",
+				"GIT_EDITOR": "vscodium --wait",
 				"GIT_MERGETOOL": "vscodium --wait $MERGED"
 			},
-			"overrideName": true
+			"icon": "star-full",
+			"overrideName": true,
+			"path": "/usr/bin/fish"
 		}
 	},
+	"terminal.integrated.sendKeybindingsToShell": true,
+	"typescript.autoClosingTags": false,
 	"typescript.format.enable": false,
 	"update.mode": "none",
 	"update.showReleaseNotes": false,
 	"vscode-neovim.neovimExecutablePaths.linux": "/usr/bin/nvim",
 	"vscode-neovim.neovimInitVimPaths.linux": "~/.config/nvim/init.vim",
+	"window.menuBarVisibility": "toggle",
 	"window.zoomLevel": -1,
 	"workbench.colorTheme": "MattTheme Light",
 	"workbench.editor.tabSizing": "shrink",
 	"workbench.editorAssociations": {
-		"*.ts": "default",
-		"*.ipynb": "jupyter.notebook.ipynb"
+		"*.ipynb": "jupyter.notebook.ipynb",
+		"*.ts": "default"
 	},
 	"workbench.enableExperiments": false,
 	"workbench.iconTheme": "file-icons",
@@ -366,11 +410,6 @@
 	"workbench.startupEditor": "newUntitledFile",
 	"workbench.tree.indent": 7,
 	"workbench.tree.renderIndentGuides": "always",
-	"redhat.telemetry.enabled": false,
-	"rust.jobs": 32,
-	"xml.completion.autoCloseTags": false,
-	"html.autoClosingTags": false,
-	"typescript.autoClosingTags": false,
-	"javascript.autoClosingTags": false,
-	"xml.completion.autoCloseRemovesContent": false
+	"xml.completion.autoCloseRemovesContent": false,
+	"xml.completion.autoCloseTags": false
 }

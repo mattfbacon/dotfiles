@@ -1,5 +1,7 @@
 set nocompatible
 
+let g:rust_recommended_style=0
+
 set viminfofile=~/.cache/viminfo
 
 " NeoVim stuff
@@ -140,14 +142,6 @@ inoremap <C-H> <C-W>
 
 let &t_SI = "\e[6 q"
 let &t_EI = "\e[2 q"
-
-" Automatically insert the right crate version
-function! CrateVersion(name)
-	let l:output = split(system($HOME . "/.local/bin/cratever.py " . a:name))
-	let @a = l:output[0]
-	let @b = l:output[1]
-endfunction
-noremap <silent><Leader>d :call CrateVersion(expand('<cword>'))<CR>
 
 if !has('termguicolors') || $TERM == 'linux'
 	set nocursorline

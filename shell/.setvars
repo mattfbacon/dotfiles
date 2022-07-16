@@ -24,10 +24,11 @@ export LESS_TERMCAP_se=$'\e[0m'
 export LESS_TERMCAP_so=$'\e[01;33m'
 export LESS_TERMCAP_ue=$'\e[0m'
 export LESS_TERMCAP_us=$'\e[1;4;31m'
-export GLFW_IM_MODULE=ibus
-export GTK_IM_MODULE=ibus
-export XMODIFIERS=@im=ibus
-export QT_IM_MODULE=ibus
+im=ibus
+export GLFW_IM_MODULE=$im
+export GTK_IM_MODULE=$im
+export XMODIFIERS=@im=$im
+export QT_IM_MODULE=$im
 export EDITOR=/usr/bin/nvim
 export BROWSER="$HOME/.local/bin/browse-home.sh"
 export TERMINAL=/usr/bin/kitty
@@ -35,7 +36,7 @@ export TERMINAL=/usr/bin/kitty
 #export MANPAGER=/usr/bin/bat
 export VISUAL=$EDITOR
 
-export BAT_THEME=ansi
+export BAT_THEME=gruvbox-light
 export BAT_STYLE=auto
 
 export DOCKER_HOST=unix://$XDG_RUNTIME_DIR/docker.sock

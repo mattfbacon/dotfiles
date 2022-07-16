@@ -4,7 +4,7 @@
 	signingKey = 00507F6492F147C2865E7558D0061A7BB596E3B3
 [core]
 	editor = nvim
-	sshCommand = ssh -i ~/.ssh/id_rsa -F /dev/null
+	sshCommand = ssh -i ~/.ssh/id_ed25519 -F /dev/null
 	excludesfile = ~/.gitignore
 [pull]
 	rebase = false
@@ -20,7 +20,6 @@
 [alias]
 	tree = log --graph --oneline --all
 	amend-to = "!f() { SHA=`git rev-parse \"$1\"`; git stash -k && git commit --fixup \"$SHA\" && GIT_SEQUENCE_EDITOR=true git rebase --interactive --autosquash \"$SHA^\" && git stash pop; }; f"
-	conflicts = diff --name-only --diff-filter=U
 [commit]
 	gpgsign = true
 [filter "lfs"]

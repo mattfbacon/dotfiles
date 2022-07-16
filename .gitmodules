@@ -46,9 +46,6 @@
 [submodule "vim/.vim/pack/plugins/start/chadtree"]
 	path = vim/.vim/pack/plugins/start/chadtree
 	url = https://github.com/ms-jpq/chadtree.git
-[submodule "vim/.vim/pack/plugins/start/signature"]
-	path = vim/.vim/pack/plugins/start/signature
-	url = https://github.com/kshenoy/vim-signature.git
 [submodule "vim/.vim/pack/syntax/start/gemini"]
 	path = vim/.vim/pack/syntax/start/gemini
 	url = https://github.com/pirmd/gemini.vim.git
@@ -64,12 +61,6 @@
 [submodule "vim/.vim/pack/colors/opt/boring"]
 	path = vim/.vim/pack/colors/opt/boring
 	url = https://github.com/mattfbacon/vim-boring.git
-[submodule "vim/.vim/pack/plugins/opt/copilot"]
-	path = vim/.vim/pack/plugins/opt/copilot
-	url = https://github.com/github/copilot.vim.git
-[submodule "vscode/.vscode-oss/extensions/mattf.matt-theme"]
-	path = vscode/.vscode-oss/extensions/mattf.matt-theme
-	url = https://github.com/mattfbacon/vscode-theme
 [submodule "vim/.vim/pack/plugins/start/caser"]
 	path = vim/.vim/pack/plugins/start/caser
 	url = https://github.com/arthurxavierx/vim-caser.git

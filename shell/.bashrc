@@ -5,25 +5,6 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-# if [ "$TERM" = "linux" ]; then
-#   echo -e "\e]P03b3228
-#   \e]P1cb6077
-#   \e]P2beb55b
-#   \e]P3f4bc87
-#   \e]P48ab3b5
-#   \e]P5a89bb9
-#   \e]P67bbda4
-#   \e]P7d0c8c6
-#   \e]P87e705a
-#   \e]P9cb6077
-#   \e]PAbeb55b
-#   \e]PBf4bc87
-#   \e]PC8ab3b5
-#   \e]PDa89bb9
-#   \e]PE7bbda4
-#   \e]PFf5eeeb"
-# fi
-
 shopt -q login_shell || test "$fish_subprocess" == 1 || [[ $(realpath $(which $(ps -o command= $(ps -o ppid= $$) | tr ' ' '\n' | head --lines 1))) == "/usr/bin/fish" ]] || exec fish
 
 alias ls='ls --color=auto'
