@@ -31,7 +31,7 @@ export XMODIFIERS=@im=$im
 export QT_IM_MODULE=$im
 export EDITOR=/usr/bin/nvim
 export BROWSER="$HOME/.local/bin/browse-home.sh"
-export TERMINAL=/usr/bin/kitty
+export TERMINAL=/usr/bin/alacritty
 #export PAGER=/usr/bin/bat
 #export MANPAGER=/usr/bin/bat
 export VISUAL=$EDITOR
