@@ -1,2 +1,2 @@
 #!/bin/sh
-/home/matt/.local/bin/show_time $(($(date '+%s') - $(date -d"$(uptime -s)" '+%s')))
+uptime -p | sed 's/up //;s/ \([a-z]\)[a-z]*/\1/g;s/, / /g'
