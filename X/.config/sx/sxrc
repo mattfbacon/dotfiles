@@ -14,4 +14,8 @@ source $HOME/.xinitrc
 
 emon
 emon
+
+sleep 0.1
+/home/matt/.local/bin/background.sh
+
 exec ${WM_BIN:-i3}
