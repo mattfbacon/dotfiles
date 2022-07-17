@@ -98,3 +98,6 @@ include "%L"
 
 <Multi_key> <M> <F>		: "Matthew Fellenz"	# MY NAME (FORMAL)
 <Multi_key> <m> <f>		: "Matt Fellenz"	# MY NAME (INFORMAL)
+
+<Multi_key> <D> <E>   : "Δ" U0394 # upper delta symbol
+<Multi_key> <d> <e>   : "δ" U03B4  # lower delta symbol
