@@ -26,8 +26,10 @@ font pango:Fira Code 9
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
 
-# xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
-# screen before suspend. Use loginctl lock-session to lock your screen.
+# locking setup
+# exec --no-startup-id xss-lock i3lock.sh
+# exec --no-startup-id xidlehook --not-when-audio --timer 150 "notify-send --expire-time=29500 --icon=/usr/share/icons/Adwaita/scalable/status/system-lock-screen-symbolic.svg 'Locking in 30 seconds'" "" --timer 30 "loginctl lock-session" ""
+exec --no-startup-id xset dpms 180 180 180
 exec --no-startup-id xss-lock i3lock.sh
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
@@ -281,8 +283,6 @@ bindsym $mod+minus move scratchpad
 # Show the first scratchpad window
 bindsym $mod+shift+plus scratchpad show
 
-# XIdleHook
-exec --no-startup-id xidlehook --not-when-audio --timer 150 "notify-send --expire-time=29500 --icon=/usr/share/icons/Adwaita/scalable/status/system-lock-screen-symbolic.svg 'Locking in 30 seconds'" "" --timer 30 "loginctl lock-session" ""
 # Screen lock on Win+,
 bindsym $mod+comma exec loginctl lock-session
 bindsym $mod+l exec loginctl lock-session
