@@ -92,5 +92,9 @@
     "key": "ctrl+left",
     "command": "-cursorWordLeft",
     "when": "textInputFocus"
+  },
+  {
+    "key": "ctrl+g ctrl+g",
+    "command": "rust-analyzer.reload"
   }
 ]

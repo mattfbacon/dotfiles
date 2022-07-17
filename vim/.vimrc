@@ -14,29 +14,6 @@ if has('termguicolors')
 	set termguicolors
 endif
 
-function! OldTheme()
-" Load theme based on time and $TERM
-" in non-xterm terminals, use a really simple theme that uses 16-color
-" in xterm terminals, load a dark theme between 9 pm and 6 am, otherwise load a light theme
-let matchedstring = matchstr($TERM, '\v^xterm')
-if !empty(matchedstring)
-	let time = str2nr(strftime('%H'), 10)
-	if time > 21 || time < 6
-		set background=dark
-		packadd! srcery
-		colorscheme srcery
-	else
-		set background=light
-		packadd! everforest
-		colorscheme everforest
-	endif
-else
-	set background=dark
-	packadd! disco
-	colorscheme disco
-endif
-endfunction
-
 " Backups and undo files
 if has("vms")
 	set nobackup
