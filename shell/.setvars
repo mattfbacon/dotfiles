@@ -55,3 +55,5 @@ export SSH_ASKPASS="/usr/lib/seahorse/ssh-askpass"
 export TZ='America/Los_Angeles'
 
 export GOPATH=~/.cache/go
+
+export DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=1
