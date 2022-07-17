@@ -156,7 +156,7 @@ command=~/.local/bin/apppicker.sh
 
 [screenshot]
 full_text=SCROT
-command=i3-msg -q -- exec gnome-screenshot -c --area
+command=i3-msg -q -- exec xfce4-screenshooter
 
 [separator]
 
