@@ -56,4 +56,6 @@ export TZ='America/Los_Angeles'
 
 export GOPATH=~/.cache/go
 
+export RUSTC_WRAPPER="sccache"
+
 export DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=1
