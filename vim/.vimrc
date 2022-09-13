@@ -5,8 +5,8 @@ let g:rust_recommended_style=0
 set viminfofile=~/.cache/viminfo
 
 " NeoVim stuff
-let g:python3_host_prog = $HOME . '/.pyenv/versions/3.9.4/bin/python'
-let g:python_host_prog = $HOME . '/.pyenv/versions/2.7.18/bin/python'
+let g:python3_host_prog = '/usr/bin/python3'
+let g:python_host_prog = '/usr/bin/python2'
 let g:node_host_prog = '/usr/local/bin/neovim-node-host'
 
 " True color
