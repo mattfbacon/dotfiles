@@ -1,11 +1,12 @@
 #!/bin/sh
+cd ~/dotfiles
+
 case $button in
 	1)
-		cd $DIR
-		i3-sensible-terminal -d $DIR fish -C 'git status' -i
+		i3-sensible-terminal -e fish -C "git status" -i
 		;;
 esac
-cd $DIR
+
 if test "$(git status --porcelain | wc -l)" -gt 0 || test "$(git log "origin/$(git rev-parse --abbrev-ref HEAD)..." --oneline | wc -l)" -gt 0; then
 	if test -z $ALWAYS_SHORT; then
 		echo DIRTY
