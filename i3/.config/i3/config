@@ -302,7 +302,6 @@ mode "app_launch" {
 	bindsym r exec rhythmbox, mode "default"
 	bindsym v exec pavucontrol, mode "default"
 	bindsym x exec xkill, mode "default"
-	bindsym p exec android-messages-desktop, mode "default"
 	bindsym t exec torbrowser-launcher, mode "default"
 
 	# back to normal: Enter or Escape or $mod+o
@@ -330,7 +329,6 @@ default_floating_border normal
 
 exec discord-canary --force-device-scale-factor=2
 for_window [class="discord"] move container to workspace $ws7
-exec --no-startup-id android-messages-desktop
 exec opensnitch-ui
 
 for_window [class="lxqt-openssh-askpass"] floating enable
