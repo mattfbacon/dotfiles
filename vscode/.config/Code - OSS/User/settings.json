@@ -231,7 +231,6 @@
 	"editor.fontWeight": 480,
 	"editor.formatOnSave": true,
 	"editor.glyphMargin": false,
-	"editor.inlayHints.enabled": "off",
 	"editor.insertSpaces": false,
 	"editor.lineHeight": 1.5,
 	"editor.lineNumbers": "relative",
