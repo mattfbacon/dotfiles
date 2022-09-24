@@ -5,7 +5,7 @@
 		"editor.defaultFormatter": "xaver.clang-format"
 	},
 	"[cpp]": {
-		"editor.defaultFormatter": "xaver.clang-format",
+		"editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd",
 		"editor.semanticHighlighting.enabled": true,
 		"editor.suggest.insertMode": "replace",
 		"editor.wordBasedSuggestions": false
