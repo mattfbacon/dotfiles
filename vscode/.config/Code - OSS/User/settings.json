@@ -346,6 +346,7 @@
 	"html.autoClosingTags": false,
 	"html.autoCreateQuotes": false,
 	"html.format.endWithNewline": true,
+	"java.import.gradle.java.home": "/usr/lib/jvm/android-studio",
 	"javascript.autoClosingTags": false,
 	"javascript.suggest.autoImports": false,
 	"json.schemaDownload.enable": false,
