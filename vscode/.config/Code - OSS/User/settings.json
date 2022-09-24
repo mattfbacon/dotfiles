@@ -366,7 +366,7 @@
 	"rpc.detailsViewing": "In {workspace}",
 	"rpc.fileInfoText": "{language} file ({currentline})",
 	"rpc.lowerDetailsEditing": "Editing {file_name}",
-	"rpc.lowerDetailsNoWorkspaceFound": "undefined",
+	"rpc.lowerDetailsNoWorkspaceFound": "{current_line}/{total_lines}",
 	"rpc.placeholderText": "VSCodium",
 	"rpc.placeholderTextInsiders": "VSCodium Insiders",
 	"rpc.removeElapsedTime": true,
