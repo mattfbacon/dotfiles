@@ -212,6 +212,7 @@ default_border pixel
 default_floating_border normal
 
 for_window [class="lxqt-openssh-askpass"] floating enable
+for_window [class="Alacritty"] border normal
 bindsym $mod+y fullscreen disable; floating enable; resize set 640 360; sticky enable; move position 3150 1750
 
 smart_borders on
