@@ -441,7 +441,7 @@
 		"*.ts": "default"
 	},
 	"workbench.enableExperiments": false,
-	"workbench.iconTheme": "file-icons",
+	"workbench.iconTheme": "file-icons-colourless",
 	"workbench.preferredDarkColorTheme": "MattTheme Dark",
 	"workbench.preferredLightColorTheme": "MattTheme Light",
 	"workbench.productIconTheme": "fluent-icons",
