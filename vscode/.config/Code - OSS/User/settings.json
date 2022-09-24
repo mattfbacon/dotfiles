@@ -372,6 +372,16 @@
 	"rpc.removeElapsedTime": true,
 	"rpc.showProblems": false,
 	"rpc.showTime": false,
+	"rust-analyzer.cargo.features": "all",
+	"rust-analyzer.checkOnSave.command": "clippy",
+	"rust-analyzer.inlayHints.bindingModeHints.enable": true,
+	"rust-analyzer.inlayHints.closureReturnTypeHints.enable": "with_block",
+	"rust-analyzer.inlayHints.lifetimeElisionHints.enable": "always",
+	"rust-analyzer.inlayHints.reborrowHints.enable": "always",
+	"rust-analyzer.inlayHints.typeHints.hideClosureInitialization": true,
+	"rust-analyzer.rustfmt.extraArgs": [
+		"+nightly"
+	],
 	"rust.clippy_preference": "on",
 	"rust.jobs": 4,
 	"rust.rust-analyzer.path": "/usr/bin/rust-analyzer",
