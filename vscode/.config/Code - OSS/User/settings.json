@@ -312,6 +312,9 @@
 		"typescript",
 		"javascript"
 	],
+	"evenBetterToml.formatter.allowedBlankLines": 1,
+	"evenBetterToml.formatter.columnWidth": 120,
+	"evenBetterToml.formatter.reorderKeys": true,
 	"files.associations": {
 		"*.ejs": "plaintext",
 		"*.h": "cpp",
