@@ -48,8 +48,14 @@
 	"[less]": {
 		"editor.defaultFormatter": "stylelint.vscode-stylelint"
 	},
+	"[njk]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
 	"[rust]": {
 		"editor.defaultFormatter": "rust-lang.rust-analyzer"
+	},
+	"[toml]": {
+		"editor.defaultFormatter": "tamasfe.even-better-toml"
 	},
 	"[typescript]": {
 		"editor.defaultFormatter": "esbenp.prettier-vscode"
