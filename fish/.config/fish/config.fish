@@ -29,6 +29,8 @@ end
 
 fish_user_keybindings
 
+source /usr/share/doc/find-the-command/ftc.fish
+
 set -g fish_handle_reflow 1
 
 [ (basename (cat "/proc/"(ps -o ppid -p $fish_pid | sed '2q;d' | sed -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//')"/comm")) != electron ]; and not set -q fish_private_mode; and mfetch
