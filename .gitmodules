@@ -64,3 +64,6 @@
 [submodule "vim/.vim/pack/plugins/start/caser"]
 	path = vim/.vim/pack/plugins/start/caser
 	url = https://github.com/arthurxavierx/vim-caser.git
+[submodule "vim/.vim/pack/plugins/start/abolish"]
+	path = vim/.vim/pack/plugins/start/abolish
+	url = https://github.com/tpope/abolish
