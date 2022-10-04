@@ -1,4 +1,3 @@
-
 include "%L"
 
 <Multi_key> <p> <i> : "π" U03C0 # Lowercase Pi
@@ -101,3 +100,5 @@ include "%L"
 
 <Multi_key> <D> <E>   : "Δ" U0394 # upper delta symbol
 <Multi_key> <d> <e>   : "δ" U03B4  # lower delta symbol
+<Multi_key> <o> <plus>		: "⊕"
+<Multi_key> <plus> <O>		: "⊕"
