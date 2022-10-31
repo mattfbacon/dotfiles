@@ -122,6 +122,6 @@
 		"exec": "while pgrep yay || pgrep pacman; do sleep 0.5; done; checkupdates | wc -l",
 		"interval": 3600,
 		"tooltip": false,
-		"on-click": "$TERMINAL ~/.local/bin/update.sh"
+		"on-click": "$TERMINAL -e ~/.local/bin/update.sh"
 	}
 }
