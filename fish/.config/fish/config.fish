@@ -34,3 +34,20 @@ source /usr/share/doc/find-the-command/ftc.fish
 set -g fish_handle_reflow 1
 
 [ (basename (cat "/proc/"(ps -o ppid -p $fish_pid | sed '2q;d' | sed -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//')"/comm")) != electron ]; and not set -q fish_private_mode; and mfetch
+
+alias ga='git add'
+alias gap='git add -p'
+alias gc='git commit'
+alias gcan='git commit --amend --no-edit'
+alias gck='git checkout'
+alias gcm='git commit -m'
+alias gd='git diff'
+alias gds='git diff --staged'
+alias gl='git log'
+alias grs='git restore --staged'
+alias gs='git status'
+alias gst='git stash'
+alias gp='git push'
+alias gpu='git pull'
+
+alias cr='cargo run'
