@@ -164,6 +164,7 @@
 		"idents",
 		"Idxs",
 		"insertable",
+		"interner",
 		"jobserver",
 		"mattfellenz",
 		"memmap",
