@@ -431,7 +431,7 @@
 	"update.mode": "none",
 	"update.showReleaseNotes": false,
 	"vscode-neovim.neovimExecutablePaths.linux": "/usr/bin/nvim",
-	"vscode-neovim.neovimInitVimPaths.linux": "~/.config/nvim/init.vim",
+	"vscode-neovim.neovimInitVimPaths.linux": "~/.config/nvim/init.lua",
 	"window.menuBarVisibility": "toggle",
 	"window.zoomLevel": 3,
 	"workbench.colorTheme": "MattTheme Light",
