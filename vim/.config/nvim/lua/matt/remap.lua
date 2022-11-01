@@ -31,7 +31,7 @@ map.n_no_re('gr', vim.lsp.buf.references)
 map.n_no_re('gi', vim.lsp.buf.implementation)
 map.n_no_re('K', vim.lsp.buf.hover)
 map.n_no_re('<C-k>', vim.lsp.buf.signature_help)
-map.led('t', '<cmd>Trouble<CR>')
+map.led('t', '<cmd>TroubleToggle<CR>')
 -- map.n_no_re('<C-n>', vim.lsp.diagnostic.goto_prev)
 -- map.n_no_re('<C-p>', vim.lsp.diagnostic.goto_next)
 
