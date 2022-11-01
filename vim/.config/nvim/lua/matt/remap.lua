@@ -44,4 +44,4 @@ map.n_no_re('cr', function()
 	vim.lsp.buf.rename(new_name)
 end)
 
-vim.api.nvim_create_autocmd('BufWritePre', { pattern = '*', command = 'lua vim.lsp.buf.formatting_sync(nil, 100)' })
+vim.api.nvim_create_autocmd('BufWritePre', { pattern = '*', command = 'lua vim.lsp.buf.format { timeout_ms = 100; }' })
