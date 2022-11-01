@@ -35,4 +35,4 @@ map.led('t', '<cmd>TroubleToggle<CR>')
 -- map.n_no_re('<C-n>', vim.lsp.diagnostic.goto_prev)
 -- map.n_no_re('<C-p>', vim.lsp.diagnostic.goto_next)
 
-vim.api.nvim_create_autocmd('BufWritePre', { pattern = '*', command = 'lua vim.lsp.buf.formatting_sync(nil, 100)' })
+vim.api.nvim_create_autocmd('BufWritePre', { pattern = '*', command = 'lua vim.lsp.buf.format { timeout_ms = 100; }' })
