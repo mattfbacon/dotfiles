@@ -1,7 +1,0 @@
-configuration {
-	modi: "window,drun";
-	font: "monospace 10";
-	dpi: 192;
-}
-
-@theme "gruvbox-light"
