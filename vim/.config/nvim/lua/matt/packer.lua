@@ -94,6 +94,7 @@ return require('packer').startup(function()
 			local Rule = require 'nvim-autopairs.rule'
 			pairs.setup {}
 			pairs.add_rule(Rule('<', '>', 'rust'))
+			pairs.add_rule(Rule('\\left(', '\\right)', 'tex'))
 		end
 	}
 end)
