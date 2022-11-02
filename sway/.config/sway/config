@@ -235,7 +235,7 @@ input "type:touchpad" {
 exec --no-startup-id nm-applet --indicator
 
 output "*" {
-	bg ~/Pictures/wallpaper.png fill
+	bg ~/wallpapers/current.jpg fill
 }
 
 seat "*" {
