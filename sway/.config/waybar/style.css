@@ -127,8 +127,11 @@ window#waybar.solo {
 }
 
 #battery.charging, #battery.plugged {
-	color: #fef8ec;
 	background-color: #26A65B;
+}
+
+#battery.charging label, #battery.plugged label {
+	color: #fef8ec;
 }
 
 @keyframes blink {
