@@ -3,6 +3,7 @@ vim.cmd 'packadd packer.nvim'
 return require('packer').startup(function()
 	use 'wbthomason/packer.nvim'
 	use 'sainnhe/everforest'
+	use 'airblade/vim-gitgutter'
 	use {
 		'neovim/nvim-lspconfig',
 		config = function()
