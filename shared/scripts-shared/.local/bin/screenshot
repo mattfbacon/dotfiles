@@ -1,7 +1,7 @@
 #!/bin/sh
 
 default_location() {
-	echo ~/Pictures/grim_"$(date +%F_%H-%M-%S)".png
+	echo ~/Pictures/ScreenshotsAuto/"$(date +%F_%H-%M-%S)".png
 }
 
 TYPE="$(echo -e 'screen\narea' | bemenu -p Type)"

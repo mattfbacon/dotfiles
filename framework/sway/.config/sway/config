@@ -207,7 +207,7 @@ bindsym $mod+o mode "app_launch"
 
 bindsym Control+mod1+Delete exec gnome-system-monitor
 
-bindsym Print exec ~/.local/bin/scrot.sh
+bindsym Print exec screenshot
 
 bindsym $mod+x [urgent=latest] focus
 
