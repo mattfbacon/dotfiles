@@ -3,7 +3,6 @@ vim.cmd 'packadd packer.nvim'
 return require('packer').startup(function()
 	use 'wbthomason/packer.nvim'
 	use 'sainnhe/everforest'
-	use 'airblade/vim-gitgutter'
 	use {
 		'nvim-treesitter/nvim-treesitter',
 		cmd = 'TSUpdate',
@@ -36,7 +35,7 @@ return require('packer').startup(function()
 			'hrsh7th/cmp-cmdline'
 		},
 		config = function()
-			-- local cmp_autopairs = require 'nvim-autopairs.completion.cmp'
+			local cmp_autopairs = require 'nvim-autopairs.completion.cmp'
 			local cmp = require 'cmp'
 			local mapping = cmp.mapping
 
@@ -69,7 +68,7 @@ return require('packer').startup(function()
 				};
 			}
 
-			-- cmp.event:on('confirm_done', cmp_autopairs.on_confirm_done())
+			cmp.event:on('confirm_done', cmp_autopairs.on_confirm_done())
 		end
 	}
 	use {
@@ -88,7 +87,6 @@ return require('packer').startup(function()
 			}
 		end
 	}
-	--[[
 	use {
 		'windwp/nvim-autopairs',
 		config = function()
@@ -96,7 +94,7 @@ return require('packer').startup(function()
 			local Rule = require 'nvim-autopairs.rule'
 			pairs.setup {}
 			pairs.add_rule(Rule('<', '>', 'rust'))
+			pairs.add_rule(Rule('\\left(', '\\right)', 'tex'))
 		end
 	}
-	--]]
 end)
