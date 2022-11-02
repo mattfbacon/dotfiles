@@ -5,6 +5,17 @@ return require('packer').startup(function()
 	use 'sainnhe/everforest'
 	use 'airblade/vim-gitgutter'
 	use {
+		'nvim-treesitter/nvim-treesitter',
+		cmd = 'TSUpdate',
+		config = function()
+			require 'nvim-treesitter.configs'.setup {
+				ensure_install = { 'c', 'lua', 'rust', },
+				auto_install = true,
+				highlight = true,
+			}
+		end
+	}
+	use {
 		'neovim/nvim-lspconfig',
 		config = function()
 			local lsp = require 'lspconfig'
