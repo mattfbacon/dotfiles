@@ -3,13 +3,10 @@
 PROFILE=""
 case "$1" in
 	home)
-		PROFILE="5bmfmi8v.Home"
+		PROFILE="3k9z7b16.default"
 	;;
 	school)
-		PROFILE="0td0hysr.School"
-	;;
-	college)
-		PROFILE="mh4f9c7h.College"
+		PROFILE="m8tvww85.School"
 	;;
 	*)
 		echo 'Unknown profile' >&2
