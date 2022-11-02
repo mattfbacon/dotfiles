@@ -251,4 +251,4 @@ exec_always {
 	gsettings set $gnome_schema font-name 'sans-serif'
 }
 
-exec --no-startup-id gammastep
+exec --no-startup-id gammastep-indicator
