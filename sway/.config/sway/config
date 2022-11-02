@@ -229,8 +229,8 @@ bindsym $mod+minus move scratchpad
 bindsym $mod+shift+plus scratchpad show
 
 # Screen lock on Win+,
-bindsym $mod+comma exec pkill -SIGUSR1 swayidle
-bindsym $mod+l exec pkill -SIGUSR1 swayidle
+bindsym $mod+comma exec sleep 1 && pkill -SIGUSR1 swayidle
+bindsym $mod+l exec sleep 1 && pkill -SIGUSR1 swayidle
 
 exec --no-startup-id setxkbmap -option compose:rctrl
 
