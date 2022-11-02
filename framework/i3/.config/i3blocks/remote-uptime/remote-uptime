@@ -1,4 +1,0 @@
-#!/bin/sh
-UP="$((ssh ${CONN:?need CONN} -- uptime | sed 's/.*up //' | sed 's/,.*$//') || echo -e 'NOCONN')"
-echo $UP
-echo $UP | sed 's/ *days//'

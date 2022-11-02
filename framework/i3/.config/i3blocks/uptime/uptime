@@ -1,2 +1,0 @@
-#!/bin/sh
-uptime -p | sed 's/up //;s/ \([a-z]\)[a-z]*/\1/g;s/, / /g'
