@@ -24,7 +24,7 @@ map.led('L', function()
 	end
 	vim.cmd('!./make.sh %')
 	local pdf_path = string.gsub(tex_path, '%.tex$', '.pdf')
-	io.popen('evince ' .. pdf_path)
+	io.popen('swaymsg -- exec evince ' .. pdf_path)
 end)
 map.n_no_re('gd', vim.lsp.buf.definition)
 map.n_no_re('gD', vim.lsp.buf.declaration)
