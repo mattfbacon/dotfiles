@@ -9,9 +9,10 @@ set $mod Mod4
 font pango:Fira Code 9
 
 exec --no-startup-id swayidle -w \
-	timeout 300 'swaylock -f -c 000000' \
-	timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
-	before-sleep 'swaylock -f -c 000000'
+	timeout 160 'swaylock -f -c 005661' \
+	timeout 165 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
+	before-sleep 'swaylock -f -c 005661'
+
 
 exec --no-startup-id nm-applet --indicator
 
