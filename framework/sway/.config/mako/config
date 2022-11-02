@@ -1,0 +1,25 @@
+max-history=10
+sort=-time
+on-button-left=dismiss
+on-button-right=invoke-default-action
+on-touch=dismiss
+
+background-color=#fef8ecff
+text-color=#005661ff
+
+width=400
+height=200
+border-color=#005661ff
+
+max-visible=5
+
+[urgency=low]
+text-color=#8ca6a6
+border-color=#8ca6a6
+[urgency=critical]
+background-color=#ff4000ff
+[app-name=brave-browser urgency=critical]
+# brave's "critical" is not actually critical.
+# in fact, it's low priority
+text-color=#8ca6a6
+border-color=#8ca6a6

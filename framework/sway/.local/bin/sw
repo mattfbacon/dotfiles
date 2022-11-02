@@ -1,0 +1,14 @@
+#!/bin/sh
+export MOZ_ENABLE_WAYLAND=1
+export XDG_CURRENT_DESKTOP=sway
+unset GDK_SCALE
+unset GDK_DPI_SCALE
+unset GDK_BACKEND
+export SAL_USE_VCLPLUGIN=gtk3
+export XDG_SESSION_TYPE=wayland
+export QT_QPA_PLATFORM=wayland-egl
+export ECORE_EVAS_ENGINE=wayland_egl
+export ELM_ENGINE=wayland_egl
+export SDL_VIDEODRIVER=wayland
+export _JAVA_AWT_WM_NONREPARENTING=1
+exec sway

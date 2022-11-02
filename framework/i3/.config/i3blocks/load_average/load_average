@@ -1,0 +1,16 @@
+#!/usr/bin/env python
+
+import subprocess
+import sys
+
+with open('/proc/loadavg', 'r') as f:
+    load = float(f.readline().split(' ')[0])
+cpus = float(subprocess.run('nproc', capture_output=True).stdout)
+
+load = load / cpus
+
+print('%.4f' % load)
+print('%.1f' % load)
+if load > 1.1:
+    print('#ff0000')
+    sys.exit(33)

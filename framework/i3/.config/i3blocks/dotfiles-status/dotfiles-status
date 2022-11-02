@@ -1,0 +1,25 @@
+#!/bin/sh
+cd ~/dotfiles
+
+case $button in
+	1)
+		i3-sensible-terminal -e fish -C "git status" -i
+		;;
+esac
+
+if test "$(git status --porcelain | wc -l)" -gt 0 || test "$(git log "origin/$(git rev-parse --abbrev-ref HEAD)..." --oneline | wc -l)" -gt 0; then
+	if test -z $ALWAYS_SHORT; then
+		echo DIRTY
+	else
+		echo D
+	fi
+	echo D
+	echo '#ff3333'
+else
+	if test -z $ALWAYS_SHORT; then
+		echo CLEAN
+	else
+		echo C
+	fi
+	echo C
+fi

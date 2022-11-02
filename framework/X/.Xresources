@@ -1,0 +1,65 @@
+Xft.dpi: 192
+! Xft.dpi: 96
+Xcursor.theme: breeze_cursors
+Xcursor.size: 48
+
+URxvt*xft:JetbrainsMono Nerd Font Mono:pixelsize=14
+
+! OLD:::
+! i3.Theme.primary: #025b54
+! ! opacity: #025b54bb
+! i3.Theme.primary_semi: #014e4b
+! i3.Theme.primary_light: #478f6a
+! i3.Theme.foreground: #ffffff
+! ! opacity: #ffffff99
+! i3.Theme.foreground_dim: #8FA1A6
+! ! opacity: #00000000
+! i3.Theme.inactive: #002934
+! i3.Theme.inactive_opaque: #002934
+! ! opacity: #ffffff77
+! i3.Theme.inactive_foreground: #70878D
+! ! opacity: #ffffff20
+! i3.Theme.inactive_border: #20444D
+! ! opacity: #ff888899
+! i3.Theme.inactive_urgent_fg: #996266
+! i3.Theme.urgent_foreground: #ff8888
+
+! ! relative to $HOME
+! i3.Background: Pictures/wallhaven-z8oe8g_3840x2160.png
+! i3.Background.color: #025b54
+
+! NEW:::
+i3.Background: Pictures/wallpaper.png
+i3.Background.color: #8E5C38
+
+i3.Theme.primary: #8ca6a6
+
+! i3.Theme.primary with opacity 73%
+! i3.Theme.primary_semi: #C2725B
+! i3.Theme.primary_semi: #005661ff
+i3.Theme.primary_semi: #EDEDE3
+
+i3.Theme.primary_light: #b0c2c2
+
+i3.Theme.foreground: #005661
+
+! i3.Theme.foreground with opacity 60%
+! i3.Theme.foreground_dim: #A79EA9
+i3.Theme.foreground_dim: #00566199
+
+i3.Theme.inactive_opaque: #fef8ec
+
+! inactive_opaque with opacity 0%
+i3.Theme.inactive: #fef8ec
+
+! i3.Theme.foreground with opacity 47%
+! i3.Theme.inactive_foreground: #8A7F8D
+i3.Theme.inactive_foreground: #00566177
+
+! i3.Theme.foreground with opacity 13%
+i3.Theme.inactive_border: #00566120
+
+i3.Theme.urgent_foreground: #e34e1c
+
+! i3.Theme.urgent_foreground with opacity 60%
+i3.Theme.inactive_urgent_fg: #e34e1c66

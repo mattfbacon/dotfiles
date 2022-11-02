@@ -1,0 +1,33 @@
+[user]
+	name = Matt Fellenz
+	email = matt@felle.nz
+	signingKey = 00507F6492F147C2865E7558D0061A7BB596E3B3
+[core]
+	editor = nvim
+	sshCommand = ssh -i ~/.ssh/id_ed25519 -F /dev/null
+	excludesfile = ~/.gitignore
+[pull]
+	rebase = false
+[bash]
+	showInformativeStatus = true
+[diff]
+	colorMoved = true
+	algorithm = histogram
+[push]
+	default = matching
+[init]
+	defaultBranch = main
+[alias]
+	tree = log --graph --oneline --all
+	amend-to = "!f() { SHA=`git rev-parse \"$1\"`; git stash -k && git commit --fixup \"$SHA\" && GIT_SEQUENCE_EDITOR=true git rebase --interactive --autosquash \"$SHA^\" && git stash pop; }; f"
+[commit]
+	gpgsign = true
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+[credential "https://github.com/mattf552814"]
+	username = mattf552814
+[credential]
+	helper = store --file ~/.git-credentials

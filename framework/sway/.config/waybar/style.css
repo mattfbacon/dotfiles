@@ -1,0 +1,224 @@
+* {
+	border: none;
+	border-radius: 0;
+	font-family: monospace, 'Noto Sans CJK JP';
+	font-size: 12px;
+	min-height: 0;
+}
+
+window#waybar {
+	background-color: #fef8ec;
+	color: #005661;
+	transition-property: background-color;
+	transition-duration: .5s;
+}
+
+window#waybar.hidden {
+	opacity: 0.2;
+}
+
+/*
+window#waybar.empty {
+	background-color: transparent;
+}
+window#waybar.solo {
+	background-color: #FFFFFF;
+}
+*/
+
+#workspaces button {
+	padding: 0 5px;
+	background-color: transparent;
+}
+
+#workspaces button:hover {
+	background: rgba(0, 0, 0, 0.05);
+}
+
+#workspaces button:active {
+	color: inherit;
+}
+
+#workspaces button.focused {
+	background-color: #f0e9d6;
+	color: #005661;
+}
+
+#workspaces button.urgent {
+	background-color: #eb4d4b;
+}
+
+#mode {
+	background-color: #f9f1e1;
+	color: #005661;
+}
+
+#clock,
+#battery,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#custom-media,
+#tray,
+#mode,
+#idle_inhibitor,
+#mpd {
+	padding: 0 10px;
+	margin: 0 4px;
+}
+
+#window,
+#workspaces {
+	margin: 0 4px;
+}
+
+/* If workspaces is the leftmost module, omit left margin */
+.modules-left > widget:first-child > #workspaces {
+	margin-left: 0;
+}
+
+/* If workspaces is the rightmost module, omit right margin */
+.modules-right > widget:last-child > #workspaces {
+	margin-right: 0;
+}
+
+#clock {
+}
+
+#battery {
+	padding-right: 22px;
+	background-position: calc(100% - 6px) 50%;
+	background-repeat: no-repeat;
+}
+
+#battery.pct-10-10 {
+	background-image: url("./pct-10-10.png");
+}
+#battery.pct-9-10 {
+	background-image: url("./pct-9-10.png");
+}
+#battery.pct-8-10 {
+	background-image: url("./pct-8-10.png");
+}
+#battery.pct-7-10 {
+	background-image: url("./pct-7-10.png");
+}
+#battery.pct-6-10 {
+	background-image: url("./pct-6-10.png");
+}
+#battery.pct-5-10 {
+	background-image: url("./pct-5-10.png");
+}
+#battery.pct-4-10 {
+	background-image: url("./pct-4-10.png");
+}
+#battery.pct-3-10 {
+	background-image: url("./pct-3-10.png");
+}
+#battery.pct-2-10 {
+	background-image: url("./pct-2-10.png");
+}
+#battery.pct-1-10 {
+	background-image: url("./pct-1-10.png");
+}
+
+#battery.charging, #battery.plugged {
+	background-color: #26A65B;
+}
+
+#battery.charging label, #battery.plugged label {
+	color: #fef8ec;
+}
+
+@keyframes blink {
+	to {
+		background-color: #fef8ec;
+		color: #005661;
+	}
+}
+
+#battery.critical:not(.charging) {
+	background-color: #f53c3c;
+	animation-name: blink;
+	animation-duration: 0.5s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+}
+
+label:focus {
+}
+
+#cpu {
+}
+
+#memory {
+}
+
+#disk {
+}
+
+#backlight {
+}
+
+#network {
+}
+
+#network.disconnected {
+}
+
+#pulseaudio {
+}
+
+#pulseaudio.muted {
+	color: #2a5c45;
+}
+
+#temperature {
+}
+
+#temperature.critical {
+}
+
+#tray {
+}
+
+#tray > .passive {
+	-gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+	-gtk-icon-effect: highlight;
+	background-color: #eb4d4b;
+}
+
+#idle_inhibitor {
+}
+
+#idle_inhibitor.activated {
+	background-color: #005661;
+	color: #fef8ec;
+}
+
+#mpd {
+	color: #2a5c45;
+}
+
+#mpd.disconnected {
+}
+
+#mpd.stopped {
+}
+
+#mpd.paused {
+}
+
+#language {
+	padding: 0 5px;
+	margin: 0 5px;
+	min-width: 16px;
+}

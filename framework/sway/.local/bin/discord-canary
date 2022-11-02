@@ -1,0 +1,2 @@
+#!/bin/sh
+exec electron-patcher /usr/bin/discord-canary
