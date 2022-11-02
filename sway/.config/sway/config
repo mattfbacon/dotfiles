@@ -191,6 +191,8 @@ set $urgent #e64100
 
 bar {
 	swaybar_command waybar
+	height 8
+	gaps 0
 }
 
 # window border colors
