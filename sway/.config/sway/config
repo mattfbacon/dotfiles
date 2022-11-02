@@ -260,7 +260,7 @@ bindsym $mod+o mode "app_launch"
 bindsym Control+mod1+Delete exec gnome-system-monitor
 bindsym $mod+period exec rofimoji
 
-bindsym Print exec xfce4-screenshooter
+bindsym Print exec screenshot
 
 bindsym $mod+x [urgent=latest] focus
 
