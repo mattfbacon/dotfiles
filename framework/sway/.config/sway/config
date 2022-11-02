@@ -234,9 +234,7 @@ input "type:touchpad" {
 
 exec --no-startup-id nm-applet --indicator
 
-output "*" {
-	bg ~/wallpapers/current.jpg fill
-}
+output "*" bg ~/wallpapers/current.jpg fill
 
 seat "*" {
 	xcursor_theme "capitaine-cursors"
