@@ -22,6 +22,7 @@ return require('packer').startup(function()
 			local capabilities = require('cmp_nvim_lsp').default_capabilities()
 			lsp.pyright.setup { capabilities = capabilities }
 			lsp.rust_analyzer.setup { capabilities = capabilities }
+			lsp.clangd.setup { capabilities = capabilities }
 		end
 	}
 	use {
