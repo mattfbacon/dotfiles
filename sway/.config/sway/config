@@ -16,7 +16,7 @@ exec --no-startup-id swayidle -w \
 
 exec --no-startup-id nm-applet --indicator
 
-exec --no-startup-id gammastep
+exec --no-startup-id gammastep-indicator
 
 exec --no-startup-id mako
 
