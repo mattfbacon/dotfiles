@@ -24,7 +24,7 @@ return require('packer').startup(function()
 			'hrsh7th/cmp-cmdline'
 		},
 		config = function()
-			local cmp_autopairs = require 'nvim-autopairs.completion.cmp'
+			-- local cmp_autopairs = require 'nvim-autopairs.completion.cmp'
 			local cmp = require 'cmp'
 			local mapping = cmp.mapping
 
@@ -57,7 +57,7 @@ return require('packer').startup(function()
 				};
 			}
 
-			cmp.event:on('confirm_done', cmp_autopairs.on_confirm_done())
+			-- cmp.event:on('confirm_done', cmp_autopairs.on_confirm_done())
 		end
 	}
 	use {
@@ -76,6 +76,7 @@ return require('packer').startup(function()
 			}
 		end
 	}
+	--[[
 	use {
 		'windwp/nvim-autopairs',
 		config = function()
@@ -85,4 +86,5 @@ return require('packer').startup(function()
 			pairs.add_rule(Rule('<', '>', 'rust'))
 		end
 	}
+	--]]
 end)
