@@ -239,7 +239,7 @@ output "*" {
 }
 
 seat "*" {
-	xcursor_theme "Breeze"
+	xcursor_theme "capitaine-cursors"
 }
 
 set $gnome_schema org.gnome.desktop.interface
@@ -247,7 +247,7 @@ set $gnome_schema org.gnome.desktop.interface
 exec_always {
 	gsettings set $gnome_schema gtk-theme 'OSX-Arc-White'
 	# gsettings set $gnome_schema icon-theme 'Adwaita'
-	gsettings set $gnome_schema cursor-theme 'Breeze'
+	gsettings set $gnome_schema cursor-theme 'capitaine-cursors'
 	gsettings set $gnome_schema font-name 'sans-serif'
 }
 
