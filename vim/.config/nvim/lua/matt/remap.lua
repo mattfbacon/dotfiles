@@ -30,10 +30,18 @@ map.n_no_re('gd', vim.lsp.buf.definition)
 map.n_no_re('gD', vim.lsp.buf.declaration)
 map.n_no_re('gr', vim.lsp.buf.references)
 map.n_no_re('gi', vim.lsp.buf.implementation)
+map.n_no_re('ca', vim.lsp.buf.code_action)
 map.n_no_re('K', vim.lsp.buf.hover)
 map.n_no_re('<C-k>', vim.lsp.buf.signature_help)
 map.led('t', '<cmd>Trouble<CR>')
--- map.n_no_re('<C-n>', vim.lsp.diagnostic.goto_prev)
--- map.n_no_re('<C-p>', vim.lsp.diagnostic.goto_next)
+map.n_no_re('<C-n>', vim.diagnostic.goto_prev)
+map.n_no_re('<C-p>', vim.diagnostic.goto_next)
+map.n_no_re('cr', function()
+	local new_name = vim.fn.input('New name: ')
+	if new_name == '' then
+		return
+	end
+	vim.lsp.buf.rename(new_name)
+end)
 
 vim.api.nvim_create_autocmd('BufWritePre', { pattern = '*', command = 'lua vim.lsp.buf.formatting_sync(nil, 100)' })
