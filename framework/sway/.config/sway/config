@@ -1,69 +1,52 @@
-exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK XDG_CURRENT_DESKTOP
-exec hash dbus-update-activation-environment 2>/dev/null \
-	&& dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK XDG_CURRENT_DESKTOP
+exec systemctl --user import-environment SWAYSOCK WAYLAND_DISPLAY
+
+exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 
 mouse_warping output
 
 set $mod Mod4
 
-font pango:Fira Code 9
+# Font for window titles. Will also be used by the bar unless a different font
+# is used in the bar {} block below.
+font pango:Fira Code 8
 
-exec --no-startup-id swayidle -w \
-	timeout 160 'swaylock -f -c 005661' \
-	timeout 165 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
-	before-sleep 'swaylock -f -c 005661'
+# This font is widely installed, provides lots of unicode glyphs, right-to-left
+# text rendering and scalability on retina/hidpi displays (thanks to pango).
+#font pango:DejaVu Sans Mono 8
 
-
-exec --no-startup-id nm-applet --indicator
-
-exec --no-startup-id gammastep-indicator
-
+# dunst for notifications
 exec --no-startup-id mako
 
 exec --no-startup-id fcitx5 -d
 
-exec --no-startup-id mpd
+# clipboard manager
+exec --no-startup-id wl-paste -t text --watch clipman store
+bindsym $mod+c exec --no-startup-id clipman pick -t bemenu
 
-set $refresh_i3status pkill -RTMIN+10 i3blocks
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +3% && $refresh_i3status
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -3% && $refresh_i3status
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
-bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
+# Use pactl to adjust volume in PulseAudio.
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +3%
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -3%
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle
+bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
-bindsym $mod+shift+Return exec i3-sensible-terminal -e ~/.local/bin/privpriv.sh
+bindsym $mod+Return exec $TERMINAL
+bindsym $mod+shift+Return exec $TERMINAL ~/.local/bin/privpriv.sh
 
 # kill focused window
 bindsym $mod+Shift+q kill
-# close focused window nicely
-# bindsym $mod+q exec xdotool windowclose $(xdotool getactivewindow)
 
 # bring all windows to laptop screen
 # bindsym $mod+b [class=".*"] move workspace to output eDP1
 
-# change focus
-# bindsym $mod+j focus left
-# bindsym $mod+k focus down
-# bindsym $mod+l focus up
-# bindsym $mod+semicolon focus right
-
-# alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
 bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
-# move focused window
-# bindsym $mod+Shift+j move left
-# bindsym $mod+Shift+k move down
-# bindsym $mod+Shift+l move up
-# bindsym $mod+Shift+semicolon move right
-
-# alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
@@ -98,26 +81,16 @@ bindsym $mod+a focus parent
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 "1"
-set $ws2 "2"
-set $ws3 "3"
-set $ws4 "4"
-set $ws5 "5"
-set $ws6 "6"
-set $ws7 "7"
-set $ws8 "8"
-set $ws9 "9"
-set $ws10 "10"
-
-workspace $ws1 output HDMI-A-1
-workspace $ws2 output HDMI-A-1
-workspace $ws3 output HDMI-A-1
-workspace $ws4 output DP-1
-workspace $ws5 output DP-1
-workspace $ws6 output DP-1
-workspace $ws7 output HDMI-A-2
-workspace $ws8 output HDMI-A-2
-workspace $ws9 output HDMI-A-2
+set $ws1 "1:一"
+set $ws2 "2:二"
+set $ws3 "3:三"
+set $ws4 "4:四"
+set $ws5 "5:五"
+set $ws6 "6:六"
+set $ws7 "7:七"
+set $ws8 "8:八"
+set $ws9 "9:九"
+set $ws10 "10:十"
 
 # switch to workspace
 bindsym $mod+1 workspace number $ws1
@@ -145,26 +118,11 @@ bindsym $mod+Shift+0 move container to workspace number $ws10
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
-# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
-bindsym $mod+Shift+r restart
-# exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
+bindsym $mod+Shift+e exec swaynag --font 'Fira Code 10' -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'
 
 for_window [class="galculator"] floating enable
 # resize window (you can also use the mouse for that)
 mode "resize" {
-	# These bindings trigger as soon as you enter the resize mode
-
-	# Pressing left will shrink the window’s width.
-	# Pressing right will grow the window’s width.
-	# Pressing up will shrink the window’s height.
-	# Pressing down will grow the window’s height.
-	#bindsym j resize shrink width 5 px or 5 ppt
-	#bindsym k resize grow height 5 px or 5 ppt
-	#bindsym l resize shrink height 5 px or 5 ppt
-	#bindsym semicolon resize grow width 5 px or 5 ppt
-
-	# same bindings, but for the arrow keys
 	bindsym Left resize shrink width 5 px or 5 ppt
 	bindsym Down resize grow height 5 px or 5 ppt
 	bindsym Up resize shrink height 5 px or 5 ppt
@@ -181,38 +139,26 @@ mode "resize" {
 	bindsym $mod+r mode "default"
 }
 
+exec swayidle -w \
+				timeout 110 'swaylock -f -c 21577B' \
+				timeout 120 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
+				timeout 180 '[ "$(cat /sys/class/power_supply/ACAD/online)" -eq 0 ] && systemctl suspend && swaymsg "output * dpms on"' \
+				before-sleep 'swaylock -f -c 21577B' \
+				lock 'sleep 1; killall -USR1 swayidle'
+
 bindsym $mod+r mode "resize"
 
-set $background_primary #fef8ec
-set $background_secondary #f7f2e3
-set $background_tertiary #f0e9d6
-set $foreground_primary #005661
-set $urgent #e64100
-
 bar {
+	font pango:sans-serif 10
 	swaybar_command waybar
-	height 8
-	gaps 0
+	position top
+	bindsym button4 nop
+	bindsym button5 nop
+	tray_output primary
+	strip_workspace_numbers yes
 }
 
-# window border colors
-# format: border title-background title-foreground
-client.focused $foreground_primary $foreground_primary $background_primary
-client.unfocused $background_tertiary $background_tertiary $foreground_primary
-# same as unfocused afaict
-client.focused_inactive $background_tertiary $background_tertiary $foreground_primary
-client.urgent $urgent $urgent $foreground_primary
-
-# start dmenu (a program launcher)
-# bindsym $mod+d exec dmenu_run
-# There also is the (new) i3-dmenu-desktop which only displays applications
-# shipping a .desktop file. It is a wrapper around dmenu, so you need that
-# installed.
-# bindsym $mod+d exec --no-startup-id "i3-dmenu-desktop --dmenu='dmenu -i -fn monospace:pixelsize=34 -nb #002934 -nf #ffffff -sb #025b54 -sf #ffffff'"
-bindsym $mod+d exec --no-startup-id ~/.local/bin/apppicker.sh
-bindsym XF86LaunchA exec --no-startup-id ~/.local/bin/apppicker.sh
-bindsym $mod+n exec --no-startup-id rofi -show window
-bindsym XF86LaunchB exec --no-startup-id rofi -show window
+bindsym $mod+d exec --no-startup-id /home/matt/.local/bin/apppicker.sh
 
 # Media player keybinds
 bindsym XF86AudioPlay exec playerctl play-pause
@@ -220,34 +166,36 @@ bindsym XF86AudioPause exec playerctl pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
+# Brightness keybinds
+bindsym XF86MonBrightnessUp exec light -A 2
+bindsym XF86MonBrightnessDown exec light -U 2
 
 # Minimizing
 # Make the currently focused window a scratchpad
 bindsym $mod+minus move scratchpad
 
 # Show the first scratchpad window
-bindsym $mod+shift+plus scratchpad show
+bindsym $mod+plus scratchpad show
 
 # Screen lock on Win+,
-bindsym $mod+comma exec sleep 1 && pkill -SIGUSR1 swayidle
-bindsym $mod+l exec sleep 1 && pkill -SIGUSR1 swayidle
+bindsym $mod+comma exec loginctl lock-session
 
-exec --no-startup-id setxkbmap -option compose:rctrl
+set $chromeflags --ozone-platform=wayland --enable-features=UseOzonePlatform,WebRTCPipeWireCapturer
 
 mode "app_launch" {
-	bindsym b exec browse.sh home window, mode "default"
-	bindsym shift+b exec browse.sh home private, mode "default"
-	bindsym mod1+b exec browse.sh college window,  mode "default"
-	bindsym s exec browse.sh school window, mode "default"
-	bindsym c exec vscodium, mode "default"
-	bindsym d exec discord-canary, mode "default"
-	bindsym m exec gnome-system-monitor, mode "default"
-	bindsym shift+f exec thunar, mode "default"
-	bindsym f exec nemo, mode "default"
-	bindsym r exec rhythmbox, mode "default"
-	bindsym v exec pavucontrol, mode "default"
-	bindsym x exec xkill, mode "default"
-	bindsym t exec torbrowser-launcher, mode "default"
+	bindsym b mode "default"; exec browse.sh home window
+	bindsym shift+b mode "default"; exec browse.sh home private
+	bindsym mod1+b mode "default"; exec browse.sh college window
+	bindsym s mode "default"; exec browse.sh school window
+	bindsym c mode "default"; exec vscodium
+	bindsym d mode "default"; exec discord-ptb $chromeflags
+	bindsym m mode "default"; exec gnome-system-monitor
+	bindsym f mode "default"; exec thunar
+	bindsym shift+f mode "default"; exec nemo
+	bindsym r mode "default"; exec rhythmbox
+	bindsym v mode "default"; exec pavucontrol
+	bindsym x mode "default"; exec xkill
+	bindsym t mode "default"; exec torbrowser-launcher
 
 	# back to normal: Enter or Escape or $mod+o
 	bindsym Return mode "default"
@@ -258,39 +206,40 @@ mode "app_launch" {
 bindsym $mod+o mode "app_launch"
 
 bindsym Control+mod1+Delete exec gnome-system-monitor
-bindsym $mod+period exec rofimoji
 
-bindsym Print exec screenshot
+bindsym Print exec ~/.local/bin/scrot.sh
 
 bindsym $mod+x [urgent=latest] focus
 
 default_border pixel
 default_floating_border normal
 
-exec discord-canary
-# for_window [class="discord"] move container to workspace $ws7
-
 for_window [class="lxqt-openssh-askpass"] floating enable
 for_window [class="Alacritty"] border normal
+bindsym $mod+y fullscreen disable; floating enable; resize set 640 360; sticky enable; move position 3150 1750
 
 smart_borders on
 hide_edge_borders both
 
-bindsym $mod+F7 exec --no-startup-id playerctl play-pause
-bindsym $mod+F8 exec --no-startup-id playerctl next
-bindsym $mod+F6 exec --no-startup-id playerctl previous
-bindsym $mod+F11 exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +3% && $refresh_i3status
-bindsym $mod+F10 exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -3% && $refresh_i3status
-bindsym $mod+F9 exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
+input "*" {
+	xkb_layout us
+	xkb_variant dvorak
+	xkb_options compose:rctrl
+}
 
-output HDMI-A-1 mode 1920x1080 position 0 0
-output DP-1 mode 3840x2160 position 1920 0 scale 2
-output HDMI-A-2 mode 1920x1080 position 3840 0 transform 270
+input "type:touchpad" {
+	natural_scroll enable
+	dwt disable
+}
 
-output "*" bg ~/Pictures/wallpaper.jpg fill
+exec --no-startup-id nm-applet --indicator
+
+output "*" {
+	bg ~/wallpapers/current.jpg fill
+}
 
 seat "*" {
-	xcursor_theme "breeze_cursors"
+	xcursor_theme "capitaine-cursors"
 }
 
 set $gnome_schema org.gnome.desktop.interface
@@ -298,13 +247,8 @@ set $gnome_schema org.gnome.desktop.interface
 exec_always {
 	gsettings set $gnome_schema gtk-theme 'OSX-Arc-White'
 	# gsettings set $gnome_schema icon-theme 'Adwaita'
-	gsettings set $gnome_schema cursor-theme 'breeze_cursors'
+	gsettings set $gnome_schema cursor-theme 'capitaine-cursors'
 	gsettings set $gnome_schema font-name 'sans-serif'
 }
 
-input type:pointer {
-	accel_profile adaptive
-	pointer_accel 0
-}
-
-exec_always 'xprop -root -f _XWAYLAND_GLOBAL_OUTPUT_SCALE 32c -set _XWAYLAND_GLOBAL_OUTPUT_SCALE 2'
+exec --no-startup-id gammastep-indicator

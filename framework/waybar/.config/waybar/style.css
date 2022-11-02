@@ -2,13 +2,13 @@
 	border: none;
 	border-radius: 0;
 	font-family: monospace, 'Noto Sans CJK JP';
-	font-size: 12px;
+	font-size: 10px;
 	min-height: 0;
+	color: #005661;
 }
 
 window#waybar {
 	background-color: #fef8ec;
-	color: #005661;
 	transition-property: background-color;
 	transition-duration: .5s;
 }

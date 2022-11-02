@@ -1,9 +1,0 @@
-#!/bin/sh
-
-xmodmap -e 'keycode 105 = Multi_key'
-xmodmap -e 'remove control = Multi_key'
-xmodmap -e "add mod3 = Scroll_Lock"
-
-xrandr --output HDMI-A-0 --mode 1920x1080 --scale 2x2 || echo "not enabling left monitor due to previous error(s)" >&2
-xrandr --output DisplayPort-0 --mode 3840x2160 --refresh 59.94 --pos 3840x0 --primary --scale 1x1 || echo "not enabling center monitor due to previous error(s)" >&2
-xrandr --output HDMI-A-1 --mode 1920x1080 --refresh 60 --right-of DisplayPort-0 --rotate left --scale 1.75x1.75 || echo "not enabling right monitor due to previous error(s)" >&2

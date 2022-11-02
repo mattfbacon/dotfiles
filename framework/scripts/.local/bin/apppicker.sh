@@ -1,2 +1,2 @@
 #!/bin/sh
-rofi -show drun
+bemenu-run -H 24 | xargs swaymsg exec --

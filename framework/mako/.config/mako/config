@@ -7,8 +7,9 @@ on-touch=dismiss
 background-color=#fef8ecff
 text-color=#005661ff
 
+font=monospace 8
 width=400
-height=200
+height=180
 border-color=#005661ff
 
 max-visible=5

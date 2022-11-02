@@ -164,7 +164,6 @@
 		"idents",
 		"Idxs",
 		"insertable",
-		"interner",
 		"jobserver",
 		"mattfellenz",
 		"memmap",
@@ -233,7 +232,7 @@
 	"editor.formatOnSave": true,
 	"editor.glyphMargin": false,
 	"editor.insertSpaces": false,
-	"editor.lineHeight": 1.5,
+	"editor.lineHeight": 0,
 	"editor.lineNumbers": "relative",
 	"editor.occurrencesHighlight": false,
 	"editor.quickSuggestions": {
@@ -384,7 +383,7 @@
 		"+nightly"
 	],
 	"rust.clippy_preference": "on",
-	"rust.jobs": 32,
+	"rust.jobs": 4,
 	"rust.rust-analyzer.path": "/usr/bin/rust-analyzer",
 	"rust.rust-analyzer.releaseTag": "stable",
 	"security.workspace.trust.enabled": false,
@@ -396,10 +395,10 @@
 	"terminal.integrated.allowChords": false,
 	"terminal.integrated.allowMnemonics": false,
 	"terminal.integrated.altClickMovesCursor": true,
+	"terminal.integrated.automationShell.linux": "bash",
 	"terminal.integrated.automationProfile.linux": {
 		"path": "/usr/bin/bash"
 	},
-	"terminal.integrated.automationShell.linux": "bash",
 	"terminal.integrated.cursorBlinking": true,
 	"terminal.integrated.defaultProfile.linux": "fish",
 	"terminal.integrated.drawBoldTextInBrightColors": false,
@@ -434,7 +433,7 @@
 	"vscode-neovim.neovimExecutablePaths.linux": "/usr/bin/nvim",
 	"vscode-neovim.neovimInitVimPaths.linux": "~/.config/nvim/init.lua",
 	"window.menuBarVisibility": "toggle",
-	"window.zoomLevel": -1,
+	"window.zoomLevel": 3,
 	"workbench.colorTheme": "MattTheme Light",
 	"workbench.editor.tabSizing": "shrink",
 	"workbench.editorAssociations": {
@@ -448,7 +447,7 @@
 	"workbench.productIconTheme": "fluent-icons",
 	"workbench.settings.enableNaturalLanguageSearch": false,
 	"workbench.startupEditor": "newUntitledFile",
-	"workbench.tree.indent": 7,
+	"workbench.tree.indent": 9.5,
 	"workbench.tree.renderIndentGuides": "always",
 	"xml.completion.autoCloseRemovesContent": false,
 	"xml.completion.autoCloseTags": false
