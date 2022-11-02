@@ -1,5 +1,7 @@
 exec systemctl --user import-environment SWAYSOCK WAYLAND_DISPLAY
 
+exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+
 mouse_warping output
 
 set $mod Mod4
