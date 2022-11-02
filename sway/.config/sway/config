@@ -287,7 +287,24 @@ output HDMI-A-1 mode 1920x1080 position 0 0
 output DP-1 mode 3840x2160 position 1920 0 scale 2
 output HDMI-A-2 mode 1920x1080 position 3840 0 transform 270
 
+output "*" bg ~/Pictures/wallpaper.jpg fill
+
+seat "*" {
+	xcursor_theme "breeze_cursors"
+}
+
+set $gnome_schema org.gnome.desktop.interface
+
+exec_always {
+	gsettings set $gnome_schema gtk-theme 'OSX-Arc-White'
+	# gsettings set $gnome_schema icon-theme 'Adwaita'
+	gsettings set $gnome_schema cursor-theme 'breeze_cursors'
+	gsettings set $gnome_schema font-name 'sans-serif'
+}
+
 input type:pointer {
 	accel_profile adaptive
 	pointer_accel 0
 }
+
+exec_always 'xprop -root -f _XWAYLAND_GLOBAL_OUTPUT_SCALE 32c -set _XWAYLAND_GLOBAL_OUTPUT_SCALE 2'
