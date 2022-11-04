@@ -296,7 +296,7 @@ seat "*" {
 set $gnome_schema org.gnome.desktop.interface
 
 exec_always {
-	gsettings set $gnome_schema gtk-theme 'OSX-Arc-White'
+	gsettings set $gnome_schema gtk-theme 'Arc'
 	# gsettings set $gnome_schema icon-theme 'Adwaita'
 	gsettings set $gnome_schema cursor-theme 'breeze_cursors'
 	gsettings set $gnome_schema font-name 'sans-serif'
