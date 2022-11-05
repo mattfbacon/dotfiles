@@ -4,13 +4,13 @@
 	font-family: monospace, 'Noto Sans CJK JP';
 	font-size: 10px;
 	min-height: 0;
-	color: #005661;
 }
 
 window#waybar {
 	background-color: #fef8ec;
 	transition-property: background-color;
 	transition-duration: .5s;
+	color: #005661;
 }
 
 window#waybar.hidden {
@@ -69,6 +69,7 @@ window#waybar.solo {
 #mpd {
 	padding: 0 10px;
 	margin: 0 4px;
+	color: #005661;
 }
 
 #window,
@@ -154,24 +155,31 @@ label:focus {
 }
 
 #cpu {
+	color: #005661;
 }
 
 #memory {
+	color: #005661;
 }
 
 #disk {
+	color: #005661;
 }
 
 #backlight {
+	color: #005661;
 }
 
 #network {
+	color: #005661;
 }
 
 #network.disconnected {
+	color: #005661;
 }
 
 #pulseaudio {
+	color: #005661;
 }
 
 #pulseaudio.muted {
@@ -179,12 +187,14 @@ label:focus {
 }
 
 #temperature {
+	color: #005661;
 }
 
 #temperature.critical {
 }
 
 #tray {
+	color: #005661;
 }
 
 #tray > .passive {
@@ -197,6 +207,7 @@ label:focus {
 }
 
 #idle_inhibitor {
+	color: #005661;
 }
 
 #idle_inhibitor.activated {
@@ -221,4 +232,5 @@ label:focus {
 	padding: 0 5px;
 	margin: 0 5px;
 	min-width: 16px;
+	color: #005661;
 }
