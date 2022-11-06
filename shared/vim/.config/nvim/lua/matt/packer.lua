@@ -28,6 +28,9 @@ return require('packer').startup(function()
 						rustfmt = {
 							extraArgs = { '+nightly' },
 						},
+						checkOnSave = {
+							command = 'clippy',
+						},
 					},
 				},
 			}
@@ -48,6 +51,7 @@ return require('packer').startup(function()
 			-- local cmp_autopairs = require 'nvim-autopairs.completion.cmp'
 			local cmp = require 'cmp'
 			local mapping = cmp.mapping
+			local compare = cmp.config.compare
 
 			cmp.setup {
 				snippet = {
@@ -64,17 +68,25 @@ return require('packer').startup(function()
 					['<C-e>'] = mapping.abort();
 					['<CR>'] = mapping.confirm({ select = true });
 				};
-				sources = cmp.config.sources(
-					{
-						{ name = 'nvim_lsp' },
-						{ name = 'vsnip' },
-					},
-					{
-						{ name = 'buffer'}
-					}
-				);
+				sources = cmp.config.sources {
+					{ name = 'nvim_lsp', priority = 8 },
+					{ name = 'vsnip', priority = 7 },
+					{ name = 'buffer', priority = 7 },
+					{ name = 'spell', keyword_length = 3, priority = 5, keyword_pattern = [[\w\+]] },
+					{ name = 'calc', priority = 3 },
+				};
 				completion = {
 					autocomplete = false;
+				};
+				sorting = {
+					priority_weight = 1.0;
+					comparators = {
+						compare.locality,
+						compare.recently_used,
+						compare.score,
+						compare.offset,
+						compare.order,
+					};
 				};
 			}
 
