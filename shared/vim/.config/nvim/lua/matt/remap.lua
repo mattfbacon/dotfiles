@@ -36,6 +36,8 @@ map.n_no_re('<C-k>', vim.lsp.buf.signature_help)
 map.led('t', '<cmd>TroubleToggle<CR>')
 map.n_no_re('<C-n>', vim.diagnostic.goto_prev)
 map.n_no_re('<C-p>', vim.diagnostic.goto_next)
+map.i_no_re('<C-y>', vim.lsp.buf.code_action)
+map.i_no_re('<C-s>', function() vim.cmd('w') end)
 
 map.n_no_re('cr', function()
 	local new_name = vim.fn.input('New name: ')
