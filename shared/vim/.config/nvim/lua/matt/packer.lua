@@ -28,6 +28,9 @@ return require('packer').startup(function()
 						rustfmt = {
 							extraArgs = { '+nightly' },
 						},
+						checkOnSave = {
+							command = 'clippy',
+						},
 					},
 				},
 			}
