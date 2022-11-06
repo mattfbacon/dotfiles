@@ -13,6 +13,8 @@ exec --no-startup-id swayidle -w \
 	timeout 165 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
 	before-sleep 'swaylock -f -c 005661'
 
+exec --no-startup-id wl-paste -t text --watch clipman store
+bindsym $mod+c exec --no-startup-id clipman pick -t bemenu
 
 exec --no-startup-id nm-applet --indicator
 
