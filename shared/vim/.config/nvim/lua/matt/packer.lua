@@ -35,6 +35,7 @@ return require('packer').startup(function()
 				},
 			}
 			lsp.clangd.setup { capabilities = capabilities }
+			lsp.taplo.setup { capabilities = capabilities }
 		end
 	}
 	use {
