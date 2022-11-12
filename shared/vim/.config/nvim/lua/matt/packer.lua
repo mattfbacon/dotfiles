@@ -36,7 +36,7 @@ return require('packer').startup(function()
 					},
 				},
 			}
-			lsp.clangd.setup { capabilities = capabilities }
+			lsp.clangd.setup { capabilities = capabilities, filetypes = { "c", "cpp", "objc", "objcpp", "cuda", "proto", "s" } }
 		end
 	}
 	use {
