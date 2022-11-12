@@ -11,6 +11,6 @@ load = load / cpus
 
 print('%.4f' % load)
 print('%.1f' % load)
-if load > 1.1:
+if load > 1.25:
     print('#ff0000')
     sys.exit(33)
