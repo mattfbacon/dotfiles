@@ -18,10 +18,12 @@ return require('packer').startup(function()
 	use {
 		'neovim/nvim-lspconfig',
 		config = function()
+			local inlay = require 'inlay-hints'
 			local lsp = require 'lspconfig'
 			local capabilities = require('cmp_nvim_lsp').default_capabilities()
 			lsp.pyright.setup { capabilities = capabilities }
 			lsp.rust_analyzer.setup {
+				on_attach = inlay.on_attach,
 				capabilities = capabilities,
 				settings = {
 					["rust-analyzer"] = {
@@ -121,4 +123,5 @@ return require('packer').startup(function()
 		end
 	}
 	--]]
+	use 'simrat39/inlay-hints.nvim'
 end)
