@@ -192,9 +192,24 @@ set $foreground_primary #005661
 set $urgent #e64100
 
 bar {
-	swaybar_command waybar
-	height 8
+	status_command i3blocks
+	position top
+	height 22
 	gaps 0
+	workspace_min_width 22
+
+	tray_output *
+
+	colors {
+		background $background_primary
+		statusline $foreground_primary
+		separator $foreground_primary
+		focused_workspace $background_tertiary $background_tertiary $foreground_primary
+		active_workspace $background_secondary $background_secondary $foreground_primary
+		inactive_workspace $background_primary $background_primary $foreground_primary
+		urgent_workspace $urgent $urgent #ffffff
+		binding_mode $background_secondary $background_secondary $foreground_primary
+	}
 }
 
 # window border colors
