@@ -33,6 +33,9 @@ return require('packer').startup(function()
 						checkOnSave = {
 							command = 'clippy',
 						},
+						cargo = {
+							features = 'all',
+						},
 					},
 				},
 			}
