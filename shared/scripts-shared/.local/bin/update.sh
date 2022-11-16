@@ -2,7 +2,7 @@
 echo -----------
 echo pacman
 echo -----------
-yay
+paru
 
 echo -----------
 echo rust
@@ -10,10 +10,14 @@ echo -----------
 rustup update
 
 echo -----------
-echo nvm
+echo npm
 echo -----------
-nvm install latest
-nvm use latest
+npm --global upgrade
+
+echo -----------
+echo yarn
+echo -----------
+yarn global upgrade
 
 echo -n '(Press any key to exit)'
 read -p ''
