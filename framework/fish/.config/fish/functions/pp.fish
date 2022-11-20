@@ -1,1 +1,0 @@
-alias pp='privpriv.sh'

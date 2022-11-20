@@ -1,1 +1,0 @@
-alias ln="ln -i"

@@ -1,10 +1,6 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
-SETUVAR --export --path NIX_PATH:nixpkgs\x3d/home/matt/\x2enix\x2ddefexpr/channels/nixos\x2dunstable\x2dsmall
-SETUVAR --export __fish_git_prompt_showupstream:verbose
 SETUVAR __fish_initialized:3400
-SETUVAR _fisher_jorgebucaran_2F_nvm_2E_fish_files:/home/matt/\x2econfig/fish/functions/_nvm_index_update\x2efish\x1e/home/matt/\x2econfig/fish/functions/_nvm_list\x2efish\x1e/home/matt/\x2econfig/fish/functions/_nvm_version_activate\x2efish\x1e/home/matt/\x2econfig/fish/functions/_nvm_version_deactivate\x2efish\x1e/home/matt/\x2econfig/fish/functions/nvm\x2efish\x1e/home/matt/\x2econfig/fish/conf\x2ed/nvm\x2efish\x1e/home/matt/\x2econfig/fish/completions/nvm\x2efish
-SETUVAR _fisher_plugins:jorgebucaran/nvm\x2efish
 SETUVAR fish_color_autosuggestion:93a1a1
 SETUVAR fish_color_cancel:\x2d\x2dreverse
 SETUVAR fish_color_command:586e75
@@ -48,5 +44,3 @@ SETUVAR fish_pager_color_selected_description:\x1d
 SETUVAR fish_pager_color_selected_prefix:\x1d
 SETUVAR --export fish_subprocess:1
 SETUVAR fish_user_paths:\x1d
-SETUVAR nvm_data:/home/matt/\x2elocal/share/nvm
-SETUVAR nvm_mirror:https\x3a//nodejs\x2eorg/dist
