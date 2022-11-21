@@ -1,1 +1,0 @@
-alias wget="wget -c"

@@ -295,7 +295,7 @@ mode "app_launch" {
 	bindsym mod1+b exec browse.sh college window,  mode "default"
 	bindsym s exec browse.sh school window, mode "default"
 	bindsym c exec vscodium, mode "default"
-	bindsym d exec discord-canary --force-device-scale-factor=2, mode "default"
+	bindsym d exec discord --force-device-scale-factor=2, mode "default"
 	bindsym m exec gnome-system-monitor, mode "default"
 	bindsym shift+f exec thunar, mode "default"
 	bindsym f exec nemo, mode "default"
@@ -327,7 +327,7 @@ bindsym $mod+x [urgent=latest] focus
 default_border pixel
 default_floating_border normal
 
-exec discord-canary --force-device-scale-factor=2
+exec discord --force-device-scale-factor=2
 for_window [class="discord"] move container to workspace $ws7
 exec opensnitch-ui
 
