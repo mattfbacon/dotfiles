@@ -34,7 +34,7 @@ floating_modifier $mod
 
 # start a terminal
 bindsym $mod+Return exec $TERMINAL
-bindsym $mod+shift+Return exec $TERMINAL ~/.local/bin/privpriv.sh
+bindsym $mod+shift+Return exec $TERMINAL -e ~/.local/bin/privpriv.sh
 
 # kill focused window
 bindsym $mod+Shift+q kill
