@@ -18,7 +18,6 @@ alias cr='cargo run'
 alias cat='bat'
 alias ls='exa -a --header --git --grid --classify --group'
 alias lstree='ls -T' # uses previous
-alias sudo='doas'
 alias vim='nvim'
 
 alias cp='cp -i'
