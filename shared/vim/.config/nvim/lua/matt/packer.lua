@@ -128,4 +128,5 @@ return require('packer').startup(function()
 	}
 	--]]
 	use 'simrat39/inlay-hints.nvim'
+	use 'tpope/vim-abolish'
 end)

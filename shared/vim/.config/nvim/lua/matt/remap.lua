@@ -39,8 +39,13 @@ map.n_no_re('<C-n>', vim.diagnostic.goto_prev)
 map.n_no_re('<C-p>', vim.diagnostic.goto_next)
 map.i_no_re('<C-y>', vim.lsp.buf.code_action)
 map.i_no_re('<C-s>', function() vim.cmd('w') end)
+map.led('T', function()
+	local row = vim.api.nvim_win_get_cursor(0)[1] - 1
+	local time = vim.fn.strftime('%A, %e %B %Y')
+	vim.api.nvim_buf_set_lines(0, row, row, true, { time, '' })
+end)
 
-map.n_no_re('cr', function()
+map.n_no_re('cR', function()
 	local new_name = vim.fn.input('New name: ')
 	if new_name == '' then
 		return
