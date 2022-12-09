@@ -167,8 +167,8 @@ bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
 # Brightness keybinds
-bindsym XF86MonBrightnessUp exec light -A 2
-bindsym XF86MonBrightnessDown exec light -U 2
+bindsym $mod+F7 exec light -U 2
+bindsym $mod+F8 exec light -A 2
 
 # Minimizing
 # Make the currently focused window a scratchpad

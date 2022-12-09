@@ -129,6 +129,7 @@ window#waybar.solo {
 
 #battery.charging, #battery.plugged {
 	background-color: #26A65B;
+	color: #fef8ec;
 }
 
 #battery.charging label, #battery.plugged label {
