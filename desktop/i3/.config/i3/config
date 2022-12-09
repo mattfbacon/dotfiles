@@ -329,7 +329,6 @@ default_floating_border normal
 
 exec discord --force-device-scale-factor=2
 for_window [class="discord"] move container to workspace $ws7
-exec opensnitch-ui
 
 for_window [class="lxqt-openssh-askpass"] floating enable
 for_window [class="Alacritty"] border normal
