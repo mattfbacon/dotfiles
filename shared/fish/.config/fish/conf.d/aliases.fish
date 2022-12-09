@@ -37,3 +37,5 @@ alias ssy='doas systemctl'
 alias syu='systemctl --user'
 
 alias c='rlwrap rpni'
+
+alias off='systemctl poweroff'
