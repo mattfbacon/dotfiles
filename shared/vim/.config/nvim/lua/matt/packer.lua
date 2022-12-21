@@ -16,30 +16,46 @@ return require('packer').startup(function()
 		end
 	}
 	use {
+		'simrat39/rust-tools.nvim',
+		config = function()
+			local rt = require 'rust-tools'
+			local capabilities = require('cmp_nvim_lsp').default_capabilities()
+			rt.setup {
+				server = {
+					capabilities = capabilities,
+					settings = {
+						["rust-analyzer"] = {
+							rustfmt = {
+								extraArgs = { '+nightly' },
+							},
+							checkOnSave = {
+								command = 'clippy',
+								allTargets = true,
+							},
+							cargo = {
+								features = 'all',
+							},
+							inlayHints = {
+								bindingModeHints = { enable = true },
+								closureReturnTypeHints = { enable = 'with_block' },
+								lifetimeElisionHints = { enable = 'always' },
+								reborrowHints = { enable = 'always' },
+								typeHints = {
+									hideClosureInitialization = true,
+								},
+							},
+						},
+					},
+				}
+			}
+		end
+	}
+	use {
 		'neovim/nvim-lspconfig',
 		config = function()
-			local inlay = require 'inlay-hints'
 			local lsp = require 'lspconfig'
 			local capabilities = require('cmp_nvim_lsp').default_capabilities()
 			lsp.pyright.setup { capabilities = capabilities }
-			lsp.rust_analyzer.setup {
-				on_attach = inlay.on_attach,
-				capabilities = capabilities,
-				settings = {
-					["rust-analyzer"] = {
-						rustfmt = {
-							extraArgs = { '+nightly' },
-						},
-						checkOnSave = {
-							command = 'clippy',
-							allTargets = true,
-						},
-						cargo = {
-							features = 'all',
-						},
-					},
-				},
-			}
 			lsp.clangd.setup { capabilities = capabilities, filetypes = { "c", "cpp", "objc", "objcpp", "cuda", "proto", "s" } }
 			lsp.taplo.setup { capabilities = capabilities }
 		end
@@ -128,6 +144,9 @@ return require('packer').startup(function()
 		end
 	}
 	--]]
-	use 'simrat39/inlay-hints.nvim'
 	use 'tpope/vim-abolish'
+	use {
+		'nvim-telescope/telescope.nvim',
+		requires = { 'nvim-lua/plenary.nvim' },
+	}
 end)

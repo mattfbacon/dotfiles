@@ -44,6 +44,14 @@ map.led('T', function()
 	local time = vim.fn.strftime('%A, %e %B %Y')
 	vim.api.nvim_buf_set_lines(0, row, row, true, { time, '' })
 end)
+map.led('gu', '<cmd>GitGutterUndoHunk<CR>')
+map.led('gd', '<cmd>GitGutterDiffOrig<CR>')
+
+local tele = require'telescope.builtin'
+map.led('ff', tele.find_files)
+map.led('fg', tele.live_grep)
+map.led('fb', tele.buffers)
+map.led('fh', tele.help_tags)
 
 map.n_no_re('cR', function()
 	local new_name = vim.fn.input('New name: ')
