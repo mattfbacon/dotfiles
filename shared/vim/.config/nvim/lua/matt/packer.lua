@@ -58,6 +58,11 @@ return require('packer').startup(function()
 			lsp.pyright.setup { capabilities = capabilities }
 			lsp.clangd.setup { capabilities = capabilities, filetypes = { "c", "cpp", "objc", "objcpp", "cuda", "proto", "s" } }
 			lsp.taplo.setup { capabilities = capabilities }
+			lsp.elmls.setup {
+				capabilities = capabilities,
+				root_dir = function(fname) return vim.loop.cwd() end,
+			}
+			lsp.tsserver.setup {}
 		end
 	}
 	use {
