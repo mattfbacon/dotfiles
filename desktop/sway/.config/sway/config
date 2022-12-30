@@ -249,8 +249,6 @@ bindsym $mod+shift+plus scratchpad show
 bindsym $mod+comma exec sleep 1 && pkill -SIGUSR1 swayidle
 bindsym $mod+l exec sleep 1 && pkill -SIGUSR1 swayidle
 
-exec --no-startup-id setxkbmap -option compose:rctrl
-
 mode "app_launch" {
 	bindsym b exec browse.sh home window, mode "default"
 	bindsym shift+b exec browse.sh home private, mode "default"
@@ -322,4 +320,10 @@ exec_always {
 input type:pointer {
 	accel_profile adaptive
 	pointer_accel 0
+}
+
+input "*" {
+	xkb_layout us
+	xkb_variant dvorak
+	xkb_options compose:rctrl
 }
