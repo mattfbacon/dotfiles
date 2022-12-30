@@ -323,5 +323,3 @@ input type:pointer {
 	accel_profile adaptive
 	pointer_accel 0
 }
-
-exec_always 'xprop -root -f _XWAYLAND_GLOBAL_OUTPUT_SCALE 32c -set _XWAYLAND_GLOBAL_OUTPUT_SCALE 2'
