@@ -52,6 +52,7 @@ map.led('ff', tele.find_files)
 map.led('fg', tele.live_grep)
 map.led('fb', tele.buffers)
 map.led('fh', tele.help_tags)
+map.led('n', vim.cmd.nohlsearch)
 
 map.n_no_re('cR', function()
 	local new_name = vim.fn.input('New name: ')
