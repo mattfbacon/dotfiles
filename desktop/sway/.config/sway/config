@@ -275,7 +275,7 @@ mode "app_launch" {
 bindsym $mod+o mode "app_launch"
 
 bindsym Control+mod1+Delete exec gnome-system-monitor
-bindsym $mod+period exec rofimoji
+bindsym $mod+period exec wofi-emoji
 
 bindsym Print exec screenshot
 
