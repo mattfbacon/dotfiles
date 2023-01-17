@@ -54,6 +54,7 @@ o.modeline = true
 o.whichwrap = 'b,s,<,>,[,]'
 o.spell = true
 o.spelllang = 'en_us'
+o.spelloptions = 'camel'
 o.mouse = 'a'
 o.cursorline = f.has 'termguicolors' == 1 and e.TERM ~= 'linux'
 

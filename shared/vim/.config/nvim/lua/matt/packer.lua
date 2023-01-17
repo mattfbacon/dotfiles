@@ -1,9 +1,11 @@
-vim.cmd 'packadd packer.nvim'
+vim.cmd.packadd 'packer.nvim'
 
 return require('packer').startup(function()
 	use 'wbthomason/packer.nvim'
 	use 'sainnhe/everforest'
 	use 'airblade/vim-gitgutter'
+	use 'tpope/vim-sleuth'
+	use 'TamaMcGlinn/quickfixdd'
 	use {
 		'nvim-treesitter/nvim-treesitter',
 		cmd = 'TSUpdate',
@@ -16,7 +18,7 @@ return require('packer').startup(function()
 		end
 	}
 	use {
-		'simrat39/rust-tools.nvim',
+		'mattfbacon/rust-tools.nvim', -- revert after PR merged or bug patched
 		config = function()
 			local rt = require 'rust-tools'
 			local capabilities = require('cmp_nvim_lsp').default_capabilities()

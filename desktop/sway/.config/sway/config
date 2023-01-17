@@ -249,8 +249,6 @@ bindsym $mod+shift+plus scratchpad show
 bindsym $mod+comma exec sleep 1 && pkill -SIGUSR1 swayidle
 bindsym $mod+l exec sleep 1 && pkill -SIGUSR1 swayidle
 
-exec --no-startup-id setxkbmap -option compose:rctrl
-
 mode "app_launch" {
 	bindsym b exec browse.sh home window, mode "default"
 	bindsym shift+b exec browse.sh home private, mode "default"
@@ -275,7 +273,7 @@ mode "app_launch" {
 bindsym $mod+o mode "app_launch"
 
 bindsym Control+mod1+Delete exec gnome-system-monitor
-bindsym $mod+period exec rofimoji
+bindsym $mod+period exec wofi-emoji
 
 bindsym Print exec screenshot
 
@@ -324,4 +322,8 @@ input type:pointer {
 	pointer_accel 0
 }
 
-exec_always 'xprop -root -f _XWAYLAND_GLOBAL_OUTPUT_SCALE 32c -set _XWAYLAND_GLOBAL_OUTPUT_SCALE 2'
+input "*" {
+	xkb_layout us
+	xkb_variant dvorak
+	xkb_options compose:rctrl
+}
