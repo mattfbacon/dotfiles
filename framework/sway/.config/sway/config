@@ -221,6 +221,8 @@ bindsym $mod+y fullscreen disable; floating enable; resize set 640 360; sticky e
 smart_borders on
 hide_edge_borders both
 
+bindsym $mod+Period exec wofi-emoji
+
 input "*" {
 	xkb_layout us
 	xkb_variant dvorak
