@@ -6,6 +6,7 @@ return require('packer').startup(function()
 	use 'airblade/vim-gitgutter'
 	use 'tpope/vim-sleuth'
 	use 'TamaMcGlinn/quickfixdd'
+	use 'nvim-lua/lsp-status.nvim'
 	use {
 		'nvim-treesitter/nvim-treesitter',
 		cmd = 'TSUpdate',
@@ -21,7 +22,9 @@ return require('packer').startup(function()
 		'simrat39/rust-tools.nvim',
 		config = function()
 			local rt = require 'rust-tools'
+			local lsp_status = require 'lsp-status'
 			local capabilities = require('cmp_nvim_lsp').default_capabilities()
+			capabilities = vim.tbl_extend('keep', capabilities or {}, lsp_status.capabilities)
 			rt.setup {
 				server = {
 					capabilities = capabilities,
@@ -48,7 +51,8 @@ return require('packer').startup(function()
 							},
 						},
 					},
-				}
+				},
+				on_attach = lsp_status.on_attach,
 			}
 		end
 	}
@@ -56,15 +60,32 @@ return require('packer').startup(function()
 		'neovim/nvim-lspconfig',
 		config = function()
 			local lsp = require 'lspconfig'
+			local lsp_status = require 'lsp-status'
 			local capabilities = require('cmp_nvim_lsp').default_capabilities()
-			lsp.pyright.setup { capabilities = capabilities }
-			lsp.clangd.setup { capabilities = capabilities, filetypes = { "c", "cpp", "objc", "objcpp", "cuda", "proto", "s" } }
-			lsp.taplo.setup { capabilities = capabilities }
+			capabilities = vim.tbl_extend('keep', capabilities or {}, lsp_status.capabilities)
+			lsp.pyright.setup {
+				capabilities = capabilities,
+				on_attach = lsp_status.on_attach,
+			}
+			lsp.clangd.setup {
+				capabilities = capabilities,
+				filetypes = { "c", "cpp", "objc", "objcpp", "cuda", "proto", "s" },
+				on_attach = lsp_status.on_attach,
+				handlers = lsp_status.extensions.clangd.setup(),
+				init_options = { clangdFileStatus = true },
+			}
+			lsp.taplo.setup {
+				capabilities = capabilities,
+				on_attach = lsp_status.on_attach,
+			}
 			lsp.elmls.setup {
 				capabilities = capabilities,
 				root_dir = function(fname) return vim.loop.cwd() end,
+				on_attach = lsp_status.on_attach,
 			}
-			lsp.tsserver.setup {}
+			lsp.tsserver.setup {
+				on_attach = lsp_status.on_attach,
+			}
 		end
 	}
 	use {
