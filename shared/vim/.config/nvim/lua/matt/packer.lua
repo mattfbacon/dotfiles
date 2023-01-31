@@ -18,7 +18,7 @@ return require('packer').startup(function()
 		end
 	}
 	use {
-		'mattfbacon/rust-tools.nvim', -- revert after PR merged or bug patched
+		'simrat39/rust-tools.nvim',
 		config = function()
 			local rt = require 'rust-tools'
 			local capabilities = require('cmp_nvim_lsp').default_capabilities()
