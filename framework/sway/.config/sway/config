@@ -221,6 +221,8 @@ bindsym $mod+y fullscreen disable; floating enable; resize set 640 360; sticky e
 smart_borders on
 hide_edge_borders both
 
+bindsym $mod+Period exec wofi-emoji
+
 input "*" {
 	xkb_layout us
 	xkb_variant dvorak
@@ -230,6 +232,7 @@ input "*" {
 input "type:touchpad" {
 	natural_scroll enable
 	dwt disable
+	tap enabled
 }
 
 exec --no-startup-id nm-applet --indicator
