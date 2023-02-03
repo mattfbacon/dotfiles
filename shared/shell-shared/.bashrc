@@ -5,7 +5,7 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-shopt -q login_shell || test "$fish_subprocess" == 1 || [[ $(realpath $(which $(ps -o command= $(ps -o ppid= $$) | tr ' ' '\n' | head --lines 1))) == "/usr/bin/fish" ]] || exec fish
+shopt -q login_shell || test "$fish_subprocess" == 1 || [[ $(realpath $(command -v $(ps -o command= $(ps -o ppid= $$) | tr ' ' '\n' | head --lines 1))) == "/usr/bin/fish" ]] || exec fish
 
 alias ls='ls --color=auto'
 PS1='[\u@\h \W]\$ '
