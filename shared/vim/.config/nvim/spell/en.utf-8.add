@@ -33,3 +33,4 @@ attrs
 bool
 Carcassonne
 runtime
+validator
