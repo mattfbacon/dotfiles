@@ -12,9 +12,6 @@ end
 
 map.led('e', '<cmd>Sex<CR>')
 map.led('E', '<cmd>Ex<CR>')
-map.led('z', 'ZZ')
-map.led('q', 'ZQ')
-map.led('w', '<cmd>w<CR>')
 map.led('L', function()
 	vim.cmd('w')
 	local tex_path = vim.api.nvim_buf_get_name(0)
@@ -53,6 +50,14 @@ map.led('fg', tele.live_grep)
 map.led('fb', tele.buffers)
 map.led('fh', tele.help_tags)
 map.led('n', vim.cmd.nohlsearch)
+
+map.led('bp', vim.cmd.bp)
+map.led('bn', vim.cmd.bn)
+
+map.led('sh', vim.cmd.split)
+map.led('sv', vim.cmd.vsplit)
+
+map.led('q', vim.cmd.Bdelete)
 
 map.n_no_re('cR', function()
 	local new_name = vim.fn.input('New name: ')

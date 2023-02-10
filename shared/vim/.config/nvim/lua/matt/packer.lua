@@ -8,6 +8,17 @@ return require('packer').startup(function()
 	use 'TamaMcGlinn/quickfixdd'
 	use 'nvim-lua/lsp-status.nvim'
 	use {
+		'romgrk/barbar.nvim',
+		config = function()
+			require'bufferline'.setup {
+				animation = false,
+				auto_hide = false,
+				closable = false,
+			}
+		end
+	}
+	use 'moll/vim-bbye'
+	use {
 		'nvim-treesitter/nvim-treesitter',
 		cmd = 'TSUpdate',
 		config = function()
