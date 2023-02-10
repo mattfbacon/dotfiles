@@ -1,3 +1,4 @@
 .vscode/
 current_task
 *~
+.cache/
