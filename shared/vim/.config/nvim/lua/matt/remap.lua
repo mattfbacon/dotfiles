@@ -69,4 +69,4 @@ end)
 
 vim.api.nvim_create_autocmd('BufWritePre', { pattern = '*', callback = function() vim.lsp.buf.format { timeout_ms = 100; } end })
 
-vim.api.nvim_create_autocmd({ 'BufNew', 'BufNewFile', 'BufRead' }, { pattern = { '*.s', '*.asm' }, callback = function() vim.bo.filetype = 'asm' end })
+vim.api.nvim_create_autocmd({ 'BufNewFile', 'BufRead' }, { pattern = { '*.s', '*.asm' }, callback = function() vim.bo.filetype = 'asm' end })
