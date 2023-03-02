@@ -16,9 +16,9 @@ ICON_STORM=""
 ICON_SNOW=""
 ICON_FOG=""
 
-SYMBOL_CELSIUS="°F"
+SYMBOL_CELSIUS="°C"
 
-WEATHER_URL="http://api.openweathermap.org/data/2.5/weather?id=${CITY_ID}&appid=cdff7006344be717c33df246a5c01cc9&units=imperial"
+WEATHER_URL="http://api.openweathermap.org/data/2.5/weather?id=${CITY_ID}&appid=cdff7006344be717c33df246a5c01cc9&units=metric"
 
 WEATHER_INFO=$(wget -qO- "${WEATHER_URL}")
 WEATHER_MAIN=$(echo "${WEATHER_INFO}" | grep -o -e '\"main\":\"[a-Z]*\"' | awk -F ':' '{print $2}' | tr -d '"' | tr '\n' ' ')
