@@ -19,7 +19,7 @@ map.led('L', function()
 		vim.api.nvim_err_writeln('file is not latex')
 		return
 	end
-	vim.cmd('!./make.sh %')
+	vim.cmd('!makelatex.sh %')
 	local pdf_path = string.gsub(tex_path, '%.tex$', '.pdf')
 	io.popen('swaymsg -- exec evince ' .. pdf_path)
 end)

@@ -2,6 +2,7 @@ max-history=10
 sort=-time
 on-button-left=dismiss
 on-button-right=invoke-default-action
+on-button-middle=dismiss-all
 on-touch=dismiss
 
 background-color=#fef8ecff
