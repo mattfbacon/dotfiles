@@ -14,7 +14,11 @@ return require('packer').startup(function()
 			require'bufferline'.setup {
 				animation = false,
 				auto_hide = false,
-				closable = false,
+				icons = {
+					button = '',
+				},
+				minimum_padding = 0,
+				maximum_padding = 0,
 			}
 		end
 	}
