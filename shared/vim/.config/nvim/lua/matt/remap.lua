@@ -10,8 +10,8 @@ local function exists(path)
 	return ok
 end
 
-map.led('e', '<cmd>Sex<CR>')
-map.led('E', '<cmd>Ex<CR>')
+map.led('en', vim.diagnostic.goto_next)
+map.led('ep', vim.diagnostic.goto_prev)
 map.led('L', function()
 	vim.cmd('w')
 	local tex_path = vim.api.nvim_buf_get_name(0)
@@ -58,6 +58,9 @@ map.led('sh', vim.cmd.split)
 map.led('sv', vim.cmd.vsplit)
 
 map.led('q', vim.cmd.Bdelete)
+
+map.led('cn', vim.cmd.cnext)
+map.led('cp', vim.cmd.cprev)
 
 map.n_no_re('cR', function()
 	local new_name = vim.fn.input('New name: ')
