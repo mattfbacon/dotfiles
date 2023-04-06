@@ -125,11 +125,6 @@ interval=60
 [separator]
 
 [remote-uptime]
-label=SRVUP 
-interval=60
-CONN=matt@mynfs
-
-[remote-uptime]
 label=VPSUP 
 interval=60
 CONN=matt@myvps

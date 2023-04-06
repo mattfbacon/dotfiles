@@ -7,6 +7,7 @@ return require('packer').startup(function()
 	use 'tpope/vim-sleuth'
 	use 'TamaMcGlinn/quickfixdd'
 	use 'nvim-lua/lsp-status.nvim'
+	use 'ntpeters/vim-better-whitespace'
 	use {
 		'romgrk/barbar.nvim',
 		config = function()
