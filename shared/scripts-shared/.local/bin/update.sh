@@ -1,4 +1,4 @@
-#!/bin/fish
+#!/bin/sh
 echo -----------
 echo pacman
 echo -----------
@@ -9,15 +9,5 @@ echo rust
 echo -----------
 rustup update
 
-echo -----------
-echo npm
-echo -----------
-npm --global upgrade
-
-echo -----------
-echo yarn
-echo -----------
-yarn global upgrade
-
 echo -n '(Press any key to exit)'
-read -p ''
+read
