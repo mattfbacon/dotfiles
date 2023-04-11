@@ -35,3 +35,5 @@ Carcassonne
 runtime
 validator
 whitespace
+allocator
+unmerged
