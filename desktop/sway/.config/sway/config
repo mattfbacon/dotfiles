@@ -1,6 +1,7 @@
 exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK XDG_CURRENT_DESKTOP
 exec hash dbus-update-activation-environment 2>/dev/null \
 	&& dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK XDG_CURRENT_DESKTOP
+exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 
 mouse_warping output
 
