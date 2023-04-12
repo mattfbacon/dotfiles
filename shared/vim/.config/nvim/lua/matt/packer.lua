@@ -17,8 +17,8 @@ return require('packer').startup(function()
 				icons = {
 					button = '',
 				},
-				minimum_padding = 0,
-				maximum_padding = 0,
+				minimum_padding = 1,
+				maximum_padding = 1,
 			}
 		end
 	}
