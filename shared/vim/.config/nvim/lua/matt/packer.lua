@@ -8,6 +8,7 @@ return require('packer').startup(function()
 	use 'TamaMcGlinn/quickfixdd'
 	use 'nvim-lua/lsp-status.nvim'
 	use 'ntpeters/vim-better-whitespace'
+	use 'SeniorMars/typst.nvim'
 	use {
 		'romgrk/barbar.nvim',
 		config = function()
@@ -17,8 +18,8 @@ return require('packer').startup(function()
 				icons = {
 					button = '',
 				},
-				minimum_padding = 0,
-				maximum_padding = 0,
+				minimum_padding = 1,
+				maximum_padding = 1,
 			}
 		end
 	}
@@ -100,6 +101,9 @@ return require('packer').startup(function()
 				on_attach = lsp_status.on_attach,
 			}
 			lsp.tsserver.setup {
+				on_attach = lsp_status.on_attach,
+			}
+			lsp.typst_lsp.setup {
 				on_attach = lsp_status.on_attach,
 			}
 		end
