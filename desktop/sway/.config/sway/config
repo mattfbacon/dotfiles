@@ -253,8 +253,7 @@ bindsym $mod+l exec sleep 1 && pkill -SIGUSR1 swayidle
 mode "app_launch" {
 	bindsym b exec browse.sh home window, mode "default"
 	bindsym shift+b exec browse.sh home private, mode "default"
-	bindsym mod1+b exec browse.sh college window,  mode "default"
-	bindsym s exec browse.sh school window, mode "default"
+	bindsym s exec browse.sh college window, mode "default"
 	bindsym c exec vscodium, mode "default"
 	bindsym d exec discord, mode "default"
 	bindsym m exec gnome-system-monitor, mode "default"
