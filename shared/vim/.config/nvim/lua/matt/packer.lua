@@ -2,7 +2,7 @@ vim.cmd.packadd 'packer.nvim'
 
 return require('packer').startup(function()
 	use 'wbthomason/packer.nvim'
-	use 'sainnhe/everforest'
+	use 'mattfbacon/neverforest'
 	use 'airblade/vim-gitgutter'
 	use 'tpope/vim-sleuth'
 	use 'TamaMcGlinn/quickfixdd'
