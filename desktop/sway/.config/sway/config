@@ -42,6 +42,7 @@ bindsym $mod+shift+Return exec i3-sensible-terminal -e d c s
 
 # kill focused window
 bindsym $mod+Shift+q kill
+bindsym $mod+F4 exec kill -9 $(swaymsg -t get_tree | jq '.. | select(.type?) | select(.focused==true).pid')
 # close focused window nicely
 # bindsym $mod+q exec xdotool windowclose $(xdotool getactivewindow)
 
