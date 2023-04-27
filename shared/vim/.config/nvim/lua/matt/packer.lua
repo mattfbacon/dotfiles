@@ -111,23 +111,16 @@ return require('packer').startup(function()
 	use {
 		'hrsh7th/nvim-cmp',
 		requires = {
-			'hrsh7th/cmp-vsnip',
-			'hrsh7th/vim-vsnip',
 			'hrsh7th/cmp-nvim-lsp',
-			'hrsh7th/cmp-buffer',
 			'hrsh7th/cmp-path',
 			'hrsh7th/cmp-cmdline'
 		},
 		config = function()
-			-- local cmp_autopairs = require 'nvim-autopairs.completion.cmp'
 			local cmp = require 'cmp'
 			local mapping = cmp.mapping
 			local compare = cmp.config.compare
 
 			cmp.setup {
-				snippet = {
-					expand = function(args) vim.fn["vsnip#anonymous"](args.body) end
-				};
 				window = {
 					completion = cmp.config.window.bordered();
 					documentation = cmp.config.window.bordered();
@@ -141,8 +134,6 @@ return require('packer').startup(function()
 				};
 				sources = cmp.config.sources {
 					{ name = 'nvim_lsp', priority = 8 },
-					{ name = 'vsnip', priority = 7 },
-					{ name = 'buffer', priority = 7 },
 					{ name = 'spell', keyword_length = 3, priority = 5, keyword_pattern = [[\w\+]] },
 					{ name = 'calc', priority = 3 },
 				};
