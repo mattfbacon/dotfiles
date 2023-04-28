@@ -1,0 +1,76 @@
+### shared
+
+## font
+font pango:Fira Code 9
+
+## idle hook
+exec --no-startup-id swayidle -w \
+	timeout 160 'swaylock -f -c 005661' \
+	timeout 165 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
+	before-sleep 'swaylock -f -c 005661' \
+	lock 'sleep 1; killall -USR1 swayidle'
+
+## volume
+set $refresh_i3status pkill -RTMIN+10 i3blocks
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +3% && $refresh_i3status
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -3% && $refresh_i3status
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
+bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
+
+bindsym $mod+F9 exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
+bindsym $mod+F11 exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +3% && $refresh_i3status
+bindsym $mod+F10 exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -3% && $refresh_i3status
+
+## bar
+set $background_primary #fef8ec
+set $background_secondary #f7f2e3
+set $background_tertiary #f0e9d6
+set $foreground_primary #005661
+set $urgent #e64100
+
+bar {
+	status_command i3blocks
+	position top
+	height 22
+	gaps 0
+	workspace_min_width 22
+
+	strip_workspace_numbers yes
+
+	tray_output *
+
+	colors {
+		background $background_primary
+		statusline $foreground_primary
+		separator $foreground_primary
+		focused_workspace $background_tertiary $background_tertiary $foreground_primary
+		active_workspace $background_secondary $background_secondary $foreground_primary
+		inactive_workspace $background_primary $background_primary $foreground_primary
+		urgent_workspace $urgent $urgent #ffffff
+		binding_mode $background_secondary $background_secondary $foreground_primary
+	}
+}
+
+# window border colors
+# format: border title-background title-foreground
+client.focused $foreground_primary $foreground_primary $background_primary
+client.unfocused $background_tertiary $background_tertiary $foreground_primary
+# same as unfocused afaict
+client.focused_inactive $background_tertiary $background_tertiary $foreground_primary
+client.urgent $urgent $urgent $foreground_primary
+
+### platform-specific
+
+output HDMI-A-1 mode 1920x1080 position 0 0
+output DP-1 mode 3840x2160 position 1920 0 scale 2
+output HDMI-A-2 mode 1920x1080 position 3840 0 transform 270
+
+workspace $ws1 output HDMI-A-1
+workspace $ws2 output HDMI-A-1
+workspace $ws3 output HDMI-A-1
+workspace $ws4 output DP-1
+workspace $ws5 output DP-1
+workspace $ws6 output DP-1
+workspace $ws7 output HDMI-A-2
+workspace $ws8 output HDMI-A-2
+workspace $ws9 output HDMI-A-2

@@ -1,4 +1,0 @@
-#!/bin/sh
-export GDK_SCALE=
-export GDK_DPI_SCALE=
-exec /usr/bin/torbrowser-launcher

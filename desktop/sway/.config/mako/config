@@ -2,13 +2,14 @@ max-history=10
 sort=-time
 on-button-left=dismiss
 on-button-right=invoke-default-action
+on-button-middle=dismiss-all
 on-touch=dismiss
 
 background-color=#fef8ecff
 text-color=#005661ff
 
 width=400
-height=200
+height=180
 border-color=#005661ff
 
 max-visible=5

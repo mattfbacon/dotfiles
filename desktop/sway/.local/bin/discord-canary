@@ -1,2 +1,0 @@
-#!/bin/sh
-electron-patcher electron /opt/discord/resources/app.asar $@

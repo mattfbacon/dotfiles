@@ -1,8 +1,0 @@
-set multibuffer
-set softwrap
-set tabsize 2
-set autoindent
-set suspend
-set mouse
-
-include /usr/share/nano/*.nanorc
