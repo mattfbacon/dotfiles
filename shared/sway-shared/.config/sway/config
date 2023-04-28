@@ -23,7 +23,7 @@ bindsym $mod+Return exec $TERMINAL
 bindsym $mod+shift+Return exec $TERMINAL -e d c s
 
 bindsym $mod+Shift+q kill
-bindsym $mod+F4 exec kill -9 $(swaymsg -t get_tree | jq '.. | select(.type?) | select(.focused==true).pid')
+bindsym $mod+delete exec kill -9 $(swaymsg -t get_tree | jq '.. | select(.type?) | select(.focused==true).pid')
 
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
