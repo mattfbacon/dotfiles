@@ -164,10 +164,6 @@ for_window [class="lxqt-openssh-askpass"] floating enable
 smart_borders on
 hide_edge_borders both
 
-bindsym $mod+F6 exec --no-startup-id playerctl previous
-bindsym $mod+F7 exec --no-startup-id playerctl play-pause
-bindsym $mod+F8 exec --no-startup-id playerctl next
-
 input "*" {
 	xkb_layout us
 	xkb_variant dvorak
