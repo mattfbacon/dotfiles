@@ -111,6 +111,7 @@ return require('packer').startup(function()
 	use {
 		'hrsh7th/nvim-cmp',
 		requires = {
+			'hrsh7th/vim-vsnip',
 			'hrsh7th/cmp-nvim-lsp',
 			'hrsh7th/cmp-path',
 			'hrsh7th/cmp-cmdline'
@@ -121,6 +122,9 @@ return require('packer').startup(function()
 			local compare = cmp.config.compare
 
 			cmp.setup {
+				snippet = {
+					expand = function(args) vim.fn["vsnip#anonymous"](args.body) end
+				};
 				window = {
 					completion = cmp.config.window.bordered();
 					documentation = cmp.config.window.bordered();
