@@ -81,4 +81,4 @@ sign define DiagnosticSignInfo text= texthl=DiagnosticSignInfo linehl= numhl=
 sign define DiagnosticSignHint text= texthl=DiagnosticSignHint linehl= numhl=
 ]]
 
-vim.lsp.set_log_level 'off'
+vim.lsp.set_log_level 'warn'
