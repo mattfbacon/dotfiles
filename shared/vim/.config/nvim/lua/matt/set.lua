@@ -29,7 +29,8 @@ set completeopt-=preview
 set completeopt+=longest,menuone,noselect
 ]]
 
-o.listchars = 'tab:→ ,nbsp:'
+o.listchars = 'tab:│ ,lead:·,extends:»,precedes:«,nbsp:'
+o.showbreak = '↳'
 o.list = true
 
 o.encoding = 'utf-8'
