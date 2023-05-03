@@ -12,6 +12,8 @@ test $? -ne 0 && exit 1
 REGION=""
 test "$TYPE" = area && REGION="$(slurp)"
 
+sleep 0.1
+
 case "$OUTPUT" in
 	file)
 		grim ${REGION:+-g "$REGION"} "$(default_location | bemenu -p Location)"
