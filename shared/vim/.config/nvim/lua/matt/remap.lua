@@ -70,7 +70,14 @@ map.n_no_re('cR', function()
 	vim.lsp.buf.rename(new_name)
 end)
 
-vim.api.nvim_create_autocmd('BufWritePre', { pattern = '*', callback = function() vim.lsp.buf.format { timeout_ms = 100; } end })
+vim.api.nvim_create_autocmd('BufWritePre', { pattern = '*', callback = function(event)
+	local bufnr = event.buffer
+	local clients = vim.lsp.get_active_clients({ bufnr = bufnr })
+	local empty = next(clients) == nil
+	if not empty then
+		vim.lsp.buf.format { timeout_ms = 100; }
+	end
+end })
 
 local function set_ext_filetype(exts, filetype)
 	vim.api.nvim_create_autocmd({ 'BufNewFile', 'BufRead' }, { pattern = exts, callback = function() vim.bo.filetype = filetype end })
