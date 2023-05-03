@@ -165,11 +165,11 @@ return require('packer').startup(function()
 		config = function()
 			require('trouble').setup {
 				signs = {
-					error = "";
-					warning = "";
-					hint = "";
+					error = "";
+					warning = "";
+					hint = "󰌶";
 					information = "";
-					other = "﫠";
+					other = "󰗡";
 				};
 				use_diagnostic_signs = false;
 			}
