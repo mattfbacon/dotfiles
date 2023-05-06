@@ -19,6 +19,14 @@ o.undofile = true
 o.background = light
 o.backupdir = e.HOME .. '/.cache/vimbackup//'
 o.directory = e.HOME .. '/.cache/vimswap//'
+o.undodir = e.HOME .. '/.cache/vimundo//'
+
+vim.api.nvim_create_autocmd({ 'BufNewFile', 'BufRead' }, { pattern = '/mnt/sivydatni/*', callback = function()
+	local o = vim.opt
+	o.backupdir = '/mnt/sivydatni/.vim/backup//'
+	o.directory = '/mnt/sivydatni/.vim/swap//'
+	o.undodir = '/mnt/sivydatni/.vim/undo//'
+end })
 
 vim.cmd [[
 filetype plugin off
