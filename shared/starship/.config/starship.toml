@@ -8,8 +8,12 @@ error_symbol = "[✖](bold red)"
 disabled = true
 
 [battery]
-charging_symbol = "" # none
 format = "[$symbol]($style)"
+full_symbol = "󰁹 "
+charging_symbol = ""
+discharging_symbol = "󰂃 "
+unknown_symbol = "󱉝 "
+empty_symbol = "󰂎 "
 
 [[battery.display]]
 threshold = 10
