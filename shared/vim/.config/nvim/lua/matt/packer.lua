@@ -105,6 +105,7 @@ return require('packer').startup(function()
 			}
 			lsp.typst_lsp.setup {
 				on_attach = lsp_status.on_attach,
+				root_dir = function(fname) return vim.loop.cwd() end,
 			}
 		end
 	}
