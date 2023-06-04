@@ -5,6 +5,7 @@ return require('packer').startup(function()
 	use 'mattfbacon/neverforest'
 	use 'airblade/vim-gitgutter'
 	use 'tpope/vim-sleuth'
+	use 'lambdalisue/suda.vim'
 	use 'TamaMcGlinn/quickfixdd'
 	use 'nvim-lua/lsp-status.nvim'
 	use 'ntpeters/vim-better-whitespace'
