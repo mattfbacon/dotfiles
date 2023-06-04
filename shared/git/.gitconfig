@@ -31,3 +31,5 @@
 	username = mattf552814
 [credential]
 	helper = store --file ~/.git-credentials
+[http]
+	postBuffer = 157286400
