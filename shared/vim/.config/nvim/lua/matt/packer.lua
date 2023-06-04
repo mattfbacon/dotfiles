@@ -36,7 +36,7 @@ return require('packer').startup(function()
 		end
 	}
 	use {
-		'simrat39/rust-tools.nvim',
+		'MunifTanjim/rust-tools.nvim',
 		config = function()
 			local rt = require 'rust-tools'
 			local lsp_status = require 'lsp-status'
@@ -67,6 +67,11 @@ return require('packer').startup(function()
 								},
 							},
 						},
+					},
+				},
+				tools = {
+					inlay_hints = {
+						highlight = 'AquaItalic',
 					},
 				},
 				on_attach = lsp_status.on_attach,
