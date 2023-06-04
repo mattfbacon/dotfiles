@@ -9,8 +9,6 @@
 	"modules-right": [
 		"idle_inhibitor",
 		"pulseaudio",
-		"cpu",
-		"memory",
 		"custom/archpkgs",
 		"battery",
 		"clock",
