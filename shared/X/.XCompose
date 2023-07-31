@@ -96,8 +96,5 @@ include "%L"
 <Multi_key> <numbersign> <F>		: "𝄢"  U0001d122 # MUSICAL SYMBOL F CLEF
 <Multi_key> <numbersign> <C>		: "𝄡" U0001d121 # MUSICAL SYMBOL C CLEF
 
-<Multi_key> <M> <F>		: "Matthew Fellenz"	# MY NAME (FORMAL)
-<Multi_key> <m> <f>		: "Matt Fellenz"	# MY NAME (INFORMAL)
-
 <Multi_key> <D> <E>   : "Δ" U0394 # upper delta symbol
 <Multi_key> <d> <e>   : "δ" U03B4  # lower delta symbol
