@@ -127,7 +127,7 @@ interval=60
 [remote-uptime]
 label=VPSUP 
 interval=60
-CONN=matt@myvps
+CONN=matt@myvps -p 21149
 
 [separator]
 
