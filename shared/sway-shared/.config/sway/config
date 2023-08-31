@@ -10,6 +10,8 @@ exec --no-startup-id mako
 
 exec --no-startup-id fcitx5 -d
 
+exec --no-startup-id opensnitch-ui
+
 exec --no-startup-id wl-paste -t text --watch clipman store
 bindsym $mod+c exec --no-startup-id clipman pick -t bemenu
 
