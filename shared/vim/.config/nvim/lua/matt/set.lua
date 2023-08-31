@@ -15,6 +15,7 @@ g.t_EI = '\\e[2 q'
 
 o.termguicolors = f.has('termguicolors') == 1
 o.backup = true
+o.backupskip = ''
 o.undofile = true
 o.background = light
 o.backupdir = e.HOME .. '/.cache/vimbackup//'
