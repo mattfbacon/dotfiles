@@ -37,7 +37,7 @@ set completeopt-=preview
 set completeopt+=longest,menuone,noselect
 ]]
 
-o.listchars = 'tab:│ ,lead:·,extends:»,precedes:«,nbsp:'
+o.listchars = 'tab:├─→,lead:·,extends:»,precedes:«,nbsp:'
 o.showbreak = '↳'
 o.list = true
 
