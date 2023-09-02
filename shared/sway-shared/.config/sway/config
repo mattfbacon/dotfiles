@@ -132,7 +132,7 @@ bindsym $mod+plus scratchpad show
 
 bindsym $mod+comma exec loginctl lock-session
 
-bindsym $mod+alt+v exec mpv ~/Downloads/vineboom.opus
+bindsym $mod+alt+v exec vineboom
 
 mode "app_launch" {
 	bindsym b mode "default"; exec browse.sh home window
