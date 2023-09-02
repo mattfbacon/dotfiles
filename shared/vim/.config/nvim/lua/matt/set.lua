@@ -15,6 +15,7 @@ g.t_EI = '\\e[2 q'
 
 o.termguicolors = f.has('termguicolors') == 1
 o.backup = true
+o.backupskip = ''
 o.undofile = true
 o.background = light
 o.backupdir = e.HOME .. '/.cache/vimbackup//'
@@ -26,6 +27,7 @@ vim.api.nvim_create_autocmd({ 'BufNewFile', 'BufRead' }, { pattern = '/mnt/sivyd
 	o.backupdir = '/mnt/sivydatni/.vim/backup//'
 	o.directory = '/mnt/sivydatni/.vim/swap//'
 	o.undodir = '/mnt/sivydatni/.vim/undo//'
+	o.shadafile = '/mnt/sivydatni/.vim/shadafile'
 end })
 
 vim.cmd [[

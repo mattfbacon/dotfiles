@@ -10,6 +10,8 @@ exec --no-startup-id mako
 
 exec --no-startup-id fcitx5 -d
 
+exec --no-startup-id opensnitch-ui
+
 exec --no-startup-id wl-paste -t text --watch clipman store
 bindsym $mod+c exec --no-startup-id clipman pick -t bemenu
 
@@ -129,6 +131,8 @@ bindsym $mod+minus move scratchpad
 bindsym $mod+plus scratchpad show
 
 bindsym $mod+comma exec loginctl lock-session
+
+bindsym $mod+alt+v exec mpv ~/Downloads/vineboom.opus
 
 mode "app_launch" {
 	bindsym b mode "default"; exec browse.sh home window
