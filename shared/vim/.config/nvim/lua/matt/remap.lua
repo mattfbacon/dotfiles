@@ -51,8 +51,8 @@ map.led('fb', tele.buffers)
 map.led('fh', tele.help_tags)
 map.led('n', vim.cmd.nohlsearch)
 
-map.led('bp', vim.cmd.bp)
-map.led('bn', vim.cmd.bn)
+map.led('bp', vim.cmd.BufferPrevious)
+map.led('bn', vim.cmd.BufferNext)
 
 map.led('sh', vim.cmd.split)
 map.led('sv', vim.cmd.vsplit)
