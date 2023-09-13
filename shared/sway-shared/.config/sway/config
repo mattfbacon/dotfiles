@@ -14,7 +14,7 @@ exec --no-startup-id fcitx5 -d
 
 exec --no-startup-id opensnitch-ui
 
-exec --no-startup-id wl-paste -t text --watch clipman store
+exec --no-startup-id wl-paste -t text --watch clipman store --max-items=3
 bindsym $mod+c exec --no-startup-id clipman pick -t bemenu
 
 exec --no-startup-id nm-applet --indicator
