@@ -26,17 +26,6 @@ return require('packer').startup(function()
 	}
 	use 'moll/vim-bbye'
 	use {
-		'nvim-treesitter/nvim-treesitter',
-		cmd = 'TSUpdate',
-		config = function()
-			require 'nvim-treesitter.configs'.setup {
-				ensure_install = { 'c', 'lua', 'rust', },
-				auto_install = true,
-				highlight = true,
-			}
-		end
-	}
-	use {
 		'MunifTanjim/rust-tools.nvim',
 		config = function()
 			local rt = require 'rust-tools'
