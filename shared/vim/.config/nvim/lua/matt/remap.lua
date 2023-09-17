@@ -10,6 +10,10 @@ local function exists(path)
 	return ok
 end
 
+function starts_with(text, prefix)
+	return text:find(prefix, 1, true) == 1
+end
+
 map.led('en', vim.diagnostic.goto_next)
 map.led('ep', vim.diagnostic.goto_prev)
 map.led('L', function()
@@ -27,7 +31,7 @@ map.n_no_re('gd', vim.lsp.buf.definition)
 map.n_no_re('gD', vim.lsp.buf.declaration)
 map.n_no_re('gr', vim.lsp.buf.references)
 map.n_no_re('gi', vim.lsp.buf.implementation)
-map.n_no_re('cA', vim.lsp.buf.code_action)
+map.n_no_re('cA', function() vim.lsp.buf.code_action { filter = function(action) return not starts_with(action.title, "Generate delegate for ") end } end)
 map.n_no_re('K', vim.lsp.buf.hover)
 map.n_no_re('<C-k>', vim.lsp.buf.signature_help)
 map.n_no_re('<C-j>', vim.diagnostic.open_float)
