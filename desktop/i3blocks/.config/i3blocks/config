@@ -162,6 +162,11 @@ interval=60
 
 [separator]
 
+[vpn]
+interval=1
+
+[separator]
+
 # Generic media player support
 #
 # This displays "ARTIST - SONG" if a music is playing.
