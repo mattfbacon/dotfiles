@@ -11,7 +11,7 @@
 		"pulseaudio",
 		"custom/archpkgs",
 		"battery",
-		"clock",
+		"custom/clock",
 		"tray",
 	],
 	// Modules configuration
@@ -34,10 +34,10 @@
 		// "icon-size": 21,
 		"spacing": 10
 	},
-	"clock": {
-		"format": "{:%Y-%m-%d %H:%M}",
-		"tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-		"format-alt": "{:%Y-%m-%d %H:%M:%S}"
+	"custom/clock": {
+		"return-type": "json",
+		"exec": "python3 ~/.config/waybar/clock.py",
+		"interval": 5,
 	},
 	"cpu": {
 		"format": "{load} 🧠",
