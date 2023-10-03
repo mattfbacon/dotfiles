@@ -55,8 +55,10 @@ map.led('fb', tele.buffers)
 map.led('fh', tele.help_tags)
 map.led('n', vim.cmd.nohlsearch)
 
-map.led('bp', vim.cmd.BufferPrevious)
-map.led('bn', vim.cmd.BufferNext)
+map.led('bp', function() vim.cmd.BufferPrevious{ count = vim.v.count } end)
+map.led('bn', function() vim.cmd.BufferNext{ count = vim.v.count } end)
+-- p = previous, so pIck
+map.led('bi', vim.cmd.BufferPick)
 
 map.led('sh', vim.cmd.split)
 map.led('sv', vim.cmd.vsplit)

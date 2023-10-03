@@ -1,0 +1,4 @@
+#!/bin/sh
+echo "VPN"
+echo "VPN"
+[ "$(expressvpn status)" = "Not connected" ] && echo "#ff0000" || echo "#009500"
