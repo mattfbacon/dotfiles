@@ -6,6 +6,8 @@ pyenv init - | source
 
 status --is-interactive; or exit
 
+alias m='d m'
+
 pyenv init --path | source
 
 set -a fish_complete_path /usr/local/share/fish/vendor_completions.d
