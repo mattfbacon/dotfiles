@@ -8,10 +8,6 @@ set $mod Mod4
 
 exec --no-startup-id mako
 
-exec --no-startup-id gammastep -c ~/.config/gammastep/config.ini
-
-exec --no-startup-id fcitx5 -d
-
 exec --no-startup-id opensnitch-ui
 
 exec --no-startup-id wl-paste -t text --watch clipman store --max-items=3
@@ -169,9 +165,9 @@ smart_borders on
 hide_edge_borders both
 
 input "*" {
-	xkb_layout us
-	xkb_variant dvorak
-	xkb_options compose:rctrl
+	xkb_layout us,us
+	xkb_variant dvorak,
+	xkb_options compose:rctrl,grp:win_space_toggle
 }
 
 input "type:touchpad" {

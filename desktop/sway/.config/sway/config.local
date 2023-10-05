@@ -3,6 +3,9 @@
 ## font
 font pango:Fira Code 9
 
+## red shift
+exec --no-startup-id gammastep -c ~/.config/gammastep/config.ini
+
 ## idle hook
 exec --no-startup-id swayidle -w \
 	timeout 160 'swaylock -f -c 005661' \
