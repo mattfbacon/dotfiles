@@ -9,8 +9,8 @@ exec rustshift
 ## idle hook
 exec --no-startup-id swayidle -w \
 	timeout 110 'killall -USR1 rustshift' resume 'killall -USR2 rustshift' \
-	timeout 116 'killall -USR2 rustshift; swaylock -f -c 21577B' \
 	timeout 120 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
+	timeout 120 'killall -USR2 rustshift; swaylock -f -c 21577B' \
 	timeout 180 '[ "$(cat /sys/class/power_supply/ACAD/online)" -eq 0 ] && systemctl suspend && swaymsg "output * dpms on"' \
 	before-sleep 'swaylock -f -c 21577B' \
 	lock 'sleep 1; killall -USR1 swayidle'
