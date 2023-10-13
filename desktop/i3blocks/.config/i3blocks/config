@@ -126,8 +126,8 @@ interval=60
 
 [remote-uptime]
 label=VPSUP 
-interval=60
-CONN=matt@myvps -p 21149
+interval=36000
+CONN=matt@vps2.felle.nz -p 21149
 
 [separator]
 
