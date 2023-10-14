@@ -63,7 +63,8 @@ map.led('bi', vim.cmd.BufferPick)
 map.led('sh', vim.cmd.split)
 map.led('sv', vim.cmd.vsplit)
 
-map.led('q', vim.cmd.Bdelete)
+map.led('q', vim.cmd.bdelete)
+map.led('Q', function() vim.cmd('bdelete!') end)
 
 map.led('cn', vim.cmd.cnext)
 map.led('cp', vim.cmd.cprev)
