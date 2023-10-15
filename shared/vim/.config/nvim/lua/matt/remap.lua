@@ -65,6 +65,17 @@ map.led('sv', vim.cmd.vsplit)
 
 map.led('q', vim.cmd.bdelete)
 map.led('Q', function() vim.cmd('bdelete!') end)
+map.led('r', function()
+	cur = vim.fn.bufnr('%')
+	last = vim.fn.bufnr('$')
+
+	if cur > 1 then
+		vim.cmd('1,' .. (cur - 1) .. 'bd')
+	end
+	if cur < last then
+		vim.cmd((cur + 1) .. ',' .. last .. 'bd')
+	end
+end)
 
 map.led('cn', vim.cmd.cnext)
 map.led('cp', vim.cmd.cprev)
