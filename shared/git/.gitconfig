@@ -6,6 +6,7 @@
 	editor = nvim
 	sshCommand = ssh -i ~/.ssh/id_ed25519 -F /dev/null
 	excludesfile = ~/.gitignore
+	pager = delta
 [pull]
 	rebase = false
 [bash]
@@ -37,3 +38,12 @@
 	ignoreRevsFile = .git-blame-ignore-revs
 	markIgnoredLines = true
 	markUnblamableLines = true
+[interactive]
+	diffFilter = delta --color-only
+[delta]
+	navigate = true
+	light = true
+[merge]
+	conflictstyle = diff3
+[diff]
+	colorMoved = default
