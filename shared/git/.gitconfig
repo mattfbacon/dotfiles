@@ -1,49 +1,47 @@
-[user]
-	name = Matt Fellenz
-	email = matt@felle.nz
-	signingKey = 00507F6492F147C2865E7558D0061A7BB596E3B3
-[core]
-	editor = nvim
-	sshCommand = ssh -i ~/.ssh/id_ed25519 -F /dev/null
-	excludesfile = ~/.gitignore
-	pager = delta
-[pull]
-	rebase = false
+[alias]
+	amend-to = "!f() { SHA=`git rev-parse \"$1\"`; git stash -k && git commit --fixup \"$SHA\" && GIT_SEQUENCE_EDITOR=true git rebase --interactive --autosquash \"$SHA^\" && git stash pop; }; f"
+	tree = log --graph --oneline --all
 [bash]
 	showInformativeStatus = true
-[diff]
-	colorMoved = true
-	algorithm = histogram
-[push]
-	default = matching
-[init]
-	defaultBranch = main
-[alias]
-	tree = log --graph --oneline --all
-	amend-to = "!f() { SHA=`git rev-parse \"$1\"`; git stash -k && git commit --fixup \"$SHA\" && GIT_SEQUENCE_EDITOR=true git rebase --interactive --autosquash \"$SHA^\" && git stash pop; }; f"
-[commit]
-	gpgsign = true
-[filter "lfs"]
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
-	clean = git-lfs clean -- %f
-[credential "https://github.com/mattf552814"]
-	username = mattf552814
-[credential]
-	helper = store --file ~/.git-credentials
-[http]
-	postBuffer = 157286400
 [blame]
 	ignoreRevsFile = .git-blame-ignore-revs
 	markIgnoredLines = true
 	markUnblamableLines = true
+[commit]
+	gpgsign = true
+[core]
+	editor = nvim
+	excludesfile = ~/.gitignore
+	pager = delta
+	sshCommand = ssh -i ~/.ssh/id_ed25519 -F /dev/null
+[credential]
+	helper = store --file ~/.git-credentials
+[credential "https://github.com/mattf552814"]
+	username = mattf552814
+[delta]
+	light = true
+	navigate = true
+[diff]
+	algorithm = histogram
+	colorMoved = default
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	process = git-lfs filter-process
+	required = true
+	smudge = git-lfs smudge -- %f
+[http]
+	postBuffer = 157286400
+[init]
+	defaultBranch = main
 [interactive]
 	diffFilter = delta --color-only
-[delta]
-	navigate = true
-	light = true
 [merge]
 	conflictstyle = diff3
-[diff]
-	colorMoved = default
+[user]
+	email = matt@felle.nz
+	name = Matt Fellenz
+	signingKey = 00507F6492F147C2865E7558D0061A7BB596E3B3
+[pull]
+	rebase = false
+[push]
+	default = matching
