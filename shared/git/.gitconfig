@@ -16,8 +16,6 @@
 	sshCommand = ssh -i ~/.ssh/id_ed25519 -F /dev/null
 [credential]
 	helper = store --file ~/.git-credentials
-[credential "https://github.com/mattf552814"]
-	username = mattf552814
 [delta]
 	light = true
 	navigate = true
