@@ -3,13 +3,11 @@
 ## font
 font pango:Fira Code 9
 
-## red shift
-exec --no-startup-id gammastep -c ~/.config/gammastep/config.ini
-
 ## idle hook
 exec --no-startup-id swayidle -w \
-	timeout 160 'swaylock -f -c 005661' \
-	timeout 165 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
+	timeout 150 'killall -USR1 rustshift' resume 'killall -USR2 rustshift' \
+	timeout 160 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
+	timeout 160 'killall -USR2 rustshift; swaylock -f -c 005661' \
 	before-sleep 'swaylock -f -c 005661' \
 	lock 'sleep 1; killall -USR1 swayidle'
 
