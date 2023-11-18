@@ -7,4 +7,4 @@ if test -f "$BATTERY"; then
 fi
 printf '\n'
 
-fortune | fmt -80 -s
+fortune
