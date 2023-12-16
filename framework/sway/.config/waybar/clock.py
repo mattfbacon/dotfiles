@@ -9,7 +9,7 @@ def sh(*args: str) -> str:
 day = sh('date', '+%d')
 
 d = {
-	'text': sh('date', '+%Y-%m-%d %H:%M:%S'),
+	'text': sh('date', '+%a %F %X'),
 	'tooltip': re.sub(f'\\b{day}\\b', f'<span underline="low">{day}</span>', sh('cal', '-m')),
 }
 
