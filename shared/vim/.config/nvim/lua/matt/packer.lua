@@ -10,6 +10,14 @@ return require('packer').startup(function()
 	use 'nvim-lua/lsp-status.nvim'
 	use 'ntpeters/vim-better-whitespace'
 	use {
+		'mattfbacon/typst.vim',
+		ft = {'typst'},
+		setup = function ()
+			vim.g.typst_conceal = 0
+			vim.g.typst_conceal_math = 0
+		end,
+	}
+	use {
 		'romgrk/barbar.nvim',
 		config = function()
 			require'bufferline'.setup {
