@@ -46,3 +46,7 @@ alias syu='systemctl --user'
 alias c='rlwrap rpni'
 
 alias off='systemctl poweroff'
+
+alias vc='mullvad connect -w; mullvad status -v'
+alias vrc='mullvad reconnect -w; mullvad status -v'
+alias vd='mullvad disconnect -w'
