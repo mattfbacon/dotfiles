@@ -1,5 +1,6 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
+SETUVAR --export XDG_DOWNLOAD_DIR:/tmp
 SETUVAR __fish_initialized:3400
 SETUVAR fish_color_autosuggestion:93a1a1
 SETUVAR fish_color_cancel:\x2d\x2dreverse
