@@ -1,4 +1,5 @@
 require 'matt.colorscheme'
-require 'matt.packer'
 require 'matt.set'
+require 'matt.packages'
 require 'matt.remap'
+require 'matt.post'

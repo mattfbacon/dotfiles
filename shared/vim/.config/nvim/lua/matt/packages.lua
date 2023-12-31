@@ -1,23 +1,34 @@
-vim.cmd.packadd 'packer.nvim'
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+	vim.fn.system({
+		"git",
+		"clone",
+		"--filter=blob:none",
+		"https://github.com/folke/lazy.nvim.git",
+		"--branch=stable", -- latest stable release
+		lazypath,
+	})
+end
+vim.opt.rtp:prepend(lazypath)
 
-return require('packer').startup(function()
-	use 'wbthomason/packer.nvim'
-	use 'mattfbacon/neverforest'
-	use 'airblade/vim-gitgutter'
-	use 'tpope/vim-sleuth'
-	use 'lambdalisue/suda.vim'
-	use 'TamaMcGlinn/quickfixdd'
-	use 'nvim-lua/lsp-status.nvim'
-	use 'ntpeters/vim-better-whitespace'
-	use {
+return require('lazy').setup({
+	'folke/lazy.nvim',
+	'mattfbacon/neverforest',
+	'airblade/vim-gitgutter',
+	'tpope/vim-sleuth',
+	'lambdalisue/suda.vim',
+	'TamaMcGlinn/quickfixdd',
+	'nvim-lua/lsp-status.nvim',
+	'ntpeters/vim-better-whitespace',
+	{
 		'mattfbacon/typst.vim',
 		ft = {'typst'},
-		setup = function ()
+		init = function ()
 			vim.g.typst_conceal = 0
 			vim.g.typst_conceal_math = 0
 		end,
-	}
-	use {
+	},
+	{
 		'romgrk/barbar.nvim',
 		config = function()
 			require'bufferline'.setup {
@@ -30,9 +41,9 @@ return require('packer').startup(function()
 				maximum_padding = 1,
 			}
 		end
-	}
-	use 'moll/vim-bbye'
-	use {
+	},
+	'moll/vim-bbye',
+	{
 		'MunifTanjim/rust-tools.nvim',
 		config = function()
 			local rt = require 'rust-tools'
@@ -74,8 +85,8 @@ return require('packer').startup(function()
 				on_attach = lsp_status.on_attach,
 			}
 		end
-	}
-	use {
+	},
+	{
 		'neovim/nvim-lspconfig',
 		config = function()
 			local lsp = require 'lspconfig'
@@ -110,10 +121,10 @@ return require('packer').startup(function()
 				root_dir = function(fname) return vim.loop.cwd() end,
 			}
 		end
-	}
-	use {
+	},
+	{
 		'hrsh7th/nvim-cmp',
-		requires = {
+		dependencies = {
 			'hrsh7th/vim-vsnip',
 			'hrsh7th/cmp-nvim-lsp',
 			'hrsh7th/cmp-path',
@@ -161,10 +172,10 @@ return require('packer').startup(function()
 
 			-- cmp.event:on('confirm_done', cmp_autopairs.on_confirm_done())
 		end
-	}
-	use {
+	},
+	{
 		'folke/trouble.nvim',
-		requires = 'kyazdani42/nvim-web-devicons',
+		dependencies = 'kyazdani42/nvim-web-devicons',
 		config = function()
 			require('trouble').setup {
 				signs = {
@@ -177,7 +188,7 @@ return require('packer').startup(function()
 				use_diagnostic_signs = false;
 			}
 		end
-	}
+	},
 	--[[
 	use {
 		'windwp/nvim-autopairs',
@@ -190,9 +201,9 @@ return require('packer').startup(function()
 		end
 	}
 	--]]
-	use 'tpope/vim-abolish'
-	use {
+	'tpope/vim-abolish',
+	{
 		'nvim-telescope/telescope.nvim',
-		requires = { 'nvim-lua/plenary.nvim' },
-	}
-end)
+		dependencies = { 'nvim-lua/plenary.nvim' },
+	},
+})
