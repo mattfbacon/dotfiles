@@ -117,7 +117,8 @@
 	},
 	"custom/archpkgs": {
 		"format": " {} 📦 ",
-		"exec": "while pgrep yay || pgrep pacman; do sleep 0.5; done; checkupdates | wc -l",
+		"exec": "checkupdates | wc -l",
+		"exec-on-event": true,
 		"interval": 3600,
 		"tooltip": false,
 		"on-click": "$TERMINAL -e ~/.local/bin/update.sh"
