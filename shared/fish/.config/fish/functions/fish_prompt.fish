@@ -15,5 +15,5 @@ function fish_prompt
 	set_color normal
 	fish_git_prompt ^/dev/null
 
-	test $USER = 'root'; and echo -n " \# "; or echo -n " \$ "
+	test $USER = 'root'; and echo -n " # "; or echo -n " \$ "
 end
