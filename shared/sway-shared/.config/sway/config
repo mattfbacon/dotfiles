@@ -20,7 +20,7 @@ exec --no-startup-id nm-applet --indicator
 floating_modifier $mod
 
 bindsym $mod+Return exec $TERMINAL
-bindsym $mod+shift+Return exec $TERMINAL -e d c s
+bindsym $mod+shift+Return exec $TERMINAL -e sh -c 'd c s || (echo -e "\n(Press enter)"; read)'
 
 bindsym $mod+Shift+q kill
 bindsym $mod+delete exec kill -9 $(swaymsg -t get_tree | jq '.. | select(.type?) | select(.focused==true).pid')
