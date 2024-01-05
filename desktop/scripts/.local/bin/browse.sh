@@ -39,4 +39,4 @@ case "$1" in
 esac
 shift
 
-exec firefox --profile "$HOME/.mozilla/firefox/$PROFILE" $ARGS "$@"
+exec firefox-developer-edition --profile "$HOME/.mozilla/firefox/$PROFILE" $ARGS "$@"
