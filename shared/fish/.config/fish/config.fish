@@ -11,6 +11,7 @@ status --is-interactive; or exit
 alias m='d m'
 
 pyenv init --path | source
+zoxide init fish | source
 
 set -a fish_complete_path /usr/local/share/fish/vendor_completions.d
 
