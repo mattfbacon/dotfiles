@@ -94,30 +94,32 @@ return require('lazy').setup({
 			local capabilities = require('cmp_nvim_lsp').default_capabilities()
 			capabilities = vim.tbl_extend('keep', capabilities or {}, lsp_status.capabilities)
 			lsp.pyright.setup {
-				capabilities = capabilities,
 				on_attach = lsp_status.on_attach,
+				capabilities = capabilities,
 			}
 			lsp.clangd.setup {
+				on_attach = lsp_status.on_attach,
 				capabilities = capabilities,
 				filetypes = { "c", "cpp", "objc", "objcpp", "cuda", "proto", "s" },
-				on_attach = lsp_status.on_attach,
 				handlers = lsp_status.extensions.clangd.setup(),
 				init_options = { clangdFileStatus = true },
 			}
 			lsp.taplo.setup {
-				capabilities = capabilities,
 				on_attach = lsp_status.on_attach,
+				capabilities = capabilities,
 			}
 			lsp.elmls.setup {
+				on_attach = lsp_status.on_attach,
 				capabilities = capabilities,
 				root_dir = function(fname) return vim.loop.cwd() end,
-				on_attach = lsp_status.on_attach,
 			}
 			lsp.tsserver.setup {
 				on_attach = lsp_status.on_attach,
+				capabilities = capabilities,
 			}
 			lsp.typst_lsp.setup {
 				on_attach = lsp_status.on_attach,
+				capabilities = capabilities,
 				root_dir = function(fname) return vim.loop.cwd() end,
 			}
 		end
