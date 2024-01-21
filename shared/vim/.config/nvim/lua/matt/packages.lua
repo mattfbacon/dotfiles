@@ -122,6 +122,14 @@ return require('lazy').setup({
 				capabilities = capabilities,
 				root_dir = function(fname) return vim.loop.cwd() end,
 			}
+			lsp.jdtls.setup {
+				on_attach = lsp_status.on_attach,
+				capabilities = capabilities,
+				cmd = {
+					"jdtls",
+					"-data", vim.env.HOME .. "/.cache/jdtls",
+				},
+			}
 		end
 	},
 	{
