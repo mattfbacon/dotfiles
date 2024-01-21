@@ -101,3 +101,10 @@ local function set_ext_filetype(exts, filetype)
 	vim.api.nvim_create_autocmd({ 'BufNewFile', 'BufRead' }, { pattern = exts, callback = function() vim.bo.filetype = filetype end })
 end
 set_ext_filetype({ '*.s', '*.asm' }, 'asm')
+
+vim.api.nvim_create_autocmd("User", {
+	pattern = "TelescopePreviewerLoaded",
+	callback = function(args)
+		vim.wo.wrap = true
+	end,
+})
