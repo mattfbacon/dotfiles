@@ -50,7 +50,7 @@ include "%L"
 <Multi_key> <quotedbl> <period> : "“" U201C # Smart quote, opener
 <Multi_key> <period> <quotedbl> : "”" U201D # Smart quote, closer
 <Multi_key> <apostrophe> <period> : "‘" U2018 # Smart apostrophe, opener
-<Multi_key> <period> <apostrophe> : "’" U2019 # Smart apostrophe, closer
+<Multi_key> <period> <apostrophe> <apostrophe> : "’" U2019 # Smart apostrophe, closer
 
 <Multi_key> <percent> <1>		: "ⅰ"	U2170		# SMALL ROMAN NUMERAL ONE
 <Multi_key> <percent> <2>		: "ⅱ"	U2171		# SMALL ROMAN NUMERAL TWO
