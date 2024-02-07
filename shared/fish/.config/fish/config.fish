@@ -12,6 +12,7 @@ alias m='d m'
 
 pyenv init --path | source
 zoxide init fish | source
+alias z=zi
 
 set -a fish_complete_path /usr/local/share/fish/vendor_completions.d
 
