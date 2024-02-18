@@ -42,3 +42,5 @@
 	rebase = false
 [push]
 	default = matching
+[rerere]
+	enabled = true
