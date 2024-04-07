@@ -1,0 +1,9 @@
+[Unit]
+Description=Set theme when it changes
+
+[Timer]
+OnCalendar=*-*-* 08:00:00
+OnCalendar=*-*-* 21:00:00
+
+[Install]
+WantedBy=default.target

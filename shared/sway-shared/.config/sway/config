@@ -17,6 +17,8 @@ bindsym $mod+c exec --no-startup-id clipman pick -t bemenu
 
 exec --no-startup-id nm-applet --indicator
 
+exec --no-startup-id ~/.local/bin/set-theme.sh
+
 floating_modifier $mod
 
 bindsym $mod+Return exec $TERMINAL
