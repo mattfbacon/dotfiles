@@ -10,7 +10,7 @@ exec --no-startup-id swayidle -w \
 	timeout 120 'killall -USR2 rustshift; swaylock -f -c 21577B' \
 	timeout 180 '[ "$(cat /sys/class/power_supply/ACAD/online)" -eq 0 ] && systemctl suspend && swaymsg "output * dpms on"' \
 	before-sleep 'swaylock -f -c 21577B' \
-	lock 'sleep 1; killall -USR1 swayidle'
+	lock 'sleep 0.1; killall -USR1 swayidle'
 
 ## volume
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +3%
