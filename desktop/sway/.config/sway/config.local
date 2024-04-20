@@ -27,12 +27,6 @@ bindsym $mod+F10 exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -3% &
 bindsym $mod+F11 exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +3% && $refresh_i3status
 
 ## bar
-set $background_primary #fef8ec
-set $background_secondary #f7f2e3
-set $background_tertiary #f0e9d6
-set $foreground_primary #005661
-set $urgent #e64100
-
 bar {
 	status_command i3blocks
 	position top
@@ -45,27 +39,20 @@ bar {
 	tray_output *
 
 	colors {
-		background $background_primary
+		background $background_tertiary
 		statusline $foreground_primary
 		separator $foreground_primary
-		focused_workspace $background_tertiary $background_tertiary $foreground_primary
+
+		focused_workspace $background_primary $background_primary $foreground_primary
+		inactive_workspace $background_tertiary $background_tertiary $foreground_primary
 		active_workspace $background_secondary $background_secondary $foreground_primary
-		inactive_workspace $background_primary $background_primary $foreground_primary
-		urgent_workspace $urgent $urgent #ffffff
-		binding_mode $background_secondary $background_secondary $foreground_primary
+		urgent_workspace $urgent $urgent $foreground_primary
+
+		binding_mode $foreground_primary $foreground_primary $background_secondary
 	}
 }
 
-# window border colors
-# format: border title-background title-foreground
-client.focused $foreground_primary $foreground_primary $background_primary
-client.unfocused $background_tertiary $background_tertiary $foreground_primary
-# same as unfocused afaict
-client.focused_inactive $background_tertiary $background_tertiary $foreground_primary
-client.urgent $urgent $urgent $foreground_primary
-
 ### platform-specific
-
 output HDMI-A-1 mode 1920x1080 position 0 0
 output DP-1 mode 3840x2160 position 1920 0 scale 2
 output HDMI-A-2 mode 1920x1080 position 3840 0 transform 270

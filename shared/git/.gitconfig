@@ -16,8 +16,9 @@
 [credential]
 	helper = store --file ~/.git-credentials
 [delta]
-	light = true
+	syntax-theme = ansi
 	navigate = true
+	tabs = 2
 [diff]
 	algorithm = histogram
 	colorMoved = default

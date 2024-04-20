@@ -6,6 +6,47 @@ local e = vim.env
 
 o.compatible = false
 
+function cmd_output(cmd)
+	local f = assert(io.popen(cmd, 'r'))
+	local s = assert(f:read('*a'))
+	f:close()
+	s = string.gsub(s, '^%s+', '')
+	s = string.gsub(s, '%s+$', '')
+	s = string.gsub(s, '[\n\r]+', ' ')
+	return s
+end
+
+function set_bg(gtk)
+	local bg = 'light'
+	if gtk == '\'prefer-dark\'' then
+		bg = 'dark'
+	end
+	o.background = bg
+end
+set_bg(cmd_output('gsettings get org.gnome.desktop.interface color-scheme'))
+
+;(function()
+	local stdout = vim.loop.new_pipe(false)
+	vim.loop.spawn(
+		'gsettings',
+		{
+			args = {'monitor', 'org.gnome.desktop.interface', 'color-scheme'},
+			stdio = {nil, stdout, nil},
+		}
+	)
+	vim.loop.read_start(stdout, function (_, s)
+		vim.schedule(function()
+			s = string.gsub(s, '^%s+', '')
+			s = string.gsub(s, '%s+$', '')
+			s = string.gsub(s, '[\n\r]+', ' ')
+
+			s = string.match(s, 'color%-scheme: (.*)')
+			print(s)
+			set_bg(s)
+		end)
+	end)
+end)()
+
 g.rust_recommended_style = 0
 g.python3_host_prog = '/usr/bin/python3'
 g.python2_host_prog = '/usr/bin/python2'
@@ -17,7 +58,7 @@ o.termguicolors = f.has('termguicolors') == 1
 o.backup = true
 o.backupskip = ''
 o.undofile = true
-o.background = light
+
 o.backupdir = e.HOME .. '/.cache/vimbackup//'
 o.directory = e.HOME .. '/.cache/vimswap//'
 o.undodir = e.HOME .. '/.cache/vimundo//'

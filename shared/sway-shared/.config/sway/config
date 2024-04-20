@@ -199,4 +199,13 @@ exec_always {
 	gsettings set $gnome_schema font-name 'sans-serif'
 }
 
+include theme.conf
+
+# window border colors
+# format: border title-background title-foreground
+client.focused $background_primary $background_primary $foreground_primary
+client.unfocused $background_tertiary $background_tertiary $foreground_primary
+client.focused_inactive $background_secondary $background_secondary $foreground_primary
+client.urgent $urgent $urgent $foreground_primary
+
 include config.local
