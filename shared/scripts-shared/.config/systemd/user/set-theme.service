@@ -3,4 +3,4 @@ Description=Set gnome theme dark/light based on time
 
 [Service]
 Type=oneshot
-ExecStart=~/.local/bin/set-theme.sh
+ExecStart=sh -c ~/.local/bin/set-theme.sh
