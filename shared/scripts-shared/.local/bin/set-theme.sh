@@ -1,8 +1,21 @@
 #!/bin/sh
 HOUR="$(date +'%H')"
-if [ "${HOUR}" -ge 21 -o "${HOUR}" -le 8 ]; then
-	THEME=prefer-dark
+if [ "$#" -ne 0 ]; then
+	THEME="$1"
 else
-	THEME=default
+	if [ "${HOUR}" -ge 21 -o "${HOUR}" -le 8 ]; then
+		THEME=dark
+	else
+		THEME=light
+	fi
 fi
-gsettings set org.gnome.desktop.interface color-scheme "${THEME}"
+
+gsettings set org.gnome.desktop.interface color-scheme "prefer-${THEME}"
+
+ln -srf ~/.config/alacritty/{"${THEME}",theme}.toml
+# Make alacritty reload config.
+touch ~/.config/alacritty/alacritty.toml
+
+ln -srf ~/.config/sway/theme{."${THEME}",}.conf
+# TODO: Possible to just change the colors in sway without a full reload?
+swaymsg reload

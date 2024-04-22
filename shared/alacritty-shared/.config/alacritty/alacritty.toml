@@ -1,0 +1,12 @@
+import = ["~/.config/alacritty/theme.toml", "~/.config/alacritty/local.toml"]
+
+[font.offset]
+y = 1
+
+[[mouse.bindings]]
+action = "None"
+mouse = "Middle"
+
+[window.padding]
+x = 3
+y = 3

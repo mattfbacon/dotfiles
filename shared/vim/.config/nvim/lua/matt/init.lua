@@ -1,4 +1,3 @@
-require 'matt.colorscheme'
 require 'matt.set'
 require 'matt.packages'
 require 'matt.remap'

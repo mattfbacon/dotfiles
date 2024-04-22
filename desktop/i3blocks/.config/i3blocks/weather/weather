@@ -4,10 +4,10 @@
 sleep 3 # wait for wifi maybe
 
 # Check on http://openweathermap.org/find
-CITY_ID="5392171"
+CITY_ID="5324400"
 
 URGENT_LOWER=5
-URGENT_HIGHER=25
+URGENT_HIGHER=30
 
 ICON_SUNNY=""
 ICON_CLOUDY=""

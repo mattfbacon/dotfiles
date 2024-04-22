@@ -21,17 +21,3 @@ yellow = "#f49725"
 [colors.primary]
 background = "#fef8ec"
 foreground = "#004d57"
-
-[font]
-size = 7
-
-[font.offset]
-y = 1
-
-[[mouse.bindings]]
-action = "None"
-mouse = "Middle"
-
-[window.padding]
-x = 3
-y = 3
