@@ -91,8 +91,15 @@ end)
 vim.api.nvim_create_autocmd('BufWritePre', { pattern = '*', callback = function(event)
 	local bufnr = event.buffer
 	local clients = vim.lsp.get_active_clients({ bufnr = bufnr })
+	local should_format = true
+	for _, client in ipairs(clients) do
+		if client.name == 'jdtls' then
+			should_format = false
+			break
+		end
+	end
 	local empty = next(clients) == nil
-	if not empty then
+	if should_format and not empty then
 		vim.lsp.buf.format { timeout_ms = 100; }
 	end
 end })
