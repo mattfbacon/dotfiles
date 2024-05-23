@@ -27,7 +27,7 @@ set_bg(cmd_output('gsettings get org.gnome.desktop.interface color-scheme'))
 
 ;(function()
 	local stdout = vim.loop.new_pipe(false)
-	vim.loop.spawn(
+	local _handle, pid = vim.loop.spawn(
 		'gsettings',
 		{
 			args = {'monitor', 'org.gnome.desktop.interface', 'color-scheme'},
@@ -41,10 +41,10 @@ set_bg(cmd_output('gsettings get org.gnome.desktop.interface color-scheme'))
 			s = string.gsub(s, '[\n\r]+', ' ')
 
 			s = string.match(s, 'color%-scheme: (.*)')
-			print(s)
 			set_bg(s)
 		end)
 	end)
+	vim.api.nvim_create_autocmd({'ExitPre'}, { callback = function() vim.system({'kill', tostring(pid)}) end })
 end)()
 
 g.rust_recommended_style = 0
