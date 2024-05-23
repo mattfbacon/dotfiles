@@ -105,7 +105,7 @@ o.softtabstop = -1
 o.modeline = true
 o.whichwrap = 'b,s,<,>,[,]'
 o.spell = true
-o.spelllang = 'en_us'
+o.spelllang = 'en_nz'
 o.spelloptions = 'camel'
 o.mouse = 'a'
 o.cursorline = f.has 'termguicolors' == 1 and e.TERM ~= 'linux'
