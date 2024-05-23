@@ -45,3 +45,5 @@
 	default = matching
 [rerere]
 	enabled = true
+[color]
+	ui = auto
