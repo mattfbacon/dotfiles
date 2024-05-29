@@ -3,7 +3,7 @@ HOUR="$(date +'%H')"
 if [ "$#" -ne 0 ]; then
 	THEME="$1"
 else
-	if [ "${HOUR}" -ge 21 -o "${HOUR}" -lt 8 ]; then
+	if [ "${HOUR}" -ge 20 -o "${HOUR}" -lt 8 ]; then
 		THEME=dark
 	else
 		THEME=light
