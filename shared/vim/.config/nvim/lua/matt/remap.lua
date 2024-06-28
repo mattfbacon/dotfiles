@@ -65,7 +65,7 @@ map.led('sv', vim.cmd.vsplit)
 
 map.led('q', vim.cmd.bdelete)
 map.led('Q', function() vim.cmd('bdelete!') end)
-map.led('r', function()
+map.led('bo', function()
 	cur = vim.fn.bufnr('%')
 	last = vim.fn.bufnr('$')
 
