@@ -12,6 +12,8 @@ exec --no-startup-id rustshift
 
 exec --no-startup-id opensnitch-ui
 
+exec --no-startup-id sway-audio-idle-inhibit >/dev/null
+
 exec --no-startup-id wl-paste -t text --watch clipman store --max-items=3
 bindsym $mod+c exec --no-startup-id clipman pick -t bemenu
 
