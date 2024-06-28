@@ -87,7 +87,7 @@ return require('lazy').setup({
 		end
 	},
 	{
-		'neovim/nvim-lspconfig',
+		'mattfbacon/nvim-lspconfig',
 		config = function()
 			local lsp = require 'lspconfig'
 			local lsp_status = require 'lsp-status'
