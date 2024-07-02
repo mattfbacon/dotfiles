@@ -36,7 +36,7 @@
 [merge]
 	conflictstyle = diff3
 [user]
-	email = matt@felle.nz
+	email = matt+github@felle.nz
 	name = Matt Fellenz
 	signingKey = 00507F6492F147C2865E7558D0061A7BB596E3B3
 [pull]
