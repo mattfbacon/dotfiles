@@ -38,7 +38,7 @@
 [user]
 	email = matt+github@felle.nz
 	name = Matt Fellenz
-	signingKey = 00507F6492F147C2865E7558D0061A7BB596E3B3
+	signingKey = 02EB67EB087C60AD467CF0ACDCBCE4091A4F9434
 [pull]
 	rebase = false
 [push]
