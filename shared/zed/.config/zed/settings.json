@@ -1,38 +1,34 @@
-// Zed settings
-//
-// For information on how to configure Zed, see the Zed
-// documentation: https://zed.dev/docs/configuring-zed
-//
-// To see all of Zed's default settings without changing your
-// custom settings, run the `open default settings` command
-// from the command palette or from `Zed` application menu.
 {
 	"vim_mode": true,
 	"telemetry": {
 		"diagnostics": false,
-		"metrics": false
+		"metrics": false,
 	},
 	"lsp": {
 		"rust-analyzer": {
 			"initialization_options": {
 				"checkOnSave": {
 					"command": "clippy",
-					"allTargets": true
+					"allTargets": true,
 				},
 				"cargo": {
-					"features": "all"
+					"features": "all",
 				},
 				"rustfmt": {
-					"extraArgs": ["+nightly"]
-				}
-			}
-		}
+					"extraArgs": [
+						"+nightly",
+					],
+				},
+			},
+		},
 	},
 	"features": {
-		"inline_completion_provider": null
+		"inline_completion_provider": null,
 	},
 	"buffer_font_family": "JuliaMono Nerd Font Mono",
-	"buffer_line_height": { "custom": 1.37 },
+	"buffer_line_height": {
+		"custom": 1.37,
+	},
 	"buffer_font_size": 9,
 	"ui_font_family": "JuliaMono Nerd Font Mono",
 	"ui_font_size": 9,
@@ -40,30 +36,41 @@
 	"show_whitespaces": "all",
 	"relative_line_numbers": true,
 	"inlay_hints": {
-		"enabled": true
+		"enabled": true,
 	},
 	"assistant": {
-		"enabled": false
+		"enabled": false,
 	},
-	"format": "language_server",
+	"format": "auto",
 	"hard_tabs": true,
 	"tab_size": 2,
 	"auto_update": false,
 	"theme": {
 		"mode": "system",
 		"light": "Two Light",
-		"dark": "Two Dark"
+		"dark": "Two Dark",
 	},
 	"project_panel": {
 		"indent_size": 10,
-		"default_width": 250
+		"default_width": 250,
 	},
 	"outline_panel": {
-		"indent_size": 10
+		"indent_size": 10,
 	},
 	"terminal": {
-		"shell": { "program": "fish" },
-		"default_height": 250
+		"shell": {
+			"program": "fish",
+		},
+		"default_height": 250,
 	},
-	"soft_wrap": "editor_width"
+	"soft_wrap": "editor_width",
+	"prettier": {
+		"tabWidth": 2,
+		"useTabs": true,
+		"endOfLine": "lf",
+		"embeddedLanguageFormatting": "auto",
+		"printWidth": 100000,
+		"trailingComma": "always",
+	},
+	"autosave": "on_focus_change",
 }
