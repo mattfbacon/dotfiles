@@ -184,7 +184,7 @@ return require('lazy').setup({
 		end
 	},
 	{
-		'folke/trouble.nvim',
+		'mattfbacon/trouble.nvim',
 		dependencies = 'kyazdani42/nvim-web-devicons',
 		config = function()
 			require('trouble').setup {
