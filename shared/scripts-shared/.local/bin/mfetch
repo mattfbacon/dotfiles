@@ -7,4 +7,5 @@ if test -f "$BATTERY"; then
 fi
 printf '\n'
 
-fortune
+# Everything except men-women and perl.
+fortune art ascii-art computers cookie debian definitions disclaimer drugs education ethnic food fortunes goedel humorists kids knghtbrd law linux literature love magic medicine miscellaneous news paradoxum people pets platitudes politics pratchett riddles rules-of-acquisition science shlomif-fav songs-poems sports startrek tao the-x-files-taglines translate-me wisdom work zippy
