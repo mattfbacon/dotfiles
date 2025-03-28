@@ -20,6 +20,13 @@ alias grs='git restore --staged'
 alias gs='git status'
 alias gst='git stash'
 
+alias jd='jj diff'
+alias jdm='jj describe -m'
+alias je='jj edit'
+alias jl='jj log'
+alias jn='jj new'
+alias js='jj status'
+
 alias cr='cargo run'
 
 alias cat='bat'
