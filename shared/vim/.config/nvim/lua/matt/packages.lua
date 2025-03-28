@@ -21,14 +21,6 @@ return require('lazy').setup({
 	'nvim-lua/lsp-status.nvim',
 	'ntpeters/vim-better-whitespace',
 	{
-		'mattfbacon/typst.vim',
-		ft = {'typst'},
-		init = function ()
-			vim.g.typst_conceal = 0
-			vim.g.typst_conceal_math = 0
-		end,
-	},
-	{
 		'romgrk/barbar.nvim',
 		config = function()
 			require'bufferline'.setup {
@@ -117,9 +109,12 @@ return require('lazy').setup({
 				on_attach = lsp_status.on_attach,
 				capabilities = capabilities,
 			}
-			lsp.typst_lsp.setup {
-				on_attach = lsp_status.on_attach,
-				capabilities = capabilities,
+			lsp.tinymist.setup {
+				settings = {
+					formatterMode = "typstyle",
+					exportPdf = "onType",
+					semanticTokens = "disable",
+				},
 				root_dir = function(fname) return vim.loop.cwd() end,
 			}
 			lsp.jdtls.setup {

@@ -115,3 +115,12 @@ vim.api.nvim_create_autocmd("User", {
 		vim.wo.wrap = true
 	end,
 })
+
+vim.api.nvim_create_user_command("OpenPdf", function()
+	local filepath = vim.api.nvim_buf_get_name(0)
+	if filepath:match("%.typ$") then
+		local pdfpath = filepath:gsub("%.typ$", ".pdf")
+		require'luv'.spawn("xdg-open", { args = { pdfpath }, detached = true })
+	end
+end, {})
+map.led('ot', vim.cmd.OpenPdf)
