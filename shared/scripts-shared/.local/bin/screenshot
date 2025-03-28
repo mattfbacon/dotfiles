@@ -1,27 +1,7 @@
 #!/bin/sh
 
-default_location() {
-	echo ~/Pictures/ScreenshotsAuto/"$(date +%F_%H-%M-%S)".png
-}
-
-TYPE="$(echo -e 'screen\narea' | bemenu -p Type)"
-test $? -ne 0 && exit 1
-OUTPUT="$(echo -e 'file\nclipboard' | bemenu -p Output)"
-test $? -ne 0 && exit 1
-
-REGION=""
-test "$TYPE" = area && REGION="$(slurp)"
-
-sleep 0.1
-
-case "$OUTPUT" in
-	file)
-		grim ${REGION:+-g "$REGION"} "$(default_location | bemenu -p Location)"
-		;;
-	clipboard)
-		grim ${REGION:+-g "$REGION"} - | wl-copy -t image/png
-		;;
-	*)
-		exit 1
-		;;
-esac
+path="/tmp/screenshot-$(uuidgen).png"
+grim "$path"
+wl-copy "$path"
+action="$(notify-send -t 5000 -A default="Show in files" "Screenshot" "$path")"
+[ "$action" = default ] && nemo "$path"
