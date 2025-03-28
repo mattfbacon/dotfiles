@@ -73,4 +73,8 @@
 		"trailingComma": "always",
 	},
 	"autosave": "on_focus_change",
+	"show_wrap_guides": true,
+	"wrap_guides": [
+		80
+	],
 }
