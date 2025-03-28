@@ -1,46 +1,46 @@
 [
-  {
-    "context": "Editor && VimControl && vim_operator == c",
-    "bindings": {
-      "A": "editor::ToggleCodeActions",
-      "R": "editor::Rename",
-    },
-  },
-  {
-    "context": "Editor && VimControl && vim_operator == g",
-    "bindings": {
-      "d": "editor::GoToDefinition",
-      "r": "editor::FindAllReferences",
-    },
-  },
-  {
-    "context": "(Editor && VimControl) || EmptyPane || SharedScreen",
-    "bindings": {
-      "space b n": "pane::ActivateNextItem",
-      "space b p": "pane::ActivatePrevItem",
-      "space b o": "pane::CloseInactiveItems",
-      "space f f": "file_finder::Toggle",
-      "space f g": "pane::DeploySearch",
-      "space t": "diagnostics::Deploy",
-      "space f t": "workspace::ToggleLeftDock",
-      "space q": "pane::CloseActiveItem",
-      "space e n": "editor::GoToDiagnostic",
-      "space e p": "editor::GoToPrevDiagnostic",
-      "space e N": "editor::GoToPrevDiagnostic",
-    },
-  },
-  {
-    "context": "Workspace",
-    "bindings": {
-      "ctrl-alt-`": "workspace::NewTerminal",
-    },
-  },
-  {
-    "context": "Terminal",
-    "bindings": {
-      "ctrl-b n": "pane::ActivateNextItem",
-      "ctrl-b p": "pane::ActivatePrevItem",
-      "ctrl-b ctrl-b": "workspace::ToggleLeftDock",
-    },
-  },
+	{
+		"context": "Editor && VimControl && vim_operator == c",
+		"bindings": {
+			"shift-a": "editor::ToggleCodeActions",
+			"shift-r": "editor::Rename",
+		},
+	},
+	{
+		"context": "Editor && VimControl && vim_operator == g",
+		"bindings": {
+			"d": "editor::GoToDefinition",
+			"r": "editor::FindAllReferences",
+		},
+	},
+	{
+		"context": "(Editor && VimControl) || EmptyPane || SharedScreen",
+		"bindings": {
+			"space b n": "pane::ActivateNextItem",
+			"space b p": "pane::ActivatePreviousItem",
+			"space b o": "pane::CloseInactiveItems",
+			"space f f": "file_finder::Toggle",
+			"space f g": "pane::DeploySearch",
+			"space t": "diagnostics::Deploy",
+			"space f t": "workspace::ToggleLeftDock",
+			"space q": "pane::CloseActiveItem",
+			"space e n": "editor::GoToDiagnostic",
+			"space e p": "editor::GoToPreviousDiagnostic",
+			"space e shift-n": "editor::GoToPreviousDiagnostic",
+		},
+	},
+	{
+		"context": "Workspace",
+		"bindings": {
+			"ctrl-alt-`": "workspace::NewTerminal",
+		},
+	},
+	{
+		"context": "Terminal",
+		"bindings": {
+			"ctrl-b n": "pane::ActivateNextItem",
+			"ctrl-b p": "pane::ActivatePreviousItem",
+			"ctrl-b ctrl-b": "workspace::ToggleLeftDock",
+		},
+	},
 ]
