@@ -1,4 +1,7 @@
-import = ["~/.config/alacritty/theme.toml", "~/.config/alacritty/local.toml"]
+general.import = [
+	"~/.config/alacritty/theme.toml",
+	"~/.config/alacritty/local.toml",
+]
 
 [font.offset]
 y = 1
