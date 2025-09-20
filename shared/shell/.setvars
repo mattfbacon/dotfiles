@@ -55,6 +55,8 @@ export DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=1
 
 export XDG_CURRENT_DESKTOP=sway
 export MOZ_ENABLE_WAYLAND=1
+# https://github.com/swaywm/sway/issues/8755
+export WLR_RENDER_NO_EXPLICIT_SYNC=1
 
 export SAL_USE_VCLPLUGIN=gtk3
 export XDG_SESSION_TYPE=wayland
