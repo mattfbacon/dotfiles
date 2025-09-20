@@ -180,18 +180,20 @@ hide_edge_borders both
 input "*" {
 	xkb_layout us,us
 	xkb_variant dvorak,
-	xkb_options compose:rctrl,grp:win_space_toggle
+	xkb_options compose:rctrl,grp:shifts_toggle,caps:escape_shifted_capslock
 }
 
 input "type:touchpad" {
 	natural_scroll enable
 	dwt disable
 	tap enabled
+	drag enabled
+	drag_lock disabled
 }
 
 input "type:pointer" {
 	accel_profile adaptive
-	pointer_accel 0
+	pointer_accel -0.1
 }
 
 output "*" bg ~/Pictures/wallpaper.jpg fill
