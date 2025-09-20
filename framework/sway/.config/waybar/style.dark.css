@@ -26,7 +26,7 @@ window#waybar.hidden {
 }
 
 #workspaces button {
-	padding: 0 5px;
+	padding: 0 3px;
 	background-color: transparent;
 	color: #b7bfc5;
 }
@@ -67,10 +67,6 @@ window#waybar.hidden {
 #idle_inhibitor.activated {
 	background-color: #b7bfc5;
 	color: #1b2932;
-	border-bottom: 2px solid rgba(255, 255, 255, 0.2);
-}
-#idle_inhibitor.activated > * {
-	margin-bottom: -2px;
 }
 
 #pulseaudio.muted {
