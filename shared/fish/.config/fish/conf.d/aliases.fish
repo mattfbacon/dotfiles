@@ -26,6 +26,7 @@ alias je='jj edit'
 alias jl='jj log'
 alias jn='jj new'
 alias js='jj status'
+alias jcm='jj commit -m'
 
 alias cr='cargo run'
 
