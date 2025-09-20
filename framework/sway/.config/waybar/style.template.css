@@ -44,21 +44,24 @@ window#waybar.hidden {
 	background-color: #eb4d4b;
 }
 
-#mode {
-	background-color: %BACKGROUND_PRIMARY%;
+#language {
+	min-width: 2em;
+}
+
+widget {
 	color: %TEXT_PRIMARY%;
 }
 
-.modules-right > widget {
-	color: %TEXT_PRIMARY%;
-}
-
-.modules-right > widget > :first-child {
+.modules-right > widget > :first-child, .modules-left > widget > :first-child {
 	padding-left: 7px;
 }
 
-.modules-right > widget > :last-child {
+.modules-right > widget > :last-child, .modules-left > widget > :last-child {
 	padding-right: 7px;
+}
+
+.modules-left > widget:first-child > :first-child {
+	padding-left: 0;
 }
 
 #idle_inhibitor {

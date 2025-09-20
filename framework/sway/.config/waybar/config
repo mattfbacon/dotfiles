@@ -12,6 +12,7 @@
 		"battery",
 		"custom/tlp",
 		"custom/clock",
+		"sway/language",
 		"tray",
 	],
 	// Modules configuration

@@ -4,7 +4,7 @@
 	font-family: monospace, 'Noto Sans CJK JP';
 	font-size: 10px;
 	min-height: 0;
-	color: #b7bfc5;
+	color: #b1b9bf;
 }
 
 window#waybar {
@@ -28,7 +28,7 @@ window#waybar.hidden {
 #workspaces button {
 	padding: 0 3px;
 	background-color: transparent;
-	color: #b7bfc5;
+	color: #b1b9bf;
 }
 
 #workspaces button.focused {
@@ -44,28 +44,31 @@ window#waybar.hidden {
 	background-color: #eb4d4b;
 }
 
-#mode {
-	background-color: #1b2932;
-	color: #b7bfc5;
+#language {
+	min-width: 2em;
 }
 
-.modules-right > widget {
-	color: #b7bfc5;
+widget {
+	color: #b1b9bf;
 }
 
-.modules-right > widget > :first-child {
+.modules-right > widget > :first-child, .modules-left > widget > :first-child {
 	padding-left: 7px;
 }
 
-.modules-right > widget > :last-child {
+.modules-right > widget > :last-child, .modules-left > widget > :last-child {
 	padding-right: 7px;
+}
+
+.modules-left > widget:first-child > :first-child {
+	padding-left: 0;
 }
 
 #idle_inhibitor {
 	margin: 0 7px;
 }
 #idle_inhibitor.activated {
-	background-color: #b7bfc5;
+	background-color: #b1b9bf;
 	color: #1b2932;
 }
 
