@@ -196,7 +196,10 @@ input "type:pointer" {
 	pointer_accel -0.1
 }
 
-output "*" bg ~/Pictures/wallpaper.jpg fill
+output "*" {
+	bg ~/Pictures/wallpaper.jpg fill
+	scale 1.7
+}
 
 seat "*" {
 	xcursor_theme "capitaine-cursors"
