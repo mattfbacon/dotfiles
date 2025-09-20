@@ -6,6 +6,8 @@ mouse_warping output
 
 set $mod Mod4
 
+exec --no-startup-id fcitx5
+
 exec --no-startup-id mako
 
 exec --no-startup-id rustshift
