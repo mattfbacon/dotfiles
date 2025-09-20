@@ -17,5 +17,6 @@ ln -srf ~/.config/alacritty/{"${THEME}",theme}.toml
 touch ~/.config/alacritty/alacritty.toml
 
 ln -srf ~/.config/sway/theme{."${THEME}",}.conf
+ln -srf ~/.config/waybar/style{."${THEME}",}.css
 # TODO: Possible to just change the colors in sway without a full reload?
 swaymsg reload

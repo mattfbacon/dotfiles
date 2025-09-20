@@ -5,12 +5,12 @@
 	// "width": 1280, // Waybar width
 	// Choose the order of the modules
 	"modules-left": ["sway/workspaces", "sway/mode", "custom/media"],
-	"modules-center": ["sway/window"],
 	"modules-right": [
+		"sway/window",
 		"idle_inhibitor",
 		"pulseaudio",
-		"custom/archpkgs",
 		"battery",
+		"custom/tlp",
 		"custom/clock",
 		"tray",
 	],
@@ -26,8 +26,8 @@
 	"idle_inhibitor": {
 		"format": "{icon}",
 		"format-icons": {
-			"activated": "🧿",
-			"deactivated": "⚪"
+			"activated": "**",
+			"deactivated": "__"
 		}
 	},
 	"tray": {
@@ -60,27 +60,13 @@
 		"format-icons": ["", ""]
 	},
 	"battery": {
-		"states": {
-			"pct-10-10": 100,
-			"pct-9-10": 90,
-			"pct-8-10": 80,
-			"pct-7-10": 70,
-			"pct-6-10": 60,
-			"pct-5-10": 50,
-			"pct-4-10": 40,
-			"pct-3-10": 30,
-			"pct-2-10": 20,
-			"pct-1-10": 10,
-			"warning": 30,
-			"critical": 15
-		},
-		"format": "{capacity}%",
-		"format-charging": "{capacity}% 🔌",
-		"format-plugged": "{capacity}% 🔌",
-		"format-alt": "{capacity}%",
+		"format": "{icon} {capacity}%",
+		"format-charging": "<span color='green'>{icon}</span> {capacity}% 🔌",
+		"format-plugged": "{icon} {capacity}% 🔌",
+		"format-alt": "{icon} {capacity}%",
 		// "format-good": "", // An empty format will hide the module
 		// "format-full": "",
-		"format-icons": ["", "", "", "", ""]
+		"format-icons": ["", "▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"]
 	},
 	"network": {
 		// "interface": "wlp2*", // (Optional) To force the use of this interface
@@ -122,5 +108,17 @@
 		"interval": 3600,
 		"tooltip": false,
 		"on-click": "$TERMINAL -e ~/.local/bin/update.sh"
+	},
+	"custom/tlp": {
+		"format": "🎚️ {}",
+		"exec": "~/.local/bin/tlpbar.sh status",
+		"interval": 5,
+		"on-click": "~/.local/bin/tlpbar.sh switch",
+		"exec-on-event": true
+	},
+	"sway/window": {
+		"expand": true,
+		"min-length": 120,
+		"align": 1
 	}
 }

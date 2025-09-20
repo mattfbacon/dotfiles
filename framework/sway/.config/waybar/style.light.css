@@ -1,0 +1,88 @@
+* {
+	border: none;
+	border-radius: 0;
+	font-family: monospace, 'Noto Sans CJK JP';
+	font-size: 10px;
+	min-height: 0;
+	color: #004d57;
+}
+
+window#waybar {
+	background-color: #fef8ec;
+	transition-property: background-color;
+	transition-duration: .5s;
+}
+
+window#waybar > * {
+	border-bottom: 2px solid rgba(0, 0, 0, 0.04);
+}
+
+window#waybar > * > * {
+	margin-bottom: -2px;
+}
+
+window#waybar.hidden {
+	opacity: 0.2;
+}
+
+#workspaces button {
+	padding: 0 5px;
+	background-color: transparent;
+	color: #004d57;
+}
+
+#workspaces button.focused {
+	background-color: rgba(0, 0, 0, 0.07);
+	border-bottom: 2px solid rgba(0, 0, 0, 0.17);
+}
+
+#workspaces button.focused > * {
+	margin-bottom: -2px;
+}
+
+#workspaces button.urgent {
+	background-color: #eb4d4b;
+}
+
+#mode {
+	background-color: #fef8ec;
+	color: #004d57;
+}
+
+.modules-right > widget {
+	color: #004d57;
+}
+
+.modules-right > widget > :first-child {
+	padding-left: 7px;
+}
+
+.modules-right > widget > :last-child {
+	padding-right: 7px;
+}
+
+#idle_inhibitor {
+	margin: 0 7px;
+}
+#idle_inhibitor.activated {
+	background-color: #004d57;
+	color: #fef8ec;
+	border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+}
+#idle_inhibitor.activated > * {
+	margin-bottom: -2px;
+}
+
+#pulseaudio.muted {
+	color: #2a5c45;
+}
+
+#tray > .passive {
+	-gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+	-gtk-icon-effect: highlight;
+	background-color: #eb4d4b;
+}
+

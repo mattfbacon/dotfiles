@@ -1,0 +1,87 @@
+* {
+	border: none;
+	border-radius: 0;
+	font-family: monospace, 'Noto Sans CJK JP';
+	font-size: 10px;
+	min-height: 0;
+	color: %TEXT_PRIMARY%;
+}
+
+window#waybar {
+	background-color: %BACKGROUND_PRIMARY%;
+	transition-property: background-color;
+	transition-duration: .5s;
+}
+
+window#waybar > * {
+	border-bottom: 2px solid rgba(%PALE_BASE_RGB%, 0.04);
+}
+
+window#waybar > * > * {
+	margin-bottom: -2px;
+}
+
+window#waybar.hidden {
+	opacity: 0.2;
+}
+
+#workspaces button {
+	padding: 0 5px;
+	background-color: transparent;
+	color: %TEXT_PRIMARY%;
+}
+
+#workspaces button.focused {
+	background-color: rgba(%PALE_BASE_RGB%, 0.07);
+	border-bottom: 2px solid rgba(%PALE_BASE_RGB%, 0.17);
+}
+
+#workspaces button.focused > * {
+	margin-bottom: -2px;
+}
+
+#workspaces button.urgent {
+	background-color: #eb4d4b;
+}
+
+#mode {
+	background-color: %BACKGROUND_PRIMARY%;
+	color: %TEXT_PRIMARY%;
+}
+
+.modules-right > widget {
+	color: %TEXT_PRIMARY%;
+}
+
+.modules-right > widget > :first-child {
+	padding-left: 7px;
+}
+
+.modules-right > widget > :last-child {
+	padding-right: 7px;
+}
+
+#idle_inhibitor {
+	margin: 0 7px;
+}
+#idle_inhibitor.activated {
+	background-color: %TEXT_PRIMARY%;
+	color: %BACKGROUND_PRIMARY%;
+	border-bottom: 2px solid rgba(%PALE_BASE_RGB%, 0.2);
+}
+#idle_inhibitor.activated > * {
+	margin-bottom: -2px;
+}
+
+#pulseaudio.muted {
+	color: #2a5c45;
+}
+
+#tray > .passive {
+	-gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+	-gtk-icon-effect: highlight;
+	background-color: #eb4d4b;
+}
