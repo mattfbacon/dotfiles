@@ -157,6 +157,10 @@ mode "app_launch" {
 	bindsym $mod+o mode "default"
 }
 
+# Faster browser bindings
+bindsym $mod+b mode "default"; exec browse.sh home window
+bindsym $mod+shift+b mode "default"; exec browse.sh home private
+
 bindsym $mod+o mode "app_launch"
 
 bindsym $mod+period exec wofi-emoji
