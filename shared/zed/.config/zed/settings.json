@@ -10,7 +10,8 @@
 	"lsp": {
 		"rust-analyzer": {
 			"initialization_options": {
-				"checkOnSave": {
+				"checkOnSave": true,
+				"check": {
 					"command": "clippy",
 					"allTargets": true,
 				},
@@ -26,7 +27,7 @@
 		},
 	},
 	"features": {
-		"inline_completion_provider": null,
+		"edit_prediction_provider": null,
 	},
 	"buffer_font_family": "JuliaMono Nerd Font Mono",
 	"buffer_line_height": {
@@ -41,7 +42,7 @@
 	"inlay_hints": {
 		"enabled": true,
 	},
-	"assistant": {
+	"agent": {
 		"enabled": false,
 	},
 	"format": "auto",
@@ -62,7 +63,7 @@
 	},
 	"terminal": {
 		"shell": {
-			"program": "fish",
+			"program": "fish"
 		},
 		"default_height": 250,
 	},
