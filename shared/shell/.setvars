@@ -51,8 +51,6 @@ export SSH_ASKPASS="/usr/lib/seahorse/ssh-askpass"
 
 export GOPATH=~/.cache/go
 
-export RUSTC_WRAPPER="sccache"
-
 export DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=1
 
 export XDG_CURRENT_DESKTOP=sway
