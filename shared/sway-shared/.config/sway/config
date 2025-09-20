@@ -223,3 +223,6 @@ client.focused_inactive $background_secondary $background_secondary $foreground_
 client.urgent $urgent $urgent $foreground_primary
 
 include config.local
+
+no_focus [floating=true]
+for_window [app_id="gcr-prompter"] focus
