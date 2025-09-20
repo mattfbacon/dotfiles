@@ -34,7 +34,6 @@ export TERMINAL=/usr/bin/alacritty
 #export MANPAGER=/usr/bin/bat
 export VISUAL=$EDITOR
 
-export BAT_THEME=gruvbox-light
 export BAT_STYLE=auto
 
 # export CMAKE_GENERATOR="Ninja Multi-Config"
