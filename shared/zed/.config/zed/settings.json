@@ -1,4 +1,7 @@
 {
+	"tab_bar": {
+		"show": false
+	},
 	"vim_mode": true,
 	"telemetry": {
 		"diagnostics": false,
